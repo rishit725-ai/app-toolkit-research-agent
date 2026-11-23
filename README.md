@@ -4,7 +4,7 @@ Composio take-home. A small agent pipeline that researches 100 apps (auth, self-
 MCP, buildability), verifies its own answers, measures its accuracy against a hand-checked sample, and
 publishes one self-explanatory HTML page.
 
-**Live page:** _add Vercel link_ · **Run sheet:** [START_HERE.md](START_HERE.md)
+**Live page:** https://app-toolkit-research-agent-site.vercel.app · **Repo:** https://github.com/rishit725-ai/app-toolkit-research-agent · **Run sheet:** [START_HERE.md](START_HERE.md)
 
 ## How it works
 
