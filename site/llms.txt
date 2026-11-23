@@ -21,8 +21,8 @@ Researched by an LLM agent with a verification loop and a human-checked audit sa
 - review_status starting with 'human' means a person checked the row against official docs.
 
 ## Source
-- Repo: #repo-link-goes-here
-- Live page: #
+- Repo: https://github.com/rishit725-ai/app-toolkit-research-agent
+- Live page: https://app-toolkit-research-agent-site.vercel.app
 
 ## Apps
 - Salesforce (CRM and Sales): ready_now, self_serve_free

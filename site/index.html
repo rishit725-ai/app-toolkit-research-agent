@@ -97,7 +97,7 @@ footer{padding:64px 24px 48px;border-top:1px solid var(--line);margin-top:72px}
 <div class="proof">
 <div class="proofcard"><p class="eyebrow">How accurate is it</p><div class='acc'><div><span class='big'>62.5%</span><span class='cap'>first pass</span></div><span class=arrow>→</span><div><span class='big'>61.7%</span><span class='cap'>after auto-verify + fact-check</span></div><span class=arrow>→</span><div><span class='big'>69.2%</span><span class='cap'>blind second agent</span></div><span class=arrow>→</span><div><span class='big accent'>100%</span><span class='cap'>audited rows after human fixes</span></div></div><p class='note'>Share of 120 field answers that match official docs on 20 apps I checked by hand. The automatic fact-check loop did not raise accuracy; an independent blind agent did better, and the human audit is what made the sample correct. The 20 audited rows in the table use the human-corrected values.</p></div>
 <div class="proofcard"><p class="eyebrow">Proof and data</p>
-<ul class="links"><li><a href="#repo-link-goes-here">Source code and README</a></li><li><a href="#run">Run the agent on one app</a></li>
+<ul class="links"><li><a href="https://github.com/rishit725-ai/app-toolkit-research-agent">Source code and README</a></li><li><a href="#run">Run the agent on one app</a></li>
 <li><a href="final.csv">final.csv</a> · <a href="final.json">final.json</a> · <a href="llms.txt">llms.txt</a> <span class="muted">for agents</span></li></ul></div>
 </div>
 </section>
@@ -206,7 +206,7 @@ python agent/05_audit.py checklist      # then hand-check review/human_audit.csv
 python agent/05_audit.py score
 python agent/06_analyze.py
 python agent/07_build_site.py</pre></details>
-<p><a href="#repo-link-goes-here">Source repository</a> · <a href="#">Live page</a></p>
+<p><a href="https://github.com/rishit725-ai/app-toolkit-research-agent">Source repository</a> · <a href="https://app-toolkit-research-agent-site.vercel.app">Live page</a></p>
 </section>
 </main>
 <footer class="wrap muted small">Built for the Composio AI Product Ops take-home. Machine-readable: <a href="llms.txt">llms.txt</a>, <a href="final.json">final.json</a>, <a href="final.csv">final.csv</a>, <a href="analysis.json">analysis.json</a>.</footer>
