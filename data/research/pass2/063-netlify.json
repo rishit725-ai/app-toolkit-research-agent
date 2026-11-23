@@ -1,0 +1,88 @@
+{
+  "description": "Netlify is a web development and cloud infrastructure platform for building, deploying, and scaling modern web applications and static sites.",
+  "auth_methods": [
+    "oauth2",
+    "bearer_token"
+  ],
+  "auth_notes": "Uses OAuth2 for user authorization apps or Personal Access Tokens (PATs) passed via Bearer token in the Authorization header.",
+  "credential_access": "self_serve_free",
+  "credential_notes": "Developers can sign up for a free tier account and generate Personal Access Tokens or register OAuth applications self-serve.",
+  "api_styles": [
+    "rest"
+  ],
+  "api_breadth": "broad",
+  "api_notes": "Comprehensive REST API covering sites, deploys, functions, environment variables, forms, DNS, hooks, and agent runners.",
+  "official_mcp": "unclear",
+  "mcp_notes": "No official vendor-published MCP server found in documentation, though community or AI agent platform tools may exist.",
+  "buildability": "ready_now",
+  "primary_blocker": "none",
+  "rationale": "Netlify provides a well-documented public REST API with broad capabilities and free self-serve credential generation.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "auth",
+      "url": "https://docs.netlify.com/api/get-started/#authentication",
+      "note": "Details OAuth2 usage and Personal Access Tokens via Bearer authorization headers."
+    },
+    {
+      "supports": "credentials",
+      "url": "https://docs.netlify.com/api/get-started/#tokens-and-credentials",
+      "note": "Explains how developers generate Personal Access Tokens and register applications self-serve."
+    },
+    {
+      "supports": "api",
+      "url": "https://open-api.netlify.com/",
+      "note": "OpenAPI documentation showing comprehensive REST endpoints for sites, deploys, functions, etc."
+    },
+    {
+      "supports": "buildability",
+      "url": "https://www.netlify.com/pricing/",
+      "note": "Confirms free forever tier availability for developers."
+    }
+  ],
+  "open_questions": "",
+  "id": 63,
+  "app": "Netlify",
+  "category": "Developer, Infra and Data platforms",
+  "official_url": "https://docs.netlify.com/api",
+  "stage": "pass2",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api/"
+    },
+    {
+      "title": "",
+      "url": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api/"
+    },
+    {
+      "title": "",
+      "url": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api/"
+    },
+    {
+      "title": "",
+      "url": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api/"
+    },
+    {
+      "title": "",
+      "url": "https://open-api.netlify.com/"
+    },
+    {
+      "title": "",
+      "url": "https://www.netlify.com/pricing/"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://docs.netlify.com/api",
+    "https://docs.netlify.com/api/get-started/",
+    "https://docs.netlify.com/api/get-started/#authentication",
+    "https://docs.netlify.com/api/get-started/#tokens-and-credentials",
+    "https://open-api.netlify.com/",
+    "https://www.netlify.com/pricing/"
+  ],
+  "schema_problems": [],
+  "changes": "not flagged, kept from pass1"
+}

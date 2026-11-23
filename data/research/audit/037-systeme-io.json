@@ -1,0 +1,70 @@
+{
+  "description": "All-in-one marketing platform for sales funnels, email marketing, and online courses with a public API.",
+  "auth_methods": [
+    "api_key"
+  ],
+  "auth_notes": "API key generated from user profile settings, passed via request header or parameter.",
+  "credential_access": "self_serve_free",
+  "credential_notes": "Any developer can sign up for a free systeme.io account and generate an API key from their profile settings.",
+  "api_styles": [
+    "rest"
+  ],
+  "api_breadth": "moderate",
+  "api_notes": "Covers core elements like contacts, tags, and automation/funnel resources.",
+  "official_mcp": "no",
+  "mcp_notes": "No official MCP server published by systeme.io.",
+  "buildability": "ready_now",
+  "primary_blocker": "none",
+  "rationale": "Systeme.io offers a public REST API with self-serve API keys obtainable via a free account.",
+  "confidence": "medium",
+  "evidence": [
+    {
+      "supports": "auth",
+      "url": "https://help.systeme.io/en/articles/9355150-how-to-use-systeme-io-api",
+      "note": "Documents how to use the systeme.io API and obtain/use API keys."
+    },
+    {
+      "supports": "credentials",
+      "url": "https://systeme.io",
+      "note": "Shows free account signup is available for self-serve access."
+    }
+  ],
+  "open_questions": "Detailed endpoint schema coverage and specific rate limit parameters are limited in public overview documentation.",
+  "id": 37,
+  "app": "systeme.io",
+  "category": "Marketing, Ads, Email and Social",
+  "official_url": "https://systeme.io",
+  "stage": "audit",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://help.systeme.io/en/articles/9355150-how-to-use-systeme-io-api"
+    },
+    {
+      "title": "",
+      "url": "https://help.systeme.io/en/categories/507-api"
+    },
+    {
+      "title": "",
+      "url": "https://help.systeme.io/en/articles/9355150-how-to-use-systeme-io-api"
+    },
+    {
+      "title": "",
+      "url": "https://systeme.io/"
+    },
+    {
+      "title": "",
+      "url": "https://help.systeme.io/en/articles/9355150-how-to-use-systeme-io-api"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://systeme.io",
+    "https://systeme.io/",
+    "https://help.systeme.io/en/articles/9355150-how-to-use-systeme-io-api",
+    "https://help.systeme.io/en/categories/507-api"
+  ],
+  "schema_problems": []
+}

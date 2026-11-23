@@ -1,0 +1,79 @@
+{
+  "description": "Hosted REST API and MCP server providing YouTube transcripts, video search, channel browsing, and playlist data at scale.",
+  "auth_methods": [
+    "api_key",
+    "bearer_token"
+  ],
+  "auth_notes": "Authentication uses a Bearer token via the Authorization header with a TranscriptAPI API key.",
+  "credential_access": "self_serve_free",
+  "credential_notes": "Developers can sign up self-serve to receive 100 free credits with no credit card required, followed by paid plans starting at $5/month.",
+  "api_styles": [
+    "rest",
+    "websocket"
+  ],
+  "api_breadth": "moderate",
+  "api_notes": "Covers YouTube video transcripts, video search, channel search, channel video lists, latest uploads, and playlist extractions.",
+  "official_mcp": "yes",
+  "mcp_notes": "Official YouTube MCP server provided by the vendor at https://transcriptapi.com/mcp supporting clients like Claude, ChatGPT, and Cursor.",
+  "buildability": "ready_now",
+  "primary_blocker": "none",
+  "rationale": "The platform provides a fully documented REST API and official MCP server with self-serve free credential access and ready-to-use endpoints.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "auth",
+      "url": "https://transcriptapi.com",
+      "note": "Shows cURL examples using Authorization: Bearer API_KEY"
+    },
+    {
+      "supports": "credentials",
+      "url": "https://transcriptapi.com/pricing",
+      "note": "Details the 100 free credits trial and self-serve sign up process without requiring a credit card."
+    },
+    {
+      "supports": "api",
+      "url": "https://transcriptapi.com",
+      "note": "Lists endpoints for transcripts, search, channel browsing, and playlist extraction."
+    },
+    {
+      "supports": "mcp",
+      "url": "https://transcriptapi.com",
+      "note": "Provides the official vendor-hosted MCP server endpoint at https://transcriptapi.com/mcp"
+    }
+  ],
+  "open_questions": "",
+  "id": 99,
+  "app": "YouTube Transcript",
+  "category": "AI, Research and Media-native",
+  "official_url": "https://transcriptapi.com",
+  "stage": "pass2",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://transcriptapi.com/"
+    },
+    {
+      "title": "",
+      "url": "https://transcriptapi.com/"
+    },
+    {
+      "title": "",
+      "url": "https://transcriptapi.com/"
+    },
+    {
+      "title": "",
+      "url": "https://transcriptapi.com/docs/"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://transcriptapi.com",
+    "https://transcriptapi.com/",
+    "https://transcriptapi.com/pricing",
+    "https://transcriptapi.com/docs"
+  ],
+  "schema_problems": [],
+  "changes": "not flagged, kept from pass1"
+}

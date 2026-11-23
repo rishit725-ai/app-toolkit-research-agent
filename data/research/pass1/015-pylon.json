@@ -1,0 +1,58 @@
+{
+  "description": "An agentic B2B customer support platform connecting humans and AI agents to track, investigate, and resolve issues.",
+  "auth_methods": [
+    "bearer_token",
+    "api_key"
+  ],
+  "auth_notes": "API access uses bearer tokens/API keys for custom apps and integrations.",
+  "credential_access": "paid_plan",
+  "credential_notes": "API and developer access typically require contacting sales or a paid enterprise tier.",
+  "api_styles": [
+    "rest"
+  ],
+  "api_breadth": "moderate",
+  "api_notes": "Provides REST API endpoints for accessing issues, accounts, and platform data.",
+  "official_mcp": "yes",
+  "mcp_notes": "Pylon offers an official Pylon MCP integration/server for AI models and tools.",
+  "buildability": "ready_with_constraints",
+  "primary_blocker": "credential_gate",
+  "rationale": "While a public API and an official MCP exist, credential access is gated behind paid or enterprise plans.",
+  "confidence": "medium",
+  "evidence": [
+    {
+      "supports": "auth",
+      "url": "https://docs.usepylon.com",
+      "note": "Documentation covers developer API and custom app integrations."
+    },
+    {
+      "supports": "mcp",
+      "url": "https://usepylon.com",
+      "note": "Mentions Model Context Protocol (MCP) and Pylon MCP support for agents."
+    }
+  ],
+  "open_questions": "Exact self-serve developer tier availability for the API could not be fully verified without login.",
+  "id": 15,
+  "app": "Pylon",
+  "category": "Support and Helpdesk",
+  "official_url": "https://usepylon.com",
+  "stage": "pass1",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://www.usepylon.com/"
+    },
+    {
+      "title": "",
+      "url": "https://docs.usepylon.com/pylon-docs"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://usepylon.com",
+    "https://docs.usepylon.com",
+    "https://docs.usepylon.com/api-reference/overview"
+  ],
+  "schema_problems": []
+}

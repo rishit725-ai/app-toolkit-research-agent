@@ -1,0 +1,73 @@
+{
+  "description": "An AI-powered web scraping and data extraction platform that automates website content extraction and web searches.",
+  "auth_methods": [
+    "api_key",
+    "bearer_token"
+  ],
+  "auth_notes": "API requests are authenticated using API tokens generated from the dashboard.",
+  "credential_access": "self_serve_free",
+  "credential_notes": "Developers can sign up self-serve to access the platform with free/trial token tiers.",
+  "api_styles": [
+    "rest",
+    "sdk_or_cli_only"
+  ],
+  "api_breadth": "broad",
+  "api_notes": "Covers scraping endpoints, web search, scraper workflows execution, and account usage.",
+  "official_mcp": "yes",
+  "mcp_notes": "MrScraper publishes an official MCP server available for connecting AI clients like Claude/agents for web scraping and search.",
+  "buildability": "ready_now",
+  "primary_blocker": "none",
+  "rationale": "MrScraper provides a fully documented public API, self-serve credentials, SDKs, and an official MCP server, making it instantly buildable as an agent toolkit.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "auth",
+      "url": "https://docs.mrscraper.com",
+      "note": "Mentions token plans and API token creation for authentication."
+    },
+    {
+      "supports": "credentials",
+      "url": "https://docs.mrscraper.com",
+      "note": "Describes getting started from sign-up to creating API tokens via the dashboard."
+    },
+    {
+      "supports": "api",
+      "url": "https://docs.mrscraper.com",
+      "note": "Outlines core features, API reference, web search, and workflow API access."
+    },
+    {
+      "supports": "mcp",
+      "url": "https://docs.mrscraper.com",
+      "note": "Documents the official MrScraper MCP Server for connecting AI clients."
+    }
+  ],
+  "open_questions": "",
+  "id": 54,
+  "app": "MrScraper",
+  "category": "Data, SEO and Scraping",
+  "official_url": "https://docs.mrscraper.com",
+  "stage": "pass2",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://docs.mrscraper.com/"
+    },
+    {
+      "title": "",
+      "url": "https://docs.mrscraper.com/"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://docs.mrscraper.com",
+    "https://docs.mrscraper.com/",
+    "https://docs.mrscraper.com/api/authentication",
+    "https://docs.mrscraper.com/api/pricing",
+    "https://docs.mrscraper.com/api/overview",
+    "https://docs.mrscraper.com/api/getting-started"
+  ],
+  "schema_problems": [],
+  "changes": "flagged, not re-checked (time limit), kept from pass1"
+}

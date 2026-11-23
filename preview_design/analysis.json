@@ -1,0 +1,280 @@
+{
+  "n_apps": 100,
+  "kpis": {
+    "self_serve_pct": 67,
+    "gated_pct": 17,
+    "ready_now": 54,
+    "buildable_any": 78,
+    "outreach": 7,
+    "oauth2_pct": 58,
+    "api_key_pct": 43,
+    "official_mcp": 45,
+    "composio_covered": 75,
+    "easy_wins": 7
+  },
+  "auto_headline": "oauth2 is the most common auth (58 of 100 apps); 67% are self-serve vs 17% gated; 54 apps are buildable today, and the most common blocker is credential gate (18 apps).",
+  "auth": {
+    "oauth2": 58,
+    "bearer_token": 55,
+    "api_key": 43,
+    "basic": 17,
+    "jwt": 7,
+    "hmac_signature": 6,
+    "none": 3,
+    "other": 2,
+    "token": 1
+  },
+  "credential_access": {
+    "self_serve_free": 52,
+    "null": 15,
+    "self_serve_trial": 11,
+    "paid_plan": 8,
+    "admin_approval": 5,
+    "partner_or_sales_gated": 4,
+    "open_source_local": 4,
+    "unclear": 1
+  },
+  "buildability": {
+    "ready_now": 54,
+    "ready_with_constraints": 24,
+    "null": 15,
+    "outreach_required": 5,
+    "not_buildable_now": 2
+  },
+  "blockers": {
+    "credential_gate": 18,
+    "admin_or_partner_approval": 8,
+    "no_public_api": 2
+  },
+  "api_styles": {
+    "rest": 80,
+    "graphql": 14,
+    "websocket": 12,
+    "sdk_or_cli_only": 12,
+    "soap": 5,
+    "none": 2,
+    "webhook": 1
+  },
+  "by_category": {
+    "CRM and Sales": {
+      "apps": 10,
+      "self_serve": 8,
+      "gated": 2,
+      "oauth2": 10,
+      "api_key": 6,
+      "ready_now": 7,
+      "outreach": 1,
+      "composio": 9,
+      "official_mcp": 6
+    },
+    "Support and Helpdesk": {
+      "apps": 10,
+      "self_serve": 8,
+      "gated": 2,
+      "oauth2": 6,
+      "api_key": 6,
+      "ready_now": 3,
+      "outreach": 0,
+      "composio": 7,
+      "official_mcp": 4
+    },
+    "Communications and Messaging": {
+      "apps": 10,
+      "self_serve": 10,
+      "gated": 0,
+      "oauth2": 6,
+      "api_key": 4,
+      "ready_now": 9,
+      "outreach": 0,
+      "composio": 9,
+      "official_mcp": 4
+    },
+    "Marketing, Ads, Email and Social": {
+      "apps": 10,
+      "self_serve": 6,
+      "gated": 4,
+      "oauth2": 8,
+      "api_key": 4,
+      "ready_now": 5,
+      "outreach": 1,
+      "composio": 8,
+      "official_mcp": 2
+    },
+    "Ecommerce": {
+      "apps": 10,
+      "self_serve": 5,
+      "gated": 4,
+      "oauth2": 8,
+      "api_key": 2,
+      "ready_now": 4,
+      "outreach": 2,
+      "composio": 3,
+      "official_mcp": 3
+    },
+    "Data, SEO and Scraping": {
+      "apps": 10,
+      "self_serve": 7,
+      "gated": 2,
+      "oauth2": 3,
+      "api_key": 7,
+      "ready_now": 5,
+      "outreach": 2,
+      "composio": 7,
+      "official_mcp": 7
+    },
+    "Developer, Infra and Data platforms": {
+      "apps": 10,
+      "self_serve": 9,
+      "gated": 0,
+      "oauth2": 7,
+      "api_key": 5,
+      "ready_now": 8,
+      "outreach": 0,
+      "composio": 9,
+      "official_mcp": 7
+    },
+    "Productivity and Project Management": {
+      "apps": 10,
+      "self_serve": 10,
+      "gated": 0,
+      "oauth2": 10,
+      "api_key": 3,
+      "ready_now": 9,
+      "outreach": 0,
+      "composio": 10,
+      "official_mcp": 8
+    },
+    "Finance and Fintech": {
+      "apps": 10,
+      "self_serve": 3,
+      "gated": 2,
+      "oauth2": 0,
+      "api_key": 5,
+      "ready_now": 3,
+      "outreach": 1,
+      "composio": 7,
+      "official_mcp": 3
+    },
+    "AI, Research and Media-native": {
+      "apps": 10,
+      "self_serve": 1,
+      "gated": 1,
+      "oauth2": 0,
+      "api_key": 1,
+      "ready_now": 1,
+      "outreach": 0,
+      "composio": 6,
+      "official_mcp": 1
+    }
+  },
+  "easy_wins": [
+    {
+      "app": "Vonage",
+      "category": "Communications and Messaging",
+      "why": "Vonage provides fully documented public APIs and self-serve free developer accounts, making it immediately buildable into an AI agent toolkit.",
+      "blocker": "none",
+      "credential_access": "self_serve_free"
+    },
+    {
+      "app": "systeme.io",
+      "category": "Marketing, Ads, Email and Social",
+      "why": "While systeme.io provides an all-in-one marketing platform and mentions a public API, detailed developer documentation, API schema, and self-serve credential instructions are not available to build an integration immediately.",
+      "blocker": "none",
+      "credential_access": "self_serve_free"
+    },
+    {
+      "app": "WooCommerce",
+      "category": "Ecommerce",
+      "why": "WooCommerce provides a fully documented, robust REST API and self-generated API keys on self-hosted instances, allowing immediate agent integration.",
+      "blocker": "none",
+      "credential_access": "open_source_local"
+    },
+    {
+      "app": "Magento (Adobe Commerce)",
+      "category": "Ecommerce",
+      "why": "Magento Open Source is freely downloadable and locally deployable with a robust, fully documented REST, GraphQL, and SOAP API surface.",
+      "blocker": "none",
+      "credential_access": "open_source_local"
+    },
+    {
+      "app": "MongoDB Atlas",
+      "category": "Developer, Infra and Data platforms",
+      "why": "MongoDB Atlas offers broad public REST APIs, robust self-service account creation with free tiers, and official support for MCP clients.",
+      "blocker": "none",
+      "credential_access": "self_serve_free"
+    },
+    {
+      "app": "Binance",
+      "category": "Finance and Fintech",
+      "why": "Binance offers extensive, fully documented public REST and WebSocket APIs with free self-serve credential generation.",
+      "blocker": "none",
+      "credential_access": "self_serve_free"
+    },
+    {
+      "app": "Mermaid CLI",
+      "category": "AI, Research and Media-native",
+      "why": "",
+      "blocker": "none",
+      "credential_access": "open_source_local"
+    }
+  ],
+  "outreach": [
+    {
+      "app": "DealCloud",
+      "category": "CRM and Sales",
+      "why": "DealCloud offers a robust REST API and official MCP support, but requires an enterprise subscription and paid workspace to obtain credentials.",
+      "blocker": "admin_or_partner_approval",
+      "credential_access": "partner_or_sales_gated"
+    },
+    {
+      "app": "LinkedIn Ads",
+      "category": "Marketing, Ads, Email and Social",
+      "why": "While developers can create a self-serve developer account, accessing LinkedIn Marketing and Ads APIs requires specific product access approvals or partnership status.",
+      "blocker": "admin_or_partner_approval",
+      "credential_access": "admin_approval"
+    },
+    {
+      "app": "Salesforce Commerce Cloud",
+      "category": "Ecommerce",
+      "why": "While the platform provides robust public REST/SOAP APIs, obtaining production or developer sandbox credentials requires an enterprise account, partnership, or sales engagement rather than self-serve free sign-up.",
+      "blocker": "admin_or_partner_approval",
+      "credential_access": "partner_or_sales_gated"
+    },
+    {
+      "app": "fanbasis",
+      "category": "Ecommerce",
+      "why": "The platform provides no public API or developer documentation to build an agent integration.",
+      "blocker": "no_public_api",
+      "credential_access": "unclear"
+    },
+    {
+      "app": "Sherlock",
+      "category": "Data, SEO and Scraping",
+      "why": "Sherlock is a local command-line and Python tool without a public web API, making it unsuitable as a direct remote cloud agent toolkit without local hosting wrappers.",
+      "blocker": "no_public_api",
+      "credential_access": "open_source_local"
+    },
+    {
+      "app": "Waterfall.io",
+      "category": "Data, SEO and Scraping",
+      "why": "Waterfall provides a documented REST API, but obtaining credentials requires booking a call or sales outreach rather than a self-serve developer portal.",
+      "blocker": "admin_or_partner_approval",
+      "credential_access": "partner_or_sales_gated"
+    },
+    {
+      "app": "Paygent Connect",
+      "category": "Finance and Fintech",
+      "why": "A developer cannot obtain API credentials self-serve because setting up an account requires commercial contracts and business verification.",
+      "blocker": "admin_or_partner_approval",
+      "credential_access": "partner_or_sales_gated"
+    }
+  ],
+  "low_confidence_left": [],
+  "verification": {
+    "pass1": null,
+    "pass2": null,
+    "accuracy": null,
+    "composio_method": "composio python SDK: Composio().toolkits.list() (paginated)",
+    "changed_in_pass2": 0
+  }
+}

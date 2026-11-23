@@ -1,0 +1,85 @@
+{
+  "description": "Streamlined issue tracking, project management, and product development tool for software teams.",
+  "auth_methods": [
+    "oauth2",
+    "api_key"
+  ],
+  "auth_notes": "Supports OAuth 2.0 authentication for public apps/integrations and personal API keys for private use.",
+  "credential_access": "self_serve_free",
+  "credential_notes": "Developers can sign up for a free Linear account and immediately generate personal API keys or create OAuth apps self-serve.",
+  "api_styles": [
+    "graphql"
+  ],
+  "api_breadth": "broad",
+  "api_notes": "Comprehensive GraphQL API covering issues, projects, cycles, initiatives, teams, and webhooks.",
+  "official_mcp": "yes",
+  "mcp_notes": "Official Model Context Protocol server published by Linear on GitHub (linearapp/mcp-server-linear).",
+  "buildability": "ready_now",
+  "primary_blocker": "none",
+  "rationale": "Linear provides a fully documented GraphQL API, self-serve free credentials, and an official MCP server, making it instantly ready for agent toolkits.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "auth",
+      "url": "https://developers.linear.app/docs/graphql/working-with-the-graphql-api/authentication",
+      "note": "Documents OAuth 2.0 and personal API keys for authentication."
+    },
+    {
+      "supports": "credentials",
+      "url": "https://linear.app/settings/api",
+      "note": "Self-serve API settings and key generation."
+    },
+    {
+      "supports": "api",
+      "url": "https://developers.linear.app/docs/graphql/getting-started",
+      "note": "Outlines getting started with the broad GraphQL API."
+    },
+    {
+      "supports": "mcp",
+      "url": "https://github.com/linearapp/mcp-server-linear",
+      "note": "Official MCP server repository maintained by Linear."
+    }
+  ],
+  "open_questions": "",
+  "id": 73,
+  "app": "Linear",
+  "category": "Productivity and Project Management",
+  "official_url": "https://developers.linear.app",
+  "stage": "pass1",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://linear.app/developers"
+    },
+    {
+      "title": "",
+      "url": "https://linear.app/developers"
+    },
+    {
+      "title": "",
+      "url": "https://linear.app/settings/api"
+    },
+    {
+      "title": "",
+      "url": "https://linear.app/pricing"
+    },
+    {
+      "title": "",
+      "url": "https://linear.app/developers"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://developers.linear.app",
+    "https://developers.linear.app/",
+    "https://developers.linear.app/docs/graphql/working-with-the-graphql-api/authentication",
+    "https://linear.app/settings/api",
+    "https://linear.app/pricing",
+    "https://developers.linear.app/docs/graphql/working-with-the-graphql-api/rate-limits",
+    "https://developers.linear.app/docs/graphql/getting-started",
+    "https://github.com/linearapp/mcp-server-linear"
+  ],
+  "schema_problems": []
+}

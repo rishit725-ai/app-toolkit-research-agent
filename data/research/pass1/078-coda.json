@@ -1,0 +1,57 @@
+{
+  "description": "All-in-one collaborative doc platform that combines docs, spreadsheets, and apps.",
+  "auth_methods": [
+    "bearer_token",
+    "oauth2",
+    "api_key"
+  ],
+  "auth_notes": "Uses API tokens (bearer tokens) generated from account settings or OAuth2 for public integrations.",
+  "credential_access": "self_serve_free",
+  "credential_notes": "Developers can sign up for a free Coda account and generate personal API tokens self-serve under account settings.",
+  "api_styles": [
+    "rest"
+  ],
+  "api_breadth": "broad",
+  "api_notes": "Comprehensive REST API covering docs, pages, tables, rows, columns, formulas, controls, and automations.",
+  "official_mcp": "no",
+  "mcp_notes": "No official MCP server published by Coda; community-created MCP servers may exist.",
+  "buildability": "ready_now",
+  "primary_blocker": "none",
+  "rationale": "Coda provides a broad, fully documented REST API with self-serve free credential generation via user account settings.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "auth",
+      "url": "https://coda.io/developers",
+      "note": "Coda developer portal describing API access and authentication tokens."
+    },
+    {
+      "supports": "credentials",
+      "url": "https://coda.io/account",
+      "note": "Coda account settings page where users generate API tokens for free."
+    },
+    {
+      "supports": "api",
+      "url": "https://coda.io/developers/apis/v1",
+      "note": "Coda API v1 documentation covering comprehensive REST endpoints."
+    }
+  ],
+  "open_questions": "",
+  "id": 78,
+  "app": "Coda",
+  "category": "Productivity and Project Management",
+  "official_url": "https://coda.io/developers",
+  "stage": "pass1",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://coda.io/developers",
+    "https://coda.io/developers/apis/v1",
+    "https://coda.io/account",
+    "https://coda.io/pricing",
+    "https://help.coda.io/en/articles/3241334-a-guide-to-coda-apis"
+  ],
+  "schema_problems": []
+}

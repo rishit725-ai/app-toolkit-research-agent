@@ -1,0 +1,86 @@
+{
+  "description": "A work OS and project management platform that lets teams build custom workflows, track projects, and connect AI agents.",
+  "auth_methods": [
+    "bearer_token",
+    "oauth2",
+    "api_key"
+  ],
+  "auth_notes": "Supports personal V2 API tokens passed via the Authorization header, app tokens with permission scopes, and OAuth2 for public/private apps.",
+  "credential_access": "self_serve_free",
+  "credential_notes": "Developers can sign up for a free account or free developer sandbox/account to generate a personal API token directly in the Developer Center.",
+  "api_styles": [
+    "graphql"
+  ],
+  "api_breadth": "broad",
+  "api_notes": "An expressive GraphQL API covering boards, groups, items, workspaces, updates, webhooks, workflows, and management of agents and MCP tools.",
+  "official_mcp": "yes",
+  "mcp_notes": "Official vendor-published Model Context Protocol (MCP) server available via mondaycom/mcp on GitHub and integrated hosted endpoints.",
+  "buildability": "ready_now",
+  "primary_blocker": "none",
+  "rationale": "Monday.com provides a broad GraphQL API, self-serve free developer credentials, and an official MCP server, making it fully ready for AI agent integration today.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "auth",
+      "url": "https://developer.monday.com/api-reference/docs/authentication",
+      "note": "Explains personal V2 API tokens and app tokens passed in the Authorization header."
+    },
+    {
+      "supports": "credentials",
+      "url": "https://developer.monday.com/api-reference/docs/authentication",
+      "note": "States that users can create a free developer account to get an API token and start testing."
+    },
+    {
+      "supports": "api",
+      "url": "https://developer.monday.com",
+      "note": "Describes the expressive GraphQL Platform API covering boards, items, workspaces, and workflows."
+    },
+    {
+      "supports": "mcp",
+      "url": "https://github.com/mondaycom",
+      "note": "Lists the official mondaycom/mcp repository published by monday.com."
+    }
+  ],
+  "open_questions": "",
+  "id": 76,
+  "app": "Monday.com",
+  "category": "Productivity and Project Management",
+  "official_url": "https://developer.monday.com",
+  "stage": "pass2",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://developer.monday.com/"
+    },
+    {
+      "title": "",
+      "url": "https://developer.monday.com/"
+    },
+    {
+      "title": "",
+      "url": "https://developer.monday.com/api-reference/docs/authentication"
+    },
+    {
+      "title": "",
+      "url": "https://developer.monday.com/api-reference/docs/rate-limits"
+    },
+    {
+      "title": "",
+      "url": "https://github.com/mondaycom"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://developer.monday.com",
+    "https://developer.monday.com/",
+    "https://developer.monday.com/api-reference/docs/authentication",
+    "https://developer.monday.com/apps/docs/developer-portal",
+    "https://developer.monday.com/api-reference/docs/rate-limits",
+    "https://developer.monday.com/api-reference/docs/introduction",
+    "https://github.com/mondaycom"
+  ],
+  "schema_problems": [],
+  "changes": "not flagged, kept from pass1"
+}

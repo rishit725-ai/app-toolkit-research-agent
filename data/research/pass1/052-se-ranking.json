@@ -1,0 +1,54 @@
+{
+  "description": "An all-in-one SEO platform providing tools for keyword ranking, competitor analysis, website audits, and backlink tracking.",
+  "auth_methods": [
+    "api_key"
+  ],
+  "auth_notes": "Authentication is performed using an API key provided in your account settings.",
+  "credential_access": "paid_plan",
+  "credential_notes": "API access typically requires a subscription to a paid plan or specific API add-ons/tiers.",
+  "api_styles": [
+    "rest"
+  ],
+  "api_breadth": "broad",
+  "api_notes": "Covers keyword rankings, competitor research, website audits, backlink data, and project management.",
+  "official_mcp": "yes",
+  "mcp_notes": "SE Ranking provides official MCP integration support (e.g., connecting SE Ranking tools to AI assistants like Gemini).",
+  "buildability": "ready_with_constraints",
+  "primary_blocker": "credential_gate",
+  "rationale": "The API is fully documented and functional, but requires a paid subscription tier or plan upgrade to obtain API credentials.",
+  "confidence": "medium",
+  "evidence": [
+    {
+      "supports": "api",
+      "url": "https://help.seranking.com/",
+      "note": "Help center references API documentation and developer tools."
+    },
+    {
+      "supports": "mcp",
+      "url": "https://help.seranking.com/",
+      "note": "Help center references MCP Hub and instructions for connecting SE Ranking MCP."
+    }
+  ],
+  "open_questions": "Could not verify exact free tier limits for the API without direct documentation page retrieval, though typical SEO platforms gate API access behind paid plans.",
+  "id": 52,
+  "app": "SE Ranking",
+  "category": "Data, SEO and Scraping",
+  "official_url": "https://seranking.com/api",
+  "stage": "pass1",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://help.seranking.com/hc/en-us"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://seranking.com/api",
+    "https://seranking.com/help/api.html",
+    "https://seranking.com/prices.html",
+    "https://help.seranking.com/"
+  ],
+  "schema_problems": []
+}

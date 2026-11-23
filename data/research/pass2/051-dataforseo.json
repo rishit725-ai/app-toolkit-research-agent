@@ -1,0 +1,66 @@
+{
+  "description": "Comprehensive SEO, SERP, keyword, and web data scraping APIs for developers and AI tools",
+  "auth_methods": [
+    "basic"
+  ],
+  "auth_notes": "Basic HTTP authentication using account login (email) and password (or API credentials generated in dashboard)",
+  "credential_access": "self_serve_trial",
+  "credential_notes": "Sign up for free and get $1 in trial credits; pay-as-you-go with a $50 minimum top-up afterward.",
+  "api_styles": [
+    "rest"
+  ],
+  "api_breadth": "broad",
+  "api_notes": "Extensive REST APIs covering SERP, keywords, backlinks, on-page crawling, labs, AI optimization, and reviews data.",
+  "official_mcp": "yes",
+  "mcp_notes": "DataForSEO provides an official MCP integration (DataForSEO MCP).",
+  "buildability": "ready_now",
+  "primary_blocker": "none",
+  "rationale": "DataForSEO offers public REST APIs with self-serve trial credentials and an official MCP server, making it fully ready for AI agent integration.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "auth",
+      "url": "https://docs.dataforseo.com",
+      "note": "Documents REST API architecture, data exchange, and authentication details."
+    },
+    {
+      "supports": "credentials",
+      "url": "https://dataforseo.com/pricing",
+      "note": "Details free $1 trial credit upon signup and pay-as-you-go model with $50 minimum top-up."
+    },
+    {
+      "supports": "mcp",
+      "url": "https://dataforseo.com/pricing",
+      "note": "Lists DataForSEO MCP under AI / LLM Agents integrations."
+    }
+  ],
+  "open_questions": "",
+  "changes": "none",
+  "id": 51,
+  "app": "DataForSEO",
+  "category": "Data, SEO and Scraping",
+  "official_url": "https://docs.dataforseo.com",
+  "stage": "pass2",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://docs.dataforseo.com/v3/"
+    },
+    {
+      "title": "",
+      "url": "https://dataforseo.com/pricing"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://docs.dataforseo.com",
+    "https://dataforseo.com/pricing",
+    "https://docs.dataforseo.com/",
+    "https://docs.dataforseo.com/v3/",
+    "https://app.dataforseo.com/register",
+    "https://docs.dataforseo.com/v3/getting-started/authentication/"
+  ],
+  "schema_problems": []
+}

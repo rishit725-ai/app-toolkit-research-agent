@@ -1,0 +1,79 @@
+{
+  "description": "An AI-powered customer service platform providing ticketing, help desk, and customer engagement solutions.",
+  "auth_methods": [
+    "oauth2",
+    "bearer_token",
+    "basic"
+  ],
+  "auth_notes": "Supports OAuth 2.0 authorization code flow, API tokens (bearer token), and basic authentication using email/password or username/token.",
+  "credential_access": "self_serve_trial",
+  "credential_notes": "Developers can sign up for a free 14-day trial account self-serve to obtain API credentials and test integrations.",
+  "api_styles": [
+    "rest",
+    "websocket"
+  ],
+  "api_breadth": "broad",
+  "api_notes": "Extensive REST APIs covering ticketing, help center, AI agents, chat, voice, custom objects, and omnichannel functionality.",
+  "official_mcp": "no",
+  "mcp_notes": "No official MCP server published by Zendesk; only community or third-party implementations may exist.",
+  "buildability": "ready_with_constraints",
+  "primary_blocker": "credential_gate",
+  "rationale": "Publicly documented REST APIs are fully available, but API credential access is gated behind a trial or paid plan rather than a permanent free tier.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "api",
+      "url": "https://developer.zendesk.com/",
+      "note": "Provides documentation home, Sunshine platform, and REST API introduction."
+    },
+    {
+      "supports": "api",
+      "url": "https://developer.zendesk.com/api-reference/",
+      "note": "Outlines the broad API surface including Ticketing, Help Center, AI Agents, and Chat APIs."
+    },
+    {
+      "supports": "credentials",
+      "url": "https://developer.zendesk.com/",
+      "note": "Mentions creating a developer account with a free 14-day trial account."
+    }
+  ],
+  "open_questions": "",
+  "id": 11,
+  "app": "Zendesk",
+  "category": "Support and Helpdesk",
+  "official_url": "https://zendesk.com",
+  "stage": "pass2",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://www.zendesk.com/"
+    },
+    {
+      "title": "",
+      "url": "https://developer.zendesk.com/documentation/"
+    },
+    {
+      "title": "",
+      "url": "https://developer.zendesk.com/api-reference/"
+    },
+    {
+      "title": "",
+      "url": "https://github.com/zendesk"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://zendesk.com",
+    "https://developer.zendesk.com/",
+    "https://developer.zendesk.com/api-reference/",
+    "https://developer.zendesk.com/documentation/ticketing/using-the-zendesk-api/introduction/",
+    "https://developer.zendesk.com/documentation/ticketing/using-the-zendesk-api/auth-and-access/",
+    "https://developer.zendesk.com/documentation/ticketing/getting-started/creating-a-zendesk-api-client/",
+    "https://support.zendesk.com/hc/en-us/articles/4408889192474-About-rate-limits-and-usage-limits",
+    "https://github.com/zendesk"
+  ],
+  "schema_problems": [],
+  "changes": "flagged, not re-checked (time limit), kept from pass1"
+}

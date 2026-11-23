@@ -1,0 +1,62 @@
+{
+  "description": "Customer support platform and infrastructure for human and AI agent collaboration across multiple communication channels.",
+  "auth_methods": [
+    "bearer_token",
+    "api_key"
+  ],
+  "auth_notes": "API access uses private app keys / bearer tokens generated within the Plain workspace.",
+  "credential_access": "self_serve_free",
+  "credential_notes": "Developers can sign up for a free account/plan on Plain and create private app keys self-serve.",
+  "api_styles": [
+    "rest",
+    "graphql"
+  ],
+  "api_breadth": "moderate",
+  "api_notes": "Offers a comprehensive GraphQL/REST API to interact with threads, customers, events, and custom actions for connected AI agents.",
+  "official_mcp": "unclear",
+  "mcp_notes": "No official vendor-published MCP server found directly in the standard documentation, though community integrations or custom implementations may exist.",
+  "buildability": "ready_now",
+  "primary_blocker": "none",
+  "rationale": "Plain provides self-serve free developer access and a well-documented API allowing external agents to integrate natively.",
+  "confidence": "medium",
+  "evidence": [
+    {
+      "supports": "auth",
+      "url": "https://plain.com",
+      "note": "Main page highlighting agentic infrastructure and API connection options."
+    },
+    {
+      "supports": "credentials",
+      "url": "https://plain.com",
+      "note": "Free tier sign up availability ('Try for free')."
+    }
+  ],
+  "open_questions": "Exact details of the API authentication sub-endpoints and a formal official MCP server release status could not be fully verified due to technical limitations fetching specific deep documentation subpaths.",
+  "id": 17,
+  "app": "Plain",
+  "category": "Support and Helpdesk",
+  "official_url": "https://plain.com",
+  "stage": "pass2",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://www.plain.com/"
+    },
+    {
+      "title": "",
+      "url": "https://github.com/plainhq"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://plain.com",
+    "https://plain.com/docs/api",
+    "https://plain.com/docs/api/authentication",
+    "https://plain.com/docs/api/pricing",
+    "https://github.com/plainhq"
+  ],
+  "schema_problems": [],
+  "changes": "flagged, not re-checked (time limit), kept from pass1"
+}

@@ -1,0 +1,84 @@
+{
+  "description": "Pinterest API enables programmatic creation and management of pins, boards, ad campaigns, product catalogs, and analytics.",
+  "auth_methods": [
+    "oauth2",
+    "bearer_token"
+  ],
+  "auth_notes": "OAuth 2.0 authorization code flow for public apps, with access tokens used as bearer tokens in request headers.",
+  "credential_access": "self_serve_free",
+  "credential_notes": "Developers can sign up for a free developer account on the Pinterest Developer Portal and create apps self-serve at no cost.",
+  "api_styles": [
+    "rest"
+  ],
+  "api_breadth": "broad",
+  "api_notes": "Covers pins, boards, board sections, ad campaigns, ad groups, ads, targeting options, conversion tracking, analytics, and shopping catalogs.",
+  "official_mcp": "unclear",
+  "mcp_notes": "The developer site mentions 'Pinterest MCP is on the way' under upcoming features, but no official production MCP server is published yet.",
+  "buildability": "ready_now",
+  "primary_blocker": "none",
+  "rationale": "Pinterest provides a fully documented REST API v5 and free self-serve developer accounts with standard OAuth2 authentication.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "auth",
+      "url": "https://developers.pinterest.com/docs/getting-started/authentication/",
+      "note": "Details OAuth 2.0 authentication flows and access tokens."
+    },
+    {
+      "supports": "credentials",
+      "url": "https://developers.pinterest.com/docs/getting-started/set-up-developer-account/",
+      "note": "Explains how to set up a developer account and register applications."
+    },
+    {
+      "supports": "api",
+      "url": "https://developers.pinterest.com/docs/api/v5/",
+      "note": "Outlines Pinterest REST API v5 scope covering pins, boards, ads, and analytics."
+    },
+    {
+      "supports": "mcp",
+      "url": "https://developers.pinterest.com",
+      "note": "Notes that Pinterest MCP is on the way."
+    }
+  ],
+  "open_questions": "Exact release timeline for the official Pinterest Model Context Protocol (MCP) server.",
+  "id": 38,
+  "app": "Pinterest",
+  "category": "Marketing, Ads, Email and Social",
+  "official_url": "https://developers.pinterest.com",
+  "stage": "pass2",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://developers.pinterest.com/"
+    },
+    {
+      "title": "",
+      "url": "https://developers.pinterest.com/docs/getting-started/connect-app/"
+    },
+    {
+      "title": "",
+      "url": "https://developers.pinterest.com/docs/getting-started/connect-app/"
+    },
+    {
+      "title": "",
+      "url": "https://developers.pinterest.com/docs/api/v5/introduction/?"
+    },
+    {
+      "title": "",
+      "url": "https://developers.pinterest.com/docs/getting-started/connect-app/"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://developers.pinterest.com",
+    "https://developers.pinterest.com/",
+    "https://developers.pinterest.com/docs/getting-started/set-up-developer-account/",
+    "https://developers.pinterest.com/docs/getting-started/authentication/",
+    "https://developers.pinterest.com/docs/api/v5/",
+    "https://developers.pinterest.com/docs/getting-started/rate-limits/"
+  ],
+  "schema_problems": [],
+  "changes": "not flagged, kept from pass1"
+}

@@ -1,0 +1,77 @@
+{
+  "description": "Team communication and messaging platform offering channels, direct messages, voice/video calls, and an official MCP server.",
+  "auth_methods": [
+    "oauth2",
+    "bearer_token"
+  ],
+  "auth_notes": "Uses OAuth2 and bearer tokens for API authentication and public/private apps.",
+  "credential_access": "self_serve_free",
+  "credential_notes": "Developers can sign up for a free Pumble account and access developer documentation and credentials self-serve.",
+  "api_styles": [
+    "rest"
+  ],
+  "api_breadth": "moderate",
+  "api_notes": "Covers workspaces, authentication, messages, and user interactions.",
+  "official_mcp": "yes",
+  "mcp_notes": "Pumble provides an official Model Context Protocol (MCP) server to connect AI agents for chat summaries, file search, and automated updates.",
+  "buildability": "ready_now",
+  "primary_blocker": "none",
+  "rationale": "Pumble provides fully documented APIs, self-serve free developer access, and an official MCP server enabling AI agent integration out of the box.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "auth",
+      "url": "https://developers.pumble.com/docs/authentication",
+      "note": "Details authentication flows and endpoints for Pumble apps."
+    },
+    {
+      "supports": "credentials",
+      "url": "https://pumble.com",
+      "note": "Pumble offers a free-forever tier for team collaboration and developer signup."
+    },
+    {
+      "supports": "mcp",
+      "url": "https://pumble.com",
+      "note": "Highlights Pumble's official MCP server for connecting AI agents."
+    },
+    {
+      "supports": "api",
+      "url": "https://developers.pumble.com/reference",
+      "note": "Provides API reference definitions and endpoints."
+    }
+  ],
+  "open_questions": "",
+  "id": 25,
+  "app": "Pumble",
+  "category": "Communications and Messaging",
+  "official_url": "https://pumble.com",
+  "stage": "pass1",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://pumble.com/"
+    },
+    {
+      "title": "",
+      "url": "https://pumble.com/login?identifier=developers"
+    },
+    {
+      "title": "",
+      "url": "https://pumble.com/login?identifier=developers"
+    },
+    {
+      "title": "",
+      "url": "https://pumble.com/login?identifier=developers"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://pumble.com",
+    "https://developers.pumble.com/",
+    "https://developers.pumble.com/docs/authentication",
+    "https://developers.pumble.com/reference"
+  ],
+  "schema_problems": []
+}

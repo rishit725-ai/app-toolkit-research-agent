@@ -1,0 +1,60 @@
+{
+  "description": "An AI-driven customer support and helpdesk platform for managing customer conversations, inboxes, and knowledge bases.",
+  "auth_methods": [
+    "oauth2",
+    "bearer_token"
+  ],
+  "auth_notes": "Uses OAuth2 authorization code flow for public integrations and custom apps, and access tokens for private apps.",
+  "credential_access": "self_serve_trial",
+  "credential_notes": "Developers can sign up for a free trial to access developer tools and APIs, but ongoing API usage generally requires a paid plan.",
+  "api_styles": [
+    "rest"
+  ],
+  "api_breadth": "broad",
+  "api_notes": "Covers Mailbox/Inbox API, Chat API, Docs API, Apps, and Webhooks for full CRUD access to support tickets and knowledge bases.",
+  "official_mcp": "no",
+  "mcp_notes": "No official MCP server published by Help Scout; only community or third-party implementations may exist.",
+  "buildability": "ready_with_constraints",
+  "primary_blocker": "credential_gate",
+  "rationale": "The API is robust and publicly documented with OAuth2, but full access requires moving past a trial or into a paid Help Scout plan.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "api",
+      "url": "https://developer.helpscout.com/",
+      "note": "Help Scout Developer portal overview detailing Inbox API, Chat API, Docs API, and Webhooks."
+    },
+    {
+      "supports": "auth",
+      "url": "https://helpscout.com",
+      "note": "Main Help Scout platform information outlining trial structure and core helpdesk features."
+    }
+  ],
+  "open_questions": "Are there permanently free developer sandboxes available without a paid plan or active trial subscription?",
+  "id": 18,
+  "app": "Help Scout",
+  "category": "Support and Helpdesk",
+  "official_url": "https://helpscout.com",
+  "stage": "pass1",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://www.helpscout.com/"
+    },
+    {
+      "title": "",
+      "url": "https://developer.helpscout.com/"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://helpscout.com",
+    "https://developer.helpscout.com/",
+    "https://developer.helpscout.com/docs/",
+    "https://developer.helpscout.com/core-api/authentication/",
+    "https://developer.helpscout.com/help-desk-api/overview/"
+  ],
+  "schema_problems": []
+}

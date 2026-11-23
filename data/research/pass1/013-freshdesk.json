@@ -1,0 +1,82 @@
+{
+  "description": "Cloud-based customer support software and ticketing platform for managing customer service operations.",
+  "auth_methods": [
+    "api_key",
+    "oauth2"
+  ],
+  "auth_notes": "Uses personal API keys (passed via HTTP basic auth with username as the API key and 'X' as password) or OAuth 2.0 with specific scopes for public apps.",
+  "credential_access": "self_serve_free",
+  "credential_notes": "Developers can sign up for a free trial or account and generate an API key directly from their profile settings page.",
+  "api_styles": [
+    "rest"
+  ],
+  "api_breadth": "broad",
+  "api_notes": "Comprehensive REST API v2 covering tickets, conversations, contacts, companies, agents, solutions, time entries, SLAs, and custom objects.",
+  "official_mcp": "yes",
+  "mcp_notes": "Freshdesk provides an official MCP (Model Context Protocol) integration to connect AI tools and apps with helpdesk data.",
+  "buildability": "ready_now",
+  "primary_blocker": "none",
+  "rationale": "Freshdesk offers a broad REST API, self-serve free credential generation via API keys or OAuth2, and an official MCP integration, making it fully ready for agent toolkits.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "auth",
+      "url": "https://developers.freshdesk.com/api/#authentication",
+      "note": "Details API key authentication methods and OAuth2 scopes."
+    },
+    {
+      "supports": "credentials",
+      "url": "https://support.freshdesk.com/en/support/solutions/articles/215517-how-to-find-your-api-key",
+      "note": "Explains how developers find and retrieve their API key self-serve in profile settings."
+    },
+    {
+      "supports": "api",
+      "url": "https://developers.freshdesk.com/api/",
+      "note": "Provides the complete REST API v2 index covering tickets, contacts, companies, etc."
+    },
+    {
+      "supports": "mcp",
+      "url": "https://freshdesk.com",
+      "note": "Mentions official Freshdesk MCP integration and connectivity for AI tools."
+    }
+  ],
+  "open_questions": "",
+  "id": 13,
+  "app": "Freshdesk",
+  "category": "Support and Helpdesk",
+  "official_url": "https://freshdesk.com",
+  "stage": "pass1",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://www.freshworks.com/freshdesk/"
+    },
+    {
+      "title": "",
+      "url": "https://developers.freshdesk.com/api/"
+    },
+    {
+      "title": "",
+      "url": "https://developers.freshdesk.com/api/"
+    },
+    {
+      "title": "",
+      "url": "https://support.freshdesk.com/support/solutions/articles/215517-how-to-find-your-api-key"
+    },
+    {
+      "title": "",
+      "url": "https://www.freshworks.com/freshdesk/pricing/"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://freshdesk.com",
+    "https://developers.freshdesk.com/api/",
+    "https://developers.freshdesk.com/api/#authentication",
+    "https://support.freshdesk.com/en/support/solutions/articles/215517-how-to-find-your-api-key",
+    "https://freshdesk.com/pricing"
+  ],
+  "schema_problems": []
+}

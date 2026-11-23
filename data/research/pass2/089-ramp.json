@@ -1,0 +1,83 @@
+{
+  "description": "Financial operations platform providing corporate cards, expense management, bill payments, and spend controls.",
+  "auth_methods": [
+    "oauth2",
+    "bearer_token"
+  ],
+  "auth_notes": "Supports OAuth2 for public apps and private app access tokens (Bearer tokens).",
+  "credential_access": "self_serve_free",
+  "credential_notes": "Developers can request sandbox access or create credentials directly if they have a Ramp account for free.",
+  "api_styles": [
+    "rest"
+  ],
+  "api_breadth": "broad",
+  "api_notes": "Covers cards, bill payments, reimbursements, spend controls, users, webhooks, and procurement integrations.",
+  "official_mcp": "yes",
+  "mcp_notes": "Ramp natively provides Model Context Protocol (MCP) support to connect AI agents to Ramp.",
+  "buildability": "ready_now",
+  "primary_blocker": "none",
+  "rationale": "Ramp provides a fully documented public REST API, self-serve sandbox/credential access, and native MCP support for AI agents.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "auth",
+      "url": "https://docs.ramp.com/developers/authentication",
+      "note": "Details OAuth2 and private app tokens for Ramp API authentication."
+    },
+    {
+      "supports": "credentials",
+      "url": "https://docs.ramp.com/developers/getting-started",
+      "note": "Explains how customers create credentials and non-customers request sandbox access."
+    },
+    {
+      "supports": "api",
+      "url": "https://docs.ramp.com/reference/api-overview",
+      "note": "Overview of the developer API, OpenAPI specs, and broad functional coverage."
+    },
+    {
+      "supports": "mcp",
+      "url": "https://docs.ramp.com",
+      "note": "Explicitly mentions connecting agents to Ramp via MCP or the CLI."
+    }
+  ],
+  "open_questions": "",
+  "id": 89,
+  "app": "Ramp",
+  "category": "Finance and Fintech",
+  "official_url": "https://docs.ramp.com",
+  "stage": "pass2",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://docs.ramp.com/"
+    },
+    {
+      "title": "",
+      "url": "https://docs.ramp.com/"
+    },
+    {
+      "title": "",
+      "url": "https://docs.ramp.com/developers/authentication"
+    },
+    {
+      "title": "",
+      "url": "https://docs.ramp.com/developers/getting-started"
+    },
+    {
+      "title": "",
+      "url": "https://docs.ramp.com/reference/api-overview"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://docs.ramp.com",
+    "https://docs.ramp.com/",
+    "https://docs.ramp.com/developers/authentication",
+    "https://docs.ramp.com/developers/getting-started",
+    "https://docs.ramp.com/reference/api-overview"
+  ],
+  "schema_problems": [],
+  "changes": "flagged, not re-checked (time limit), kept from pass1"
+}

@@ -1,0 +1,62 @@
+{
+  "description": "An AI-native creative suite providing CLI and Model Context Protocol (MCP) support for image, video, and character generation inside AI agents.",
+  "auth_methods": [
+    "oauth2"
+  ],
+  "auth_notes": "Users authenticate via browser sign-in using the CLI command 'higgsfield auth login' or through their Higgsfield account via MCP configuration.",
+  "credential_access": "self_serve_free",
+  "credential_notes": "Developers can install the CLI and connect via free self-serve browser authentication using their standard Higgsfield user account.",
+  "api_styles": [
+    "sdk_or_cli_only",
+    "websocket"
+  ],
+  "api_breadth": "moderate",
+  "api_notes": "Exposes an MCP server and CLI to access image/video generation models, character training, and generation history asynchronously.",
+  "official_mcp": "yes",
+  "mcp_notes": "Official Higgsfield MCP server available via '@higgsfield/cli' and companion skills for Claude Code, ChatGPT, OpenClaw, and Hermes Agent.",
+  "buildability": "ready_now",
+  "primary_blocker": "none",
+  "rationale": "Higgsfield provides an official MCP server and CLI with self-serve free authentication, making it fully ready to integrate into agent toolkits today.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "auth",
+      "url": "https://higgsfield.ai/cli",
+      "note": "Describes authentication via browser sign-in using `higgsfield auth login` and account linking for MCP."
+    },
+    {
+      "supports": "credentials",
+      "url": "https://higgsfield.ai/cli",
+      "note": "Confirms no API key is required; users authenticate through their Higgsfield account for free self-serve use."
+    },
+    {
+      "supports": "mcp",
+      "url": "https://higgsfield.ai/cli",
+      "note": "Details the official Higgsfield Model Context Protocol (MCP) server and CLI package `@higgsfield/cli`."
+    }
+  ],
+  "open_questions": "",
+  "id": 97,
+  "app": "higgsfield",
+  "category": "AI, Research and Media-native",
+  "official_url": "https://higgsfield.ai/cli",
+  "stage": "pass1",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://higgsfield.ai/cli"
+    },
+    {
+      "title": "",
+      "url": "https://higgsfield.ai/"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://higgsfield.ai/cli",
+    "https://higgsfield.ai/"
+  ],
+  "schema_problems": []
+}

@@ -1,0 +1,80 @@
+{
+  "description": "Customer service and shared inbox platform powered by AI for managing team and agent communications.",
+  "auth_methods": [
+    "oauth2",
+    "bearer_token"
+  ],
+  "auth_notes": "Uses OAuth2 authorization code flow for public apps and API tokens/bearer tokens for private apps.",
+  "credential_access": "self_serve_free",
+  "credential_notes": "Developers can sign up for a free developer account providing a free sandbox environment with limited teammates.",
+  "api_styles": [
+    "rest"
+  ],
+  "api_breadth": "broad",
+  "api_notes": "Extensive Core API, webhooks, plugin SDK, and native MCP support covering contacts, conversations, messages, and comments.",
+  "official_mcp": "yes",
+  "mcp_notes": "Front provides official MCP servers (including standard and admin MCP servers) for AI agents.",
+  "buildability": "ready_now",
+  "primary_blocker": "none",
+  "rationale": "Front provides a comprehensive public REST API, official MCP servers, and free self-serve developer accounts.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "auth",
+      "url": "https://dev.frontapp.com/",
+      "note": "Describes authentication options for public and private apps."
+    },
+    {
+      "supports": "credentials",
+      "url": "https://dev.frontapp.com/",
+      "note": "Details signing up for a free developer account and free developer environment."
+    },
+    {
+      "supports": "api",
+      "url": "https://dev.frontapp.com/",
+      "note": "Lists Core API, MCP server, Plugin SDK, and Channels API capabilities."
+    },
+    {
+      "supports": "mcp",
+      "url": "https://dev.frontapp.com/",
+      "note": "Explicitly documents official MCP Server and Admin MCP Server support."
+    }
+  ],
+  "open_questions": "",
+  "id": 14,
+  "app": "Front",
+  "category": "Support and Helpdesk",
+  "official_url": "https://front.com",
+  "stage": "pass2",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://front.com/"
+    },
+    {
+      "title": "",
+      "url": "https://dev.frontapp.com/docs/welcome"
+    },
+    {
+      "title": "",
+      "url": "https://front.com/pricing"
+    },
+    {
+      "title": "",
+      "url": "https://github.com/frontapp"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://front.com",
+    "https://dev.frontapp.com/",
+    "https://dev.frontapp.com/reference/authentication",
+    "https://dev.frontapp.com/docs/api-getting-started",
+    "https://front.com/pricing",
+    "https://github.com/frontapp"
+  ],
+  "schema_problems": [],
+  "changes": "not flagged, kept from pass1"
+}

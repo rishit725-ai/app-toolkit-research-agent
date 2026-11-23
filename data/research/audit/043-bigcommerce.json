@@ -1,0 +1,92 @@
+{
+  "description": "Comprehensive open-SaaS ecommerce platform providing extensive REST and GraphQL APIs for store management, headless storefronts, carts, and checkout.",
+  "auth_methods": [
+    "oauth2",
+    "bearer_token",
+    "jwt",
+    "hmac_signature"
+  ],
+  "auth_notes": "OAuth2 auth code flow for public apps; static access tokens (X-Auth-Token header) and client IDs for store/account level accounts; JWTs for storefront and customer auth.",
+  "credential_access": "self_serve_trial",
+  "credential_notes": "Developers can sign up for a free 15-day trial sandbox store to generate API credentials directly in the control panel or Developer Portal.",
+  "api_styles": [
+    "rest",
+    "graphql",
+    "websocket"
+  ],
+  "api_breadth": "broad",
+  "api_notes": "Extensive coverage of ecommerce operations including catalog, orders, customers, checkouts, carts, metafields, webhooks, and B2B management.",
+  "official_mcp": "yes",
+  "mcp_notes": "BigCommerce provides an official Docs MCP Server (and experimental store management/storefront MCP options in developer resources).",
+  "buildability": "ready_with_constraints",
+  "primary_blocker": "credential_gate",
+  "rationale": "The APIs are fully public and documented with comprehensive SDKs and sandboxes, but live API credentials require signing up for a trial store or paid subscription plan.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "auth",
+      "url": "https://developer.bigcommerce.com/api-docs/getting-started/authentication",
+      "note": "Details OAuth scopes, token creation, X-Auth-Token headers, and JWT/storefront authentication methods."
+    },
+    {
+      "supports": "credentials",
+      "url": "https://developer.bigcommerce.com",
+      "note": "Explains getting started by creating a free sandbox trial store and generating API credentials via the control panel."
+    },
+    {
+      "supports": "api",
+      "url": "https://developer.bigcommerce.com/api-reference",
+      "note": "Provides complete REST and GraphQL API specifications and endpoints across admin, storefront, and account management."
+    },
+    {
+      "supports": "buildability",
+      "url": "https://www.bigcommerce.com/essentials/pricing/",
+      "note": "Outlines the 15-day free trial and tier structure required to operate stores and maintain active API access."
+    },
+    {
+      "supports": "mcp",
+      "url": "https://developer.bigcommerce.com",
+      "note": "Mentions the official Docs MCP Server and MCP toolkits for connecting AI agents to documentation and store tools."
+    }
+  ],
+  "open_questions": "",
+  "id": 43,
+  "app": "BigCommerce",
+  "category": "Ecommerce",
+  "official_url": "https://developer.bigcommerce.com",
+  "stage": "audit",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://docs.bigcommerce.com/developer/docs/overview/quick-start"
+    },
+    {
+      "title": "",
+      "url": "https://docs.bigcommerce.com/developer/docs/overview/api-fundamentals/api-accounts"
+    },
+    {
+      "title": "",
+      "url": "https://docs.bigcommerce.com/developer/docs/overview/api-fundamentals/api-accounts"
+    },
+    {
+      "title": "",
+      "url": "https://docs.bigcommerce.com/developer/api-reference/about-our-apis"
+    },
+    {
+      "title": "",
+      "url": "https://www.bigcommerce.com/pricing/"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://developer.bigcommerce.com",
+    "https://developer.bigcommerce.com/",
+    "https://developer.bigcommerce.com/api-docs/getting-started/authentication",
+    "https://developer.bigcommerce.com/api-docs/getting-started/building-apps",
+    "https://developer.bigcommerce.com/api-reference",
+    "https://www.bigcommerce.com/essentials/pricing/"
+  ],
+  "schema_problems": []
+}

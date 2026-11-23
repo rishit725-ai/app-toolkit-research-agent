@@ -1,0 +1,83 @@
+{
+  "description": "Open-source CRM platform designed for technical teams with extensible building blocks, REST/GraphQL APIs, and AI agent integration.",
+  "auth_methods": [
+    "oauth2",
+    "api_key",
+    "bearer_token"
+  ],
+  "auth_notes": "Supports API keys, bearer tokens, and OAuth2 for authenticating requests and public apps.",
+  "credential_access": "self_serve_free",
+  "credential_notes": "Developers can sign up for a cloud trial/account or self-host the open-source version for free to generate credentials.",
+  "api_styles": [
+    "rest",
+    "graphql",
+    "websocket"
+  ],
+  "api_breadth": "broad",
+  "api_notes": "Covers core CRM objects, data models, workflows, custom apps, and webhooks via REST and GraphQL.",
+  "official_mcp": "yes",
+  "mcp_notes": "Twenty provides a native Model Context Protocol (MCP) server built into its cloud workspaces and packaged apps.",
+  "buildability": "ready_now",
+  "primary_blocker": "none",
+  "rationale": "Twenty features comprehensive REST and GraphQL APIs, native MCP support, and self-serve free developer access.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "auth",
+      "url": "https://twenty.com/pricing",
+      "note": "Mentions API keys, webhooks, and OAuth connectivity for AI assistants."
+    },
+    {
+      "supports": "credentials",
+      "url": "https://twenty.com/pricing",
+      "note": "Explains self-serve cloud sign-up and free self-hosting options."
+    },
+    {
+      "supports": "api",
+      "url": "https://twenty.com/pricing",
+      "note": "Lists REST & GraphQL APIs, webhooks, and MCP server capabilities under developer features."
+    },
+    {
+      "supports": "mcp",
+      "url": "https://twenty.com/pricing",
+      "note": "Confirms that every cloud workspace ships with a native MCP server."
+    }
+  ],
+  "open_questions": "",
+  "id": 5,
+  "app": "Twenty",
+  "category": "CRM and Sales",
+  "official_url": "https://twenty.com",
+  "stage": "pass1",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://twenty.com/"
+    },
+    {
+      "title": "",
+      "url": "https://docs.twenty.com/getting-started/introduction"
+    },
+    {
+      "title": "",
+      "url": "https://twenty.com/pricing"
+    },
+    {
+      "title": "",
+      "url": "https://github.com/twentyhq/twenty"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://twenty.com",
+    "https://docs.twenty.com",
+    "https://docs.twenty.com/developer/api-overview",
+    "https://docs.twenty.com/developer/api-key",
+    "https://docs.twenty.com/developer/authentication",
+    "https://twenty.com/pricing",
+    "https://github.com/twentyhq/twenty"
+  ],
+  "schema_problems": []
+}

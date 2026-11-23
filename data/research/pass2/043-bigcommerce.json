@@ -1,0 +1,87 @@
+{
+  "description": "E-commerce platform empowering merchants to build online stores, manage products, orders, and customer data via robust APIs.",
+  "auth_methods": [
+    "oauth2",
+    "bearer_token",
+    "jwt",
+    "hmac_signature"
+  ],
+  "auth_notes": "Uses OAuth2 for public apps and app-level credentials, token-based headers (X-Auth-Token) for store-level API accounts, and JWTs for storefront/customer authentication.",
+  "credential_access": "self_serve_free",
+  "credential_notes": "Developers can sign up for a free trial/sandbox store and generate store-level or app-level API credentials directly in the control panel or Developer Portal for free.",
+  "api_styles": [
+    "rest",
+    "graphql"
+  ],
+  "api_breadth": "broad",
+  "api_notes": "Comprehensive coverage of catalog, products, categories, orders, customers, carts, checkouts, and store administration via REST and GraphQL endpoints.",
+  "official_mcp": "yes",
+  "mcp_notes": "BigCommerce publishes official MCP servers including the Docs MCP Server, Store Management MCP, Storefront MCP, and WebMCP.",
+  "buildability": "ready_now",
+  "primary_blocker": "none",
+  "rationale": "BigCommerce provides broad REST and GraphQL APIs, self-serve free sandbox credentials, and official MCP server support for building agent toolkits immediately.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "auth",
+      "url": "https://developer.bigcommerce.com/api-docs/getting-started/authentication",
+      "note": "Details OAuth-based API accounts, store-level tokens, headers like X-Auth-Token, and JWT authentication methods."
+    },
+    {
+      "supports": "credentials",
+      "url": "https://developer.bigcommerce.com",
+      "note": "Explains signing up for a free sandbox store and generating API credentials via Settings > API Accounts or the Developer Portal."
+    },
+    {
+      "supports": "api",
+      "url": "https://developer.bigcommerce.com/api-reference",
+      "note": "Outlines REST and GraphQL API collections covering products, orders, customers, carts, checkouts, and admin operations."
+    },
+    {
+      "supports": "mcp",
+      "url": "https://developer.bigcommerce.com/api-reference",
+      "note": "Lists official MCP servers under the API Reference navigation, including Store Management MCP, Storefront MCP, and WebMCP."
+    }
+  ],
+  "open_questions": "",
+  "id": 43,
+  "app": "BigCommerce",
+  "category": "Ecommerce",
+  "official_url": "https://developer.bigcommerce.com",
+  "stage": "pass2",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://docs.bigcommerce.com/developer/docs/overview/quick-start"
+    },
+    {
+      "title": "",
+      "url": "https://docs.bigcommerce.com/developer/docs/overview/api-fundamentals/api-accounts"
+    },
+    {
+      "title": "",
+      "url": "https://docs.bigcommerce.com/developer/docs/overview/api-fundamentals/api-accounts"
+    },
+    {
+      "title": "",
+      "url": "https://docs.bigcommerce.com/developer/docs/overview/api-fundamentals/api-accounts"
+    },
+    {
+      "title": "",
+      "url": "https://docs.bigcommerce.com/developer/api-reference/about-our-apis"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://developer.bigcommerce.com",
+    "https://developer.bigcommerce.com/",
+    "https://developer.bigcommerce.com/api-docs/getting-started/authentication",
+    "https://developer.bigcommerce.com/api-docs/getting-started/building-apps",
+    "https://developer.bigcommerce.com/api-docs/getting-started/pricing-and-limits",
+    "https://developer.bigcommerce.com/api-reference"
+  ],
+  "schema_problems": [],
+  "changes": "not flagged, kept from pass1"
+}

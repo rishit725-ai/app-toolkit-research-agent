@@ -1,0 +1,76 @@
+{
+  "description": "Enterprise-grade platform providing APIs for businesses to send and receive WhatsApp messages, manage accounts, and build automated messaging solutions.",
+  "auth_methods": [
+    "bearer_token",
+    "other"
+  ],
+  "auth_notes": "Uses OAuth-based Bearer tokens (temporary user access tokens or permanent system user access tokens passed in the Authorization header).",
+  "credential_access": "self_serve_free",
+  "credential_notes": "Any developer can sign up for a Meta Developer account for free, create an app, and generate test access tokens and phone number IDs via the Meta App Dashboard.",
+  "api_styles": [
+    "rest",
+    "websocket"
+  ],
+  "api_breadth": "broad",
+  "api_notes": "Covers cloud messaging (sending text, media, and templates), webhooks for real-time events, business management, phone number management, groups, media, and profiles.",
+  "official_mcp": "no",
+  "mcp_notes": "No official Model Context Protocol (MCP) server published by Meta; only third-party or community integrations exist.",
+  "buildability": "ready_now",
+  "primary_blocker": "none",
+  "rationale": "The WhatsApp Cloud API features a fully documented public REST API and free self-serve developer credentials, allowing developers to immediately build integrations.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "auth",
+      "url": "https://developers.facebook.com/docs/whatsapp",
+      "note": "Shows the REST API endpoint structure and Bearer token authorization header format."
+    },
+    {
+      "supports": "credentials",
+      "url": "https://developers.facebook.com/docs/whatsapp/cloud-api/get-started",
+      "note": "Details self-serve developer registration, Meta app creation, and generation of access tokens."
+    },
+    {
+      "supports": "api",
+      "url": "https://developers.facebook.com/docs/whatsapp/cloud-api/get-started",
+      "note": "Describes messaging features, webhooks, templates, and management capabilities."
+    },
+    {
+      "supports": "buildability",
+      "url": "https://developers.facebook.com/docs/whatsapp/cloud-api/get-started",
+      "note": "Confirms complete setup steps from scratch for developers using free self-serve tools."
+    }
+  ],
+  "open_questions": "",
+  "id": 28,
+  "app": "WhatsApp Business",
+  "category": "Communications and Messaging",
+  "official_url": "https://developers.facebook.com/docs/whatsapp",
+  "stage": "pass2",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/overview"
+    },
+    {
+      "title": "",
+      "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/get-started"
+    },
+    {
+      "title": "",
+      "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://developers.facebook.com/docs/whatsapp",
+    "https://developers.facebook.com/docs/whatsapp/get-started",
+    "https://developers.facebook.com/docs/whatsapp/cloud-api/get-started",
+    "https://developers.facebook.com/docs/whatsapp/business-management-api/authentication",
+    "https://developers.facebook.com/docs/whatsapp/pricing"
+  ],
+  "schema_problems": [],
+  "changes": "not flagged, kept from pass1"
+}

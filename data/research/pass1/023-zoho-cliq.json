@@ -1,0 +1,60 @@
+{
+  "description": "Team chat and business communication software with messaging, channels, meetings, and workflow automation.",
+  "auth_methods": [
+    "oauth2"
+  ],
+  "auth_notes": "Zoho uses OAuth 2.0 via the Zoho Developer Console for authentication and generating access tokens for API requests.",
+  "credential_access": "self_serve_free",
+  "credential_notes": "Developers can sign up for a free Zoho account and use the Zoho API Console self-serve at no cost to register apps and obtain credentials.",
+  "api_styles": [
+    "rest"
+  ],
+  "api_breadth": "broad",
+  "api_notes": "Comprehensive REST APIs covering chats, channels, messages, bots, and custom extensions/integrations.",
+  "official_mcp": "no",
+  "mcp_notes": "No official Model Context Protocol (MCP) server published by Zoho; community alternatives may exist.",
+  "buildability": "ready_now",
+  "primary_blocker": "none",
+  "rationale": "Zoho Cliq offers a fully documented public REST API and self-serve free developer credentials via the Zoho API Console.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "buildability",
+      "url": "https://zoho.com/cliq",
+      "note": "Main Zoho Cliq product page outlining collaboration features and API capabilities."
+    },
+    {
+      "supports": "credentials",
+      "url": "https://www.zoho.com/cliq/pricing.html",
+      "note": "Pricing page detailing free plans and developer platform access levels."
+    }
+  ],
+  "open_questions": "",
+  "id": 23,
+  "app": "Zoho Cliq",
+  "category": "Communications and Messaging",
+  "official_url": "https://zoho.com/cliq",
+  "stage": "pass1",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://www.zoho.com/cliq/"
+    },
+    {
+      "title": "",
+      "url": "https://www.zoho.com/cliq/pricing.html"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://zoho.com/cliq",
+    "https://www.zoho.com/cliq/help/rest-api/",
+    "https://www.zoho.com/cliq/help/rest-api/v2/",
+    "https://www.zoho.com/cliq/help/rest-api/authentication.html",
+    "https://api-console.zoho.com/",
+    "https://www.zoho.com/cliq/pricing.html"
+  ],
+  "schema_problems": []
+}

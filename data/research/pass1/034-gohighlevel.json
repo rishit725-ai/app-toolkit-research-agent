@@ -1,0 +1,74 @@
+{
+  "description": "An all-in-one marketing, sales, and CRM platform for agencies and businesses to manage leads, campaigns, and communications.",
+  "auth_methods": [
+    "oauth2",
+    "bearer_token"
+  ],
+  "auth_notes": "OAuth2 auth code flow for marketplace apps, and private app access tokens for custom integrations.",
+  "credential_access": "paid_plan",
+  "credential_notes": "Developers need a paid GoHighLevel account or agency subscription to access the marketplace/developer portal and create API apps.",
+  "api_styles": [
+    "rest"
+  ],
+  "api_breadth": "broad",
+  "api_notes": "Comprehensive API v2 covering contacts, calendars, conversations, locations, opportunities, custom fields, and workflows.",
+  "official_mcp": "no",
+  "mcp_notes": "No official MCP server published by GoHighLevel.",
+  "buildability": "ready_with_constraints",
+  "primary_blocker": "credential_gate",
+  "rationale": "Public REST APIs and OAuth2 are well-documented, but developers require a paid GoHighLevel subscription to create credentials and apps.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "auth",
+      "url": "https://highlevel.stoplight.io/docs/integrations/1e7372cf50257-authentication",
+      "note": "Details OAuth2 and Private Integration Token authentication methods."
+    },
+    {
+      "supports": "credentials",
+      "url": "https://marketplace.gohighlevel.com/",
+      "note": "GoHighLevel developer portal and marketplace requiring account access."
+    },
+    {
+      "supports": "api",
+      "url": "https://github.com/GoHighLevel/highlevel-api-docs",
+      "note": "Official public API v2 documentation repository."
+    }
+  ],
+  "open_questions": "",
+  "id": 34,
+  "app": "GoHighLevel",
+  "category": "Marketing, Ads, Email and Social",
+  "official_url": "https://highlevel.stoplight.io",
+  "stage": "pass1",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://highlevel.stoplight.io"
+    },
+    {
+      "title": "",
+      "url": "https://highlevel.stoplight.io/docs/integrations/1e7372cf50257-authentication"
+    },
+    {
+      "title": "",
+      "url": "https://marketplace.gohighlevel.com/"
+    },
+    {
+      "title": "",
+      "url": "https://github.com/GoHighLevel"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://highlevel.stoplight.io",
+    "https://highlevel.stoplight.io/",
+    "https://highlevel.stoplight.io/docs/integrations/1e7372cf50257-authentication",
+    "https://marketplace.gohighlevel.com/",
+    "https://help.gohighlevel.com/support/solutions/articles/155000003154-api-rate-limits",
+    "https://github.com/GoHighLevel"
+  ],
+  "schema_problems": []
+}

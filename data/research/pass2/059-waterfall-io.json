@@ -1,0 +1,57 @@
+{
+  "description": "Aggregates 30+ B2B data vendors into a single GTM API for contact enrichment, phone lookup, prospecting, and job change tracking.",
+  "auth_methods": [
+    "api_key"
+  ],
+  "auth_notes": "Uses an API key passed via the 'x-waterfall-api-key' or 'x-api-key' request header.",
+  "credential_access": "partner_or_sales_gated",
+  "credential_notes": "The public landing page prompts users to 'Book a call' or submit a request to get started, with no automated self-serve free tier or signup flow visible.",
+  "api_styles": [
+    "rest"
+  ],
+  "api_breadth": "moderate",
+  "api_notes": "REST API covering contact search/prospector, email enrichment, phone enrichment, and job changes.",
+  "official_mcp": "no",
+  "mcp_notes": "No official MCP server published by Waterfall.io; no known community MCP servers.",
+  "buildability": "outreach_required",
+  "primary_blocker": "admin_or_partner_approval",
+  "rationale": "Waterfall provides a documented REST API, but obtaining credentials requires booking a call or sales outreach rather than a self-serve developer portal.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "auth",
+      "url": "https://waterfall.io",
+      "note": "Code snippets show API requests using the x-api-key header."
+    },
+    {
+      "supports": "credentials",
+      "url": "https://waterfall.io",
+      "note": "Page indicates users must book a call or request access rather than self-sign up."
+    },
+    {
+      "supports": "api",
+      "url": "https://waterfall.io",
+      "note": "Provides endpoints for prospector, contact enrichment, phone enrichment, and job changes."
+    }
+  ],
+  "open_questions": "Whether a self-serve developer tier is available behind a hidden login page, as the main site currently directs users to book a call.",
+  "id": 59,
+  "app": "Waterfall.io",
+  "category": "Data, SEO and Scraping",
+  "official_url": "https://waterfall.io",
+  "stage": "pass2",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://www.waterfall.io/"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://waterfall.io"
+  ],
+  "schema_problems": [],
+  "changes": "not flagged, kept from pass1"
+}

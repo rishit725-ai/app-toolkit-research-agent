@@ -1,0 +1,90 @@
+{
+  "description": "AI-powered customer communications and cloud phone system platform providing voice, SMS, and messaging APIs",
+  "auth_methods": [
+    "oauth2",
+    "bearer_token",
+    "basic"
+  ],
+  "auth_notes": "OAuth2 auth code flow for public marketplace apps; HTTP Basic Auth (using api_id and api_token) or Bearer token for private apps and customer integrations",
+  "credential_access": "self_serve_trial",
+  "credential_notes": "Developers can sign up for a free trial to access developer tools and test the API, but full API usage requires a paid plan (Essentials, Professional, or Enterprise starting at $30-$50/license/month)",
+  "api_styles": [
+    "rest",
+    "websocket"
+  ],
+  "api_breadth": "broad",
+  "api_notes": "Comprehensive REST API covering users, teams, calls, conversations, outbound campaigns, SMS, WhatsApp, conversation intelligence, analytics reports, webhooks, and embedded CTI SDK",
+  "official_mcp": "no",
+  "mcp_notes": "No official MCP server published by Aircall directly; docs mention AI/MCP guides coming soon or framework readiness",
+  "buildability": "ready_with_constraints",
+  "primary_blocker": "none",
+  "rationale": "Aircall provides a robust, publicly documented REST API and webhooks with self-serve trial access, though full production usage requires a paid subscription plan.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "auth",
+      "url": "https://developer.aircall.io/api-references/",
+      "note": "Documents OAuth for technology partners and Basic Auth with api_id/api_token for customers"
+    },
+    {
+      "supports": "credentials",
+      "url": "https://aircall.io/pricing/",
+      "note": "Details subscription plans (Essentials, Professional, Enterprise) and free trials / free access"
+    },
+    {
+      "supports": "api",
+      "url": "https://developer.aircall.io/api-references/",
+      "note": "Complete public REST API reference for users, calls, conversations, analytics, webhooks, and messaging"
+    },
+    {
+      "supports": "mcp",
+      "url": "https://developer.aircall.io/docs/introduction",
+      "note": "Lists platform capabilities including classic integrations, webhooks, and embedded SDK"
+    }
+  ],
+  "open_questions": "",
+  "id": 29,
+  "app": "Aircall",
+  "category": "Communications and Messaging",
+  "official_url": "https://aircall.io",
+  "stage": "audit",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://aircall.io/"
+    },
+    {
+      "title": "",
+      "url": "https://developer.aircall.io/"
+    },
+    {
+      "title": "",
+      "url": "https://developers.aircall.io/api-references"
+    },
+    {
+      "title": "",
+      "url": "https://developer.aircall.io/docs/introduction"
+    },
+    {
+      "title": "",
+      "url": "https://developer.aircall.io/docs/introduction"
+    },
+    {
+      "title": "",
+      "url": "https://aircall.io/pricing/"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://aircall.io",
+    "https://developer.aircall.io/",
+    "https://developer.aircall.io/api-references/",
+    "https://developer.aircall.io/tutorials/authentication/",
+    "https://developer.aircall.io/tutorials/create-an-app/",
+    "https://developer.aircall.io/resources/limits/",
+    "https://aircall.io/pricing/"
+  ],
+  "schema_problems": []
+}

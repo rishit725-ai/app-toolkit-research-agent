@@ -1,0 +1,74 @@
+{
+  "description": "Agentic document platform providing APIs for parsing, extracting, splitting, classifying, and editing documents at scale.",
+  "auth_methods": [
+    "api_key"
+  ],
+  "auth_notes": "API keys are passed via headers (e.g., Bearer token or custom headers) for authenticating API requests.",
+  "credential_access": "self_serve_free",
+  "credential_notes": "Developers can sign up self-serve for the Standard pay-as-you-go plan, which includes $150 in free trial/usage credits.",
+  "api_styles": [
+    "rest",
+    "sdk_or_cli_only"
+  ],
+  "api_breadth": "broad",
+  "api_notes": "Extensive API coverage for document parsing (r-1 and r-1 mini models), structured data extraction, file splitting, classification, and editing.",
+  "official_mcp": "yes",
+  "mcp_notes": "Reducto provides an official Model Context Protocol (MCP) server for integrating directly into AI agent workflows.",
+  "buildability": "ready_now",
+  "primary_blocker": "none",
+  "rationale": "Reducto features a comprehensive public API, self-serve credentials with free trial credits, and an official MCP server, making it fully ready to integrate into an AI agent toolkit today.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "buildability",
+      "url": "https://reducto.ai",
+      "note": "Main platform overview and documentation link showing API availability and tools."
+    },
+    {
+      "supports": "credentials",
+      "url": "https://reducto.ai/pricing",
+      "note": "Pricing page detailing the Standard tier with $150 in free usage credits for self-serve signups."
+    },
+    {
+      "supports": "mcp",
+      "url": "https://docs.reducto.ai",
+      "note": "Documentation reference confirming the official Reducto MCP server for agentic tooling."
+    }
+  ],
+  "open_questions": "",
+  "id": 95,
+  "app": "Reducto",
+  "category": "AI, Research and Media-native",
+  "official_url": "https://reducto.ai",
+  "stage": "pass1",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://reducto.ai/"
+    },
+    {
+      "title": "",
+      "url": "https://docs.reducto.ai/overview"
+    },
+    {
+      "title": "",
+      "url": "https://reducto.ai/pricing"
+    },
+    {
+      "title": "",
+      "url": "https://github.com/reductoai"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://reducto.ai",
+    "https://docs.reducto.ai",
+    "https://docs.reducto.ai/api-reference/overview",
+    "https://docs.reducto.ai/api-reference/authentication",
+    "https://reducto.ai/pricing",
+    "https://github.com/reductoai"
+  ],
+  "schema_problems": []
+}

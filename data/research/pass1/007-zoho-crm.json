@@ -1,0 +1,74 @@
+{
+  "description": "Comprehensive cloud-based customer relationship management (CRM) software for managing leads, deals, and sales automation.",
+  "auth_methods": [
+    "oauth2"
+  ],
+  "auth_notes": "Uses OAuth 2.0 protocol with access tokens (1-hour lifespan) and long-lived refresh tokens.",
+  "credential_access": "self_serve_free",
+  "credential_notes": "Developers can sign up for a forever-free edition (up to 3 users) and use the Zoho API Console to generate OAuth credentials self-serve.",
+  "api_styles": [
+    "rest",
+    "graphql"
+  ],
+  "api_breadth": "broad",
+  "api_notes": "Extensive REST and GraphQL APIs covering modules, leads, contacts, deals, workflows, functions, and analytics.",
+  "official_mcp": "no",
+  "mcp_notes": "No official Zoho CRM Model Context Protocol (MCP) server published by Zoho yet (though Zoho Analytics has an analytics-mcp-server repo).",
+  "buildability": "ready_now",
+  "primary_blocker": "none",
+  "rationale": "Zoho CRM provides a broad public REST/GraphQL API and a forever-free tier with self-serve OAuth credentials via the developer console.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "auth",
+      "url": "https://www.zoho.com/crm/developer/docs/api/v2/oauth-overview.html",
+      "note": "Details OAuth 2.0 implementation for Zoho CRM APIs"
+    },
+    {
+      "supports": "credentials",
+      "url": "https://www.zoho.com/crm/pricing.html",
+      "note": "Confirms the forever-free edition supporting APIs and developer access"
+    },
+    {
+      "supports": "api",
+      "url": "https://zoho.com/crm",
+      "note": "Lists REST APIs, GraphQL APIs, and developer tools available on the platform"
+    }
+  ],
+  "open_questions": "",
+  "id": 7,
+  "app": "Zoho CRM",
+  "category": "CRM and Sales",
+  "official_url": "https://zoho.com/crm",
+  "stage": "pass1",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://www.zoho.com/crm/"
+    },
+    {
+      "title": "",
+      "url": "https://www.zoho.com/crm/developer/docs/api/v2/oauth-overview.html"
+    },
+    {
+      "title": "",
+      "url": "https://www.zoho.com/en-us/crm/zohocrm-pricing.html"
+    },
+    {
+      "title": "",
+      "url": "https://github.com/zoho"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://zoho.com/crm",
+    "https://www.zoho.com/crm/developer/docs/api/v2/v2-index.html",
+    "https://www.zoho.com/crm/developer/docs/api/v2/oauth-overview.html",
+    "https://api-console.zoho.com/",
+    "https://www.zoho.com/crm/pricing.html",
+    "https://github.com/zoho"
+  ],
+  "schema_problems": []
+}

@@ -1,0 +1,64 @@
+{
+  "description": "Cloud help desk and call center software with a universal shared inbox, ticketing, live chat, knowledge base, and AI agents.",
+  "auth_methods": [
+    "api_key"
+  ],
+  "auth_notes": "API keys let third-party apps retrieve and push data and manage tickets.",
+  "credential_access": "self_serve_trial",
+  "credential_notes": "A 30-day free trial provides access to API keys depending on the plan, but there is no free tier; API keys are included starting with paid or trial plans.",
+  "api_styles": [
+    "rest"
+  ],
+  "api_breadth": "moderate",
+  "api_notes": "Covers retrieving/pushing data, ticket management, and third-party integrations.",
+  "official_mcp": "yes",
+  "mcp_notes": "LiveAgent provides built-in MCP tools for AI agents and an official MCP server on Business and Enterprise plans to connect external AI tools like Claude.",
+  "buildability": "ready_with_constraints",
+  "primary_blocker": "none",
+  "rationale": "LiveAgent provides a documented API and a Model Context Protocol (MCP) server, accessible via self-serve trial or paid plans.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "auth",
+      "url": "https://www.liveagent.com/pricing/",
+      "note": "Mentions API keys per plan for third-party app integration."
+    },
+    {
+      "supports": "credentials",
+      "url": "https://liveagent.com",
+      "note": "Offers a 30-day free trial with no permanent free plan."
+    },
+    {
+      "supports": "mcp",
+      "url": "https://www.liveagent.com/pricing/",
+      "note": "Details the MCP server inclusion on Business and Enterprise plans."
+    }
+  ],
+  "open_questions": "",
+  "id": 16,
+  "app": "LiveAgent",
+  "category": "Support and Helpdesk",
+  "official_url": "https://liveagent.com",
+  "stage": "pass2",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://www.liveagent.com/"
+    },
+    {
+      "title": "",
+      "url": "https://www.liveagent.com/pricing/"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://liveagent.com",
+    "https://www.liveagent.com/api/",
+    "https://support.liveagent.com/112678-API-reference",
+    "https://www.liveagent.com/pricing/"
+  ],
+  "schema_problems": [],
+  "changes": "flagged, not re-checked (time limit), kept from pass1"
+}

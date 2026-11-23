@@ -1,0 +1,88 @@
+{
+  "description": "Enables applications to securely connect with users' bank accounts for financial data access, verification, and payments.",
+  "auth_methods": [
+    "api_key"
+  ],
+  "auth_notes": "Almost all Plaid API endpoints require a client_id and secret, sent either in the request body or via PLAID-CLIENT-ID and PLAID-SECRET headers.",
+  "credential_access": "self_serve_free",
+  "credential_notes": "Developers can sign up on the Plaid Dashboard for free to get a live or sandbox client_id and secret, with sandbox access free and pay-as-you-go production access.",
+  "api_styles": [
+    "rest"
+  ],
+  "api_breadth": "broad",
+  "api_notes": "Comprehensive REST/JSON API covering auth, balance, transactions, investments, liabilities, identity, transfers, income, and verification endpoints.",
+  "official_mcp": "yes",
+  "mcp_notes": "Plaid officially publishes an MCP server via its ai-coding-toolkit repository to serve docs and assist IDE/AI coding agents.",
+  "buildability": "ready_now",
+  "primary_blocker": "none",
+  "rationale": "Plaid provides a fully documented public REST API, self-serve free sandbox/dashboard credentials, and an official MCP server, making it fully ready for agent toolkits.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "auth",
+      "url": "https://plaid.com/docs/api/",
+      "note": "Details that Plaid API requests require client_id and secret in headers or body."
+    },
+    {
+      "supports": "credentials",
+      "url": "https://plaid.com/pricing/",
+      "note": "Shows pay-as-you-go / free tier setup and free sandbox access."
+    },
+    {
+      "supports": "api",
+      "url": "https://plaid.com/docs/api/",
+      "note": "Outlines REST API architecture, endpoints, OpenAPI definition, and client libraries."
+    },
+    {
+      "supports": "mcp",
+      "url": "https://github.com/plaid/ai-coding-toolkit",
+      "note": "Official Plaid repository providing the Plaid MCP server for AI tooling."
+    }
+  ],
+  "open_questions": "",
+  "id": 82,
+  "app": "Plaid",
+  "category": "Finance and Fintech",
+  "official_url": "https://plaid.com/docs",
+  "stage": "pass2",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://plaid.com/docs/"
+    },
+    {
+      "title": "",
+      "url": "https://plaid.com/docs/auth/"
+    },
+    {
+      "title": "",
+      "url": "https://dashboard.plaid.com/signup"
+    },
+    {
+      "title": "",
+      "url": "https://plaid.com/pricing/"
+    },
+    {
+      "title": "",
+      "url": "https://plaid.com/docs/api/"
+    },
+    {
+      "title": "",
+      "url": "https://github.com/plaid"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://plaid.com/docs",
+    "https://plaid.com/docs/",
+    "https://plaid.com/docs/auth/",
+    "https://dashboard.plaid.com/signup",
+    "https://plaid.com/pricing/",
+    "https://plaid.com/docs/api/",
+    "https://github.com/plaid"
+  ],
+  "schema_problems": [],
+  "changes": "not flagged, kept from pass1"
+}

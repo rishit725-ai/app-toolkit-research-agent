@@ -1,0 +1,21 @@
+id,app,category,official_url,hint
+10,DealCloud,CRM and Sales,https://api.docs.dealcloud.com,api.docs.dealcloud.com
+8,Close,CRM and Sales,https://close.com,close.com
+13,Freshdesk,Support and Helpdesk,https://freshdesk.com,freshdesk.com
+20,Gladly,Support and Helpdesk,https://gladly.com,gladly.com
+29,Aircall,Communications and Messaging,https://aircall.io,aircall.io
+22,Twilio,Communications and Messaging,https://twilio.com,twilio.com
+39,Threads (Meta),"Marketing, Ads, Email and Social",https://developers.facebook.com/docs/threads,developers.facebook.com/docs/threads
+37,systeme.io,"Marketing, Ads, Email and Social",https://systeme.io,systeme.io (funnel builder)
+47,Ecwid,Ecommerce,https://api-docs.ecwid.com,api-docs.ecwid.com
+43,BigCommerce,Ecommerce,https://developer.bigcommerce.com,developer.bigcommerce.com
+51,DataForSEO,"Data, SEO and Scraping",https://docs.dataforseo.com,docs.dataforseo.com
+52,SE Ranking,"Data, SEO and Scraping",https://seranking.com/api,seranking.com/api
+62,Vercel,"Developer, Infra and Data platforms",https://vercel.com/docs/rest-api,vercel.com/docs/rest-api
+67,Snowflake,"Developer, Infra and Data platforms",https://docs.snowflake.com,docs.snowflake.com
+75,Asana,Productivity and Project Management,https://developers.asana.com,developers.asana.com
+72,Airtable,Productivity and Project Management,https://airtable.com/developers,airtable.com/developers
+81,Stripe,Finance and Fintech,https://stripe.com/docs/api,stripe.com/docs/api
+85,iPayX,Finance and Fintech,https://ipayx.ai/docs,ipayx.ai/docs
+96,Devin,"AI, Research and Media-native",https://docs.devin.ai,docs.devin.ai (MCP)
+98,Mermaid CLI,"AI, Research and Media-native",https://github.com/mermaid-js/mermaid-cli,github.com/mermaid-js/mermaid-cli

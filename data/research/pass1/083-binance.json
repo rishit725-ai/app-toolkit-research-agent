@@ -1,0 +1,65 @@
+{
+  "description": "Cryptocurrency exchange platform providing spot, futures, and margin trading alongside wallet and web3 services via APIs.",
+  "auth_methods": [
+    "api_key",
+    "hmac_signature"
+  ],
+  "auth_notes": "API requests require an API key and an HMAC signature (or Ed25519/RSA keys) computed over the query parameters and payload using the secret key.",
+  "credential_access": "self_serve_free",
+  "credential_notes": "Any registered user can generate API keys for free directly via their account settings interface.",
+  "api_styles": [
+    "rest",
+    "websocket"
+  ],
+  "api_breadth": "broad",
+  "api_notes": "Comprehensive coverage of spot trading, futures, margin, wallet operations, market data streams, and user data updates.",
+  "official_mcp": "no",
+  "mcp_notes": "No official MCP server published by Binance; only community-driven implementations exist.",
+  "buildability": "ready_now",
+  "primary_blocker": "none",
+  "rationale": "Binance offers extensive, fully documented public REST and WebSocket APIs with free self-serve credential generation.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "auth",
+      "url": "https://binance-docs.github.io/apidocs/spot/en/",
+      "note": "Details signing and API key requirements for authenticated endpoints."
+    },
+    {
+      "supports": "credentials",
+      "url": "https://binance-docs.github.io/apidocs/futures/en/",
+      "note": "Outlines API key setup instructions under the Quick Start section."
+    }
+  ],
+  "open_questions": "",
+  "id": 83,
+  "app": "Binance",
+  "category": "Finance and Fintech",
+  "official_url": "https://binance-docs.github.io",
+  "stage": "pass1",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://developers.binance.com/en/docs/products/spot/CHANGELOG"
+    },
+    {
+      "title": "",
+      "url": "https://developers.binance.com/en/docs/products/algo/quick-start"
+    },
+    {
+      "title": "",
+      "url": "https://www.binance.com/en/fee/cryptoFee"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://binance-docs.github.io",
+    "https://binance-docs.github.io/apidocs/spot/en/",
+    "https://binance-docs.github.io/apidocs/futures/en/",
+    "https://www.binance.com/en/my/settings/api-management",
+    "https://www.binance.com/en/fee/cryptoFee"
+  ],
+  "schema_problems": []
+}

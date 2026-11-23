@@ -1,0 +1,127 @@
+# Agent toolkit research: which of 100 apps can become AI-agent toolkits today
+
+> Most of these 100 apps can become agent toolkits today: 77% give developers self-serve credentials, 62 are buildable now, and OAuth2 is the dominant auth (66 apps). The real friction is access gating, not missing APIs, and gating is also where the agent was least accurate.
+
+Researched by an LLM agent with a verification loop and a human-checked audit sample. Data as of 23 Nov 2026.
+
+## Key numbers
+- 77% of apps have self-serve credentials; 19% are gated (paid, approval or sales).
+- 62 apps are ready to build today; 11 need outreach or have no usable API.
+- 53 apps ship an official MCP server; 75 already have a Composio toolkit.
+
+## Data
+- [final.json](final.json): one record per app (auth_methods, credential_access, api_styles, api_breadth, official_mcp, composio_toolkit, buildability, primary_blocker, rationale, confidence, review_status, evidence_urls)
+- [final.csv](final.csv): same data as CSV
+- [analysis.json](analysis.json): every aggregate shown on the page, plus verification and accuracy numbers
+- [index.html](index.html): the human-readable case study
+
+## Vocabulary
+- credential_access: self_serve_free, self_serve_trial, paid_plan, admin_approval, partner_or_sales_gated, open_source_local, unclear
+- buildability: ready_now, ready_with_constraints, outreach_required, not_buildable_now
+- review_status starting with 'human' means a person checked the row against official docs.
+
+## Source
+- Repo: #repo-link-goes-here
+- Live page: #
+
+## Apps
+- Salesforce (CRM and Sales): ready_now, self_serve_free
+- HubSpot (CRM and Sales): ready_now, self_serve_free
+- Pipedrive (CRM and Sales): ready_now, self_serve_free
+- Attio (CRM and Sales): ready_now, self_serve_free
+- Twenty (CRM and Sales): ready_now, self_serve_free
+- Podio (CRM and Sales): ready_now, self_serve_free
+- Zoho CRM (CRM and Sales): ready_now, self_serve_free
+- Close (CRM and Sales): ready_with_constraints, self_serve_trial
+- Copper (CRM and Sales): ready_with_constraints, paid_plan
+- DealCloud (CRM and Sales): outreach_required, partner_or_sales_gated
+- Zendesk (Support and Helpdesk): ready_with_constraints, self_serve_trial
+- Intercom (Support and Helpdesk): ready_now, self_serve_free
+- Freshdesk (Support and Helpdesk): ready_with_constraints, self_serve_trial
+- Front (Support and Helpdesk): ready_now, self_serve_free
+- Pylon (Support and Helpdesk): ready_with_constraints, paid_plan
+- LiveAgent (Support and Helpdesk): ready_with_constraints, self_serve_trial
+- Plain (Support and Helpdesk): ready_now, self_serve_free
+- Help Scout (Support and Helpdesk): ready_with_constraints, self_serve_trial
+- Gorgias (Support and Helpdesk): ready_with_constraints, self_serve_trial
+- Gladly (Support and Helpdesk): outreach_required, partner_or_sales_gated
+- Slack (Communications and Messaging): ready_now, self_serve_free
+- Twilio (Communications and Messaging): ready_now, self_serve_free
+- Zoho Cliq (Communications and Messaging): ready_now, self_serve_free
+- Lark (Larksuite) (Communications and Messaging): ready_now, self_serve_free
+- Pumble (Communications and Messaging): ready_now, self_serve_free
+- Discord (Communications and Messaging): ready_now, self_serve_free
+- Telegram (Communications and Messaging): ready_now, self_serve_free
+- WhatsApp Business (Communications and Messaging): ready_now, self_serve_free
+- Aircall (Communications and Messaging): ready_with_constraints, self_serve_trial
+- Vonage (Communications and Messaging): ready_now, self_serve_free
+- Google Ads (Marketing, Ads, Email and Social): ready_with_constraints, admin_approval
+- Meta Ads (Marketing, Ads, Email and Social): ready_with_constraints, self_serve_free
+- LinkedIn Ads (Marketing, Ads, Email and Social): outreach_required, admin_approval
+- GoHighLevel (Marketing, Ads, Email and Social): ready_with_constraints, paid_plan
+- Mailchimp (Marketing, Ads, Email and Social): ready_now, self_serve_free
+- Klaviyo (Marketing, Ads, Email and Social): ready_now, self_serve_free
+- systeme.io (Marketing, Ads, Email and Social): ready_now, self_serve_free
+- Pinterest (Marketing, Ads, Email and Social): ready_now, self_serve_free
+- Threads (Meta) (Marketing, Ads, Email and Social): ready_with_constraints, admin_approval
+- SendGrid (Marketing, Ads, Email and Social): ready_now, self_serve_free
+- Shopify (Ecommerce): ready_now, self_serve_free
+- WooCommerce (Ecommerce): ready_now, open_source_local
+- BigCommerce (Ecommerce): ready_with_constraints, self_serve_trial
+- Salesforce Commerce Cloud (Ecommerce): outreach_required, partner_or_sales_gated
+- Magento (Adobe Commerce) (Ecommerce): ready_now, open_source_local
+- Squarespace (Ecommerce): ready_with_constraints, paid_plan
+- Ecwid (Ecommerce): ready_with_constraints, paid_plan
+- Gumroad (Ecommerce): ready_now, self_serve_free
+- Amazon Selling Partner (Ecommerce): ready_with_constraints, admin_approval
+- fanbasis (Ecommerce): not_buildable_now, unclear
+- DataForSEO (Data, SEO and Scraping): ready_now, self_serve_free
+- SE Ranking (Data, SEO and Scraping): ready_with_constraints, self_serve_trial
+- Ahrefs (Data, SEO and Scraping): ready_with_constraints, paid_plan
+- MrScraper (Data, SEO and Scraping): ready_now, self_serve_free
+- Apify (Data, SEO and Scraping): ready_now, self_serve_free
+- Firecrawl (Data, SEO and Scraping): ready_now, self_serve_free
+- Bright Data (Data, SEO and Scraping): ready_now, self_serve_free
+- Sherlock (Data, SEO and Scraping): not_buildable_now, open_source_local
+- Waterfall.io (Data, SEO and Scraping): outreach_required, partner_or_sales_gated
+- Clay (Data, SEO and Scraping): ready_now, self_serve_free
+- GitHub (Developer, Infra and Data platforms): ready_now, self_serve_free
+- Vercel (Developer, Infra and Data platforms): ready_now, self_serve_free
+- Netlify (Developer, Infra and Data platforms): ready_now, self_serve_free
+- Cloudflare (Developer, Infra and Data platforms): ready_now, self_serve_free
+- Supabase (Developer, Infra and Data platforms): ready_now, self_serve_free
+- Neo4j (Developer, Infra and Data platforms): ready_now, self_serve_free
+- Snowflake (Developer, Infra and Data platforms): ready_with_constraints, self_serve_trial
+- MongoDB Atlas (Developer, Infra and Data platforms): ready_now, self_serve_free
+- Datadog (Developer, Infra and Data platforms): ready_now, self_serve_free
+- Sentry (Developer, Infra and Data platforms): ready_now, self_serve_free
+- Notion (Productivity and Project Management): ready_now, self_serve_free
+- Airtable (Productivity and Project Management): ready_now, self_serve_free
+- Linear (Productivity and Project Management): ready_now, self_serve_free
+- Jira (Productivity and Project Management): ready_now, self_serve_free
+- Asana (Productivity and Project Management): ready_now, self_serve_free
+- Monday.com (Productivity and Project Management): ready_now, self_serve_free
+- ClickUp (Productivity and Project Management): ready_now, self_serve_free
+- Coda (Productivity and Project Management): ready_now, self_serve_free
+- Smartsheet (Productivity and Project Management): ready_now, self_serve_free
+- Harvest (Productivity and Project Management): ready_with_constraints, self_serve_trial
+- Stripe (Finance and Fintech): ready_now, self_serve_free
+- Plaid (Finance and Fintech): ready_now, self_serve_free
+- Binance (Finance and Fintech): ready_now, self_serve_free
+- Paygent Connect (Finance and Fintech): outreach_required, partner_or_sales_gated
+- iPayX (Finance and Fintech): ready_with_constraints, paid_plan
+- QuickBooks (Finance and Fintech): ready_now, self_serve_free
+- Xero (Finance and Fintech): ready_now, self_serve_free
+- Brex (Finance and Fintech): ready_with_constraints, admin_approval
+- Ramp (Finance and Fintech): ready_now, self_serve_free
+- PitchBook (Finance and Fintech): outreach_required, partner_or_sales_gated
+- NotebookLM (AI, Research and Media-native): ready_with_constraints, self_serve_free
+- Otter AI (AI, Research and Media-native): not_buildable_now, unclear
+- Fathom (AI, Research and Media-native): ready_now, self_serve_free
+- Consensus (AI, Research and Media-native): not_buildable_now, unclear
+- Reducto (AI, Research and Media-native): ready_now, self_serve_free
+- Devin (AI, Research and Media-native): ready_with_constraints, paid_plan
+- higgsfield (AI, Research and Media-native): ready_now, self_serve_free
+- Mermaid CLI (AI, Research and Media-native): ready_with_constraints, open_source_local
+- YouTube Transcript (AI, Research and Media-native): ready_now, self_serve_free
+- Grain (AI, Research and Media-native): None, None

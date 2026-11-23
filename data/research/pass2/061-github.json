@@ -1,0 +1,82 @@
+{
+  "description": "Developer platform providing hosting for software development and version control using Git, plus collaboration features.",
+  "auth_methods": [
+    "oauth2",
+    "bearer_token",
+    "basic",
+    "jwt"
+  ],
+  "auth_notes": "Supports Personal Access Tokens (classic or fine-grained) passed via Bearer tokens, GitHub App tokens (JWT and installation access tokens), and OAuth2 tokens.",
+  "credential_access": "self_serve_free",
+  "credential_notes": "Developers can sign up for a free GitHub account self-serve and generate personal access tokens or register free GitHub Apps at no cost.",
+  "api_styles": [
+    "rest",
+    "graphql"
+  ],
+  "api_breadth": "broad",
+  "api_notes": "Comprehensive REST and GraphQL APIs covering repositories, issues, pull requests, actions, users, and organization management.",
+  "official_mcp": "no",
+  "mcp_notes": "No official MCP server maintained directly by GitHub under their organization, though community implementations exist.",
+  "buildability": "ready_now",
+  "primary_blocker": "none",
+  "rationale": "GitHub provides a robust, publicly documented REST/GraphQL API with self-serve free developer credential access.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "api",
+      "url": "https://docs.github.com/rest",
+      "note": "GitHub REST API documentation covering endpoints and usage"
+    },
+    {
+      "supports": "auth",
+      "url": "https://docs.github.com/rest/authentication/authenticating-to-the-rest-api",
+      "note": "Authentication methods including personal access tokens, apps, and bearer tokens"
+    },
+    {
+      "supports": "credentials",
+      "url": "https://docs.github.com/apps/creating-github-apps",
+      "note": "Guide on creating GitHub Apps and acquiring credentials self-serve"
+    },
+    {
+      "supports": "mcp",
+      "url": "https://github.com/modelcontextprotocol/servers",
+      "note": "List of official and reference MCP servers showing no official GitHub vendor server"
+    }
+  ],
+  "open_questions": "",
+  "id": 61,
+  "app": "GitHub",
+  "category": "Developer, Infra and Data platforms",
+  "official_url": "https://docs.github.com/rest",
+  "stage": "pass2",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://docs.github.com/rest"
+    },
+    {
+      "title": "",
+      "url": "https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api"
+    },
+    {
+      "title": "",
+      "url": "https://docs.github.com/apps/creating-github-apps"
+    },
+    {
+      "title": "",
+      "url": "https://github.com/modelcontextprotocol/servers"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://docs.github.com/rest",
+    "https://docs.github.com/rest/authentication/authenticating-to-the-rest-api",
+    "https://docs.github.com/apps/creating-github-apps",
+    "https://docs.github.com/rest/about-the-rest-api/rate-limits-for-the-rest-api",
+    "https://github.com/modelcontextprotocol/servers"
+  ],
+  "schema_problems": [],
+  "changes": "not flagged, kept from pass1"
+}

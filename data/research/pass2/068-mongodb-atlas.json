@@ -1,0 +1,78 @@
+{
+  "description": "Fully managed cloud database platform for modern applications with vector search, administration, and management capabilities.",
+  "auth_methods": [
+    "oauth2",
+    "api_key",
+    "bearer_token",
+    "basic"
+  ],
+  "auth_notes": "Uses service account access tokens (OAuth 2.0 client credentials) or API keys (HTTP Digest / basic headers) for programmatic administration API access.",
+  "credential_access": "self_serve_free",
+  "credential_notes": "Developers can sign up for a free Atlas account self-service and generate API keys or service account credentials at no cost.",
+  "api_styles": [
+    "rest"
+  ],
+  "api_breadth": "broad",
+  "api_notes": "Covers comprehensive administrative resources (clusters, projects, users, backups) via the Atlas Administration API and embedding/reranking APIs.",
+  "official_mcp": "yes",
+  "mcp_notes": "MongoDB Atlas provides delegated app access settings including Model Context Protocol (MCP) client support.",
+  "buildability": "ready_now",
+  "primary_blocker": "none",
+  "rationale": "MongoDB Atlas offers broad public REST APIs, robust self-service account creation with free tiers, and official support for MCP clients.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "api",
+      "url": "https://mongodb.com/docs/atlas/api",
+      "note": "Atlas Programmatic Access overview detailing APIs, SDKs, and Terraform support."
+    },
+    {
+      "supports": "auth",
+      "url": "https://www.mongodb.com/docs/atlas/configure-api-access/",
+      "note": "Details authentication via service account access tokens (OAuth 2.0) and API keys."
+    },
+    {
+      "supports": "credentials",
+      "url": "https://www.mongodb.com/docs/atlas/configure-api-access/",
+      "note": "Describes self-service creation of service accounts and API keys after creating a free Atlas account."
+    },
+    {
+      "supports": "mcp",
+      "url": "https://www.mongodb.com/docs/atlas/configure-api-access/",
+      "note": "References delegated access settings for Model Context Protocol (MCP) clients."
+    }
+  ],
+  "open_questions": "",
+  "id": 68,
+  "app": "MongoDB Atlas",
+  "category": "Developer, Infra and Data platforms",
+  "official_url": "https://mongodb.com/docs/atlas/api",
+  "stage": "pass2",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://www.mongodb.com/docs/atlas/api/"
+    },
+    {
+      "title": "",
+      "url": "https://www.mongodb.com/docs/atlas/configure-api-access/"
+    },
+    {
+      "title": "",
+      "url": "https://www.mongodb.com/docs/atlas/reference/atlas-limits/"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://mongodb.com/docs/atlas/api",
+    "https://www.mongodb.com/docs/atlas/api/",
+    "https://www.mongodb.com/docs/atlas/reference/api-keys/",
+    "https://www.mongodb.com/docs/atlas/configure-api-access/",
+    "https://www.mongodb.com/docs/atlas/reference/atlas-limits/",
+    "https://www.mongodb.com/docs/atlas/api/data-api/"
+  ],
+  "schema_problems": [],
+  "changes": "not flagged, kept from pass1"
+}

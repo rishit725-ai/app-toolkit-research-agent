@@ -1,0 +1,64 @@
+{
+  "description": "Time tracking and project management software that helps teams track time, manage projects, and streamline invoicing.",
+  "auth_methods": [
+    "oauth2",
+    "bearer_token"
+  ],
+  "auth_notes": "OAuth2 is used for multi-user public integrations, and Personal Access Tokens (Bearer tokens) are used for private apps/scripts.",
+  "credential_access": "self_serve_trial",
+  "credential_notes": "Developers can create a Harvest account with a free 30-day trial and register apps or generate personal access tokens via the developer profile, but ongoing API access requires a paid plan.",
+  "api_styles": [
+    "rest"
+  ],
+  "api_breadth": "broad",
+  "api_notes": "Comprehensive REST API covering timesheets, projects, tasks, clients, invoices, expenses, users, roles, estimates, and reports.",
+  "official_mcp": "no",
+  "mcp_notes": "No official MCP server published by Harvest; community servers may exist.",
+  "buildability": "ready_with_constraints",
+  "primary_blocker": "credential_gate",
+  "rationale": "Harvest provides a robust public REST API and self-serve developer access via a trial, but requires a paid subscription for long-term API usage.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "auth",
+      "url": "https://help.getharvest.com/api-v2/",
+      "note": "API documentation index showing authentication and endpoint categories like timesheets, projects, and invoices."
+    },
+    {
+      "supports": "credentials",
+      "url": "https://harvestapp.com",
+      "note": "Pricing and sign-up page showing a free 30-day trial for getting started with Harvest."
+    },
+    {
+      "supports": "api",
+      "url": "https://help.getharvest.com/api-v2/",
+      "note": "Lists broad API support across clients, company settings, invoices, estimates, expenses, tasks, timesheets, projects, roles, users, and reports."
+    }
+  ],
+  "open_questions": "",
+  "id": 80,
+  "app": "Harvest",
+  "category": "Productivity and Project Management",
+  "official_url": "https://harvestapp.com",
+  "stage": "pass1",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://www.getharvest.com/"
+    },
+    {
+      "title": "",
+      "url": "https://help.getharvest.com/api-v2/"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://harvestapp.com",
+    "https://help.getharvest.com/api-v2/",
+    "https://help.getharvest.com/api-v2/authentication/authentication/authentication/",
+    "https://id.getharvest.com/developers"
+  ],
+  "schema_problems": []
+}

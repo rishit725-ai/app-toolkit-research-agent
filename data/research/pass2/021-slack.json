@@ -1,0 +1,94 @@
+{
+  "description": "A channel-based messaging and collaboration platform for team communication, app integration, and AI agents.",
+  "auth_methods": [
+    "oauth2",
+    "bearer_token"
+  ],
+  "auth_notes": "OAuth 2.0 authorization code flow for public apps; individual bot tokens (xoxb-) and user tokens for workspace apps.",
+  "credential_access": "self_serve_free",
+  "credential_notes": "Developers can sign up for a free Slack account and create apps self-serve via the Slack API dashboard at no cost.",
+  "api_styles": [
+    "rest",
+    "websocket"
+  ],
+  "api_breadth": "broad",
+  "api_notes": "Comprehensive Web API covering messaging, channels, users, files, reactions, workflows, and an official MCP server for agentic interaction.",
+  "official_mcp": "yes",
+  "mcp_notes": "Official Slack Model Context Protocol (MCP) server provided by Slack at https://mcp.slack.com/mcp for connecting AI agents.",
+  "buildability": "ready_now",
+  "primary_blocker": "none",
+  "rationale": "Slack provides extensive public APIs, self-serve free app creation, and an official remote MCP server making it immediately ready for agent toolkits.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "auth",
+      "url": "https://api.slack.com/authentication",
+      "note": "Details OAuth 2.0 and token management for Slack apps."
+    },
+    {
+      "supports": "credentials",
+      "url": "https://api.slack.com/apps",
+      "note": "Allows developers to sign in and create apps self-serve."
+    },
+    {
+      "supports": "api",
+      "url": "https://api.slack.com/",
+      "note": "Documents Web API methods, Events API, and developer tools."
+    },
+    {
+      "supports": "mcp",
+      "url": "https://api.slack.com/",
+      "note": "Provides the official Slack MCP server URL and connection instructions for AI tools."
+    }
+  ],
+  "open_questions": "",
+  "id": 21,
+  "app": "Slack",
+  "category": "Communications and Messaging",
+  "official_url": "https://slack.com",
+  "stage": "pass2",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://slack.com/"
+    },
+    {
+      "title": "",
+      "url": "https://docs.slack.dev/"
+    },
+    {
+      "title": "",
+      "url": "https://docs.slack.dev/authentication/"
+    },
+    {
+      "title": "",
+      "url": "https://api.slack.com/apps/"
+    },
+    {
+      "title": "",
+      "url": "https://api.slack.com/pricing?nojsmode=1"
+    },
+    {
+      "title": "",
+      "url": "https://docs.slack.dev/legacy/legacy-rtm-api"
+    },
+    {
+      "title": "",
+      "url": "https://github.com/slackapi"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://slack.com",
+    "https://api.slack.com/",
+    "https://api.slack.com/authentication",
+    "https://api.slack.com/apps",
+    "https://api.slack.com/pricing",
+    "https://api.slack.com/rtm",
+    "https://github.com/slackapi"
+  ],
+  "schema_problems": [],
+  "changes": "not flagged, kept from pass1"
+}

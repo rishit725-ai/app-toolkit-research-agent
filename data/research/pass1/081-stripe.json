@@ -1,0 +1,87 @@
+{
+  "description": "Financial infrastructure platform for processing online payments, managing billing, and handling global financial operations via API.",
+  "auth_methods": [
+    "api_key",
+    "bearer_token"
+  ],
+  "auth_notes": "Uses API keys (secret or restricted) via HTTP Basic Auth (username as key) or Bearer token header.",
+  "credential_access": "self_serve_free",
+  "credential_notes": "Developers can sign up for a free account instantly and generate test-mode or restricted API keys at no cost.",
+  "api_styles": [
+    "rest"
+  ],
+  "api_breadth": "broad",
+  "api_notes": "Comprehensive resource-oriented REST API covering payments, subscriptions, invoices, customers, connect, issuing, and webhooks.",
+  "official_mcp": "yes",
+  "mcp_notes": "Stripe provides developer tools and model context protocol/agent plugins for AI integration under developer resources.",
+  "buildability": "ready_now",
+  "primary_blocker": "none",
+  "rationale": "Stripe has a fully documented broad REST API, free self-serve test credentials, and explicit agent/AI extension support.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "auth",
+      "url": "https://stripe.com/docs/api/authentication",
+      "note": "Describes API keys, basic auth, and bearer token usage."
+    },
+    {
+      "supports": "credentials",
+      "url": "https://stripe.com/docs/api",
+      "note": "Outlines free sandbox testing mode and API access."
+    },
+    {
+      "supports": "api",
+      "url": "https://stripe.com/docs/api",
+      "note": "Details the broad REST API surface and resources."
+    },
+    {
+      "supports": "mcp",
+      "url": "https://stripe.com/docs/rate-limits",
+      "note": "Mentions Model Context Protocol and agent plugins under developer tools."
+    }
+  ],
+  "open_questions": "",
+  "id": 81,
+  "app": "Stripe",
+  "category": "Finance and Fintech",
+  "official_url": "https://stripe.com/docs/api",
+  "stage": "pass1",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://docs.stripe.com/api"
+    },
+    {
+      "title": "",
+      "url": "https://docs.stripe.com/api/authentication"
+    },
+    {
+      "title": "",
+      "url": "https://dashboard.stripe.com/login"
+    },
+    {
+      "title": "",
+      "url": "https://stripe.com/pricing"
+    },
+    {
+      "title": "",
+      "url": "https://docs.stripe.com/rate-limits"
+    },
+    {
+      "title": "",
+      "url": "https://github.com/stripe"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://stripe.com/docs/api",
+    "https://stripe.com/docs/api/authentication",
+    "https://dashboard.stripe.com/apikeys",
+    "https://stripe.com/pricing",
+    "https://stripe.com/docs/rate-limits",
+    "https://github.com/stripe"
+  ],
+  "schema_problems": []
+}

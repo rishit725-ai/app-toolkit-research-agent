@@ -1,0 +1,59 @@
+{
+  "description": "SEO toolset and marketing data provider for keyword research, backlink analysis, and rank tracking",
+  "auth_methods": [
+    "api_key",
+    "oauth2"
+  ],
+  "auth_notes": "Supports API keys for REST API access and OAuth 2.0 for third-party integrations via Ahrefs Connect.",
+  "credential_access": "paid_plan",
+  "credential_notes": "API access typically requires an Enterprise subscription or paid plan, though free test queries or specific developer tiers may be available.",
+  "api_styles": [
+    "rest"
+  ],
+  "api_breadth": "broad",
+  "api_notes": "Covers keyword research, backlinks, ranking tracking, and brand visibility data through a comprehensive REST API and OpenAPI spec.",
+  "official_mcp": "yes",
+  "mcp_notes": "Ahrefs officially provides documentation and support for connecting Ahrefs data to Model Context Protocol (MCP) clients like Claude and ChatGPT.",
+  "buildability": "ready_with_constraints",
+  "primary_blocker": "none",
+  "rationale": "Ahrefs has a fully documented REST API and official MCP support, but full API access generally requires a paid plan or enterprise subscription.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "api",
+      "url": "https://ahrefs.com/api",
+      "note": "Provides overview of Ahrefs REST API, MCP support, OpenAPI spec, and Ahrefs Connect OAuth guide."
+    }
+  ],
+  "open_questions": "",
+  "id": 53,
+  "app": "Ahrefs",
+  "category": "Data, SEO and Scraping",
+  "official_url": "https://ahrefs.com/api",
+  "stage": "pass2",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://docs.ahrefs.com/"
+    },
+    {
+      "title": "",
+      "url": "https://docs.ahrefs.com/"
+    },
+    {
+      "title": "",
+      "url": "https://docs.ahrefs.com/"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://ahrefs.com/api",
+    "https://ahrefs.com/api/pricing",
+    "https://help.ahrefs.com/en/articles/8885434-how-to-get-an-api-key",
+    "https://ahrefs.com/docs/api"
+  ],
+  "schema_problems": [],
+  "changes": "flagged, not re-checked (time limit), kept from pass1"
+}

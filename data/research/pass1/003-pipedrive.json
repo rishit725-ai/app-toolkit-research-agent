@@ -1,0 +1,84 @@
+{
+  "description": "Web-based sales CRM and pipeline management software",
+  "auth_methods": [
+    "oauth2",
+    "api_key"
+  ],
+  "auth_notes": "OAuth 2.0 auth code for public Marketplace apps; stateless API tokens obtained manually from the Pipedrive app for private/personal use.",
+  "credential_access": "self_serve_free",
+  "credential_notes": "Developers can sign up for a free developer sandbox account and generate API tokens or OAuth credentials self-serve for free.",
+  "api_styles": [
+    "rest"
+  ],
+  "api_breadth": "broad",
+  "api_notes": "Comprehensive RESTful API covering deals, leads, organizations, persons, activities, pipelines, filters, webhooks, and more.",
+  "official_mcp": "yes",
+  "mcp_notes": "Pipedrive provides official capabilities/mention (e.g. Pipedrive MCP listed on features and pipedeive-skills repository on GitHub).",
+  "buildability": "ready_now",
+  "primary_blocker": "none",
+  "rationale": "Pipedrive offers a well-documented public REST API, developer sandbox accounts, free self-serve credentials, and official integration options.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "auth",
+      "url": "https://developers.pipedrive.com/docs/api/v1",
+      "note": "API is stateless and validated against an API token or OAuth 2.0"
+    },
+    {
+      "supports": "credentials",
+      "url": "https://developers.pipedrive.com/docs/api/v1",
+      "note": "Details signing up for a Sandbox Account and obtaining API tokens/credentials"
+    },
+    {
+      "supports": "api",
+      "url": "https://developers.pipedrive.com/docs/api/v1",
+      "note": "Lists the comprehensive RESTful API endpoints for v1 and v2"
+    },
+    {
+      "supports": "mcp",
+      "url": "https://pipedrive.com",
+      "note": "References Pipedrive MCP features"
+    }
+  ],
+  "open_questions": "",
+  "id": 3,
+  "app": "Pipedrive",
+  "category": "CRM and Sales",
+  "official_url": "https://pipedrive.com",
+  "stage": "pass1",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://www.pipedrive.com/"
+    },
+    {
+      "title": "",
+      "url": "https://developers.pipedrive.com/"
+    },
+    {
+      "title": "",
+      "url": "https://developers.pipedrive.com/docs/api/v1"
+    },
+    {
+      "title": "",
+      "url": "https://developers.pipedrive.com/docs/app"
+    },
+    {
+      "title": "",
+      "url": "https://github.com/pipedrive"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://pipedrive.com",
+    "https://developers.pipedrive.com/",
+    "https://developers.pipedrive.com/docs/api/v1",
+    "https://developers.pipedrive.com/docs/api/authentication",
+    "https://developers.pipedrive.com/docs/app",
+    "https://support.pipedrive.com/en/article/pipedrive-api-rate-limiting",
+    "https://github.com/pipedrive"
+  ],
+  "schema_problems": []
+}

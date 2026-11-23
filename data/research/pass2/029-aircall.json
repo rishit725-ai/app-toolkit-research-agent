@@ -1,0 +1,89 @@
+{
+  "description": "An AI-powered customer communications platform combining a modern business phone system, shared inbox, SMS/WhatsApp, and voice/messaging AI agents.",
+  "auth_methods": [
+    "oauth2",
+    "basic"
+  ],
+  "auth_notes": "OAuth 2.0 auth code flow for public marketplace apps; HTTP Basic Authentication using API ID and API Token for private/customer apps.",
+  "credential_access": "paid_plan",
+  "credential_notes": "API access requires a paid subscription tier (Professional plan or higher includes full API access), though a trial or free access entry is available to test the platform.",
+  "api_styles": [
+    "rest",
+    "websocket"
+  ],
+  "api_breadth": "broad",
+  "api_notes": "Comprehensive REST API covering calls, users, teams, conversations, conversation intelligence (transcripts, summaries, sentiment, CSAT), SMS/WhatsApp messaging, outbound campaigns, webhooks, and analytics reports.",
+  "official_mcp": "no",
+  "mcp_notes": "No official MCP server published by the vendor yet; documentation mentions AI integration concepts but does not provide an official MCP package.",
+  "buildability": "ready_with_constraints",
+  "primary_blocker": "credential_gate",
+  "rationale": "Aircall provides a robust, fully documented REST API and webhooks, but full API access requires a paid plan tier (Professional or higher).",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "auth",
+      "url": "https://developer.aircall.io/tutorials/authentication/",
+      "note": "Details OAuth for technology partners and Basic Auth (api_id and api_token) for customers."
+    },
+    {
+      "supports": "credentials",
+      "url": "https://aircall.io/pricing/",
+      "note": "Shows pricing plans, indicating full API access is included in Professional and Enterprise tiers."
+    },
+    {
+      "supports": "api",
+      "url": "https://developer.aircall.io/api-references/",
+      "note": "Comprehensive API reference covering users, calls, conversations, intelligence, messaging, and webhooks."
+    },
+    {
+      "supports": "mcp",
+      "url": "https://developer.aircall.io/",
+      "note": "Developer home page listing available tools (REST API, Webhooks, SDK, MCP mentions coming soon)."
+    }
+  ],
+  "open_questions": "",
+  "id": 29,
+  "app": "Aircall",
+  "category": "Communications and Messaging",
+  "official_url": "https://aircall.io",
+  "stage": "pass2",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://aircall.io/"
+    },
+    {
+      "title": "",
+      "url": "https://developer.aircall.io/"
+    },
+    {
+      "title": "",
+      "url": "https://developers.aircall.io/api-references"
+    },
+    {
+      "title": "",
+      "url": "https://developer.aircall.io/docs/introduction"
+    },
+    {
+      "title": "",
+      "url": "https://developer.aircall.io/docs/introduction"
+    },
+    {
+      "title": "",
+      "url": "https://aircall.io/pricing/"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://aircall.io",
+    "https://developer.aircall.io/",
+    "https://developer.aircall.io/api-references/",
+    "https://developer.aircall.io/tutorials/authentication/",
+    "https://developer.aircall.io/tutorials/getting-started/",
+    "https://aircall.io/pricing/"
+  ],
+  "schema_problems": [],
+  "changes": "not flagged, kept from pass1"
+}

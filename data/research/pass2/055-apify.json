@@ -1,0 +1,91 @@
+{
+  "description": "Cloud platform for web scraping, data extraction, and automation using serverless actors and developer APIs.",
+  "auth_methods": [
+    "api_key",
+    "bearer_token",
+    "oauth2"
+  ],
+  "auth_notes": "Authentication uses secret personal or organization API tokens supplied as Bearer tokens in the Authorization header or via OAuth2 (for hosted MCP and platform integrations).",
+  "credential_access": "self_serve_free",
+  "credential_notes": "Developers can sign up for a free tier account self-serve and generate API tokens directly in the Apify Console.",
+  "api_styles": [
+    "rest",
+    "sdk_or_cli_only"
+  ],
+  "api_breadth": "broad",
+  "api_notes": "The comprehensive REST API and official SDKs cover actor management, builds, runs, actor tasks, storage (datasets, key-value stores, request queues), webhooks, schedules, and user management.",
+  "official_mcp": "yes",
+  "mcp_notes": "Official Apify Model Context Protocol (MCP) server published by Apify at https://mcp.apify.com and open-sourced via apify/apify-mcp-server.",
+  "buildability": "ready_now",
+  "primary_blocker": "none",
+  "rationale": "Apify provides a fully documented REST API, official SDKs, self-serve free credentials, and an official MCP server, making it fully ready to use as an agent toolkit today.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "auth",
+      "url": "https://docs.apify.com/api/v2#/introduction/authentication",
+      "note": "Documents API token creation and authentication via Bearer header or token query parameter."
+    },
+    {
+      "supports": "credentials",
+      "url": "https://docs.apify.com/platform/integrations/api",
+      "note": "Describes how to create personal and scoped API tokens via the Apify Console."
+    },
+    {
+      "supports": "api",
+      "url": "https://docs.apify.com/api/v2",
+      "note": "Full REST API reference covering actors, runs, storage, webhooks, schedules, and usage."
+    },
+    {
+      "supports": "mcp",
+      "url": "https://github.com/apify/apify-mcp-server",
+      "note": "Official repository for the Apify MCP server providing web scraping and automation tools for AI agents."
+    }
+  ],
+  "open_questions": "",
+  "id": 55,
+  "app": "Apify",
+  "category": "Data, SEO and Scraping",
+  "official_url": "https://docs.apify.com",
+  "stage": "pass2",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://docs.apify.com/"
+    },
+    {
+      "title": "",
+      "url": "https://docs.apify.com/api/v2"
+    },
+    {
+      "title": "",
+      "url": "https://docs.apify.com/api/v2"
+    },
+    {
+      "title": "",
+      "url": "https://docs.apify.com/integrations/api"
+    },
+    {
+      "title": "",
+      "url": "https://github.com/apify/apify-client-js"
+    },
+    {
+      "title": "",
+      "url": "https://github.com/apify/apify-mcp-server"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://docs.apify.com",
+    "https://docs.apify.com/api/v2",
+    "https://docs.apify.com/api/v2#/introduction/authentication",
+    "https://docs.apify.com/platform/integrations/api",
+    "https://docs.apify.com/platform/pricing",
+    "https://github.com/apify/apify-client-js",
+    "https://github.com/apify/apify-mcp-server"
+  ],
+  "schema_problems": [],
+  "changes": "not flagged, kept from pass1"
+}

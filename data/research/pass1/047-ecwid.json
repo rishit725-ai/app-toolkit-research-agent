@@ -1,0 +1,65 @@
+{
+  "description": "Ecwid is a multi-channel ecommerce platform enabling businesses to build online stores and sell across websites, social media, and marketplaces.",
+  "auth_methods": [
+    "oauth2",
+    "bearer_token"
+  ],
+  "auth_notes": "OAuth2 auth code flow for public apps; access tokens / store ID and secret tokens for private apps and custom integrations.",
+  "credential_access": "self_serve_free",
+  "credential_notes": "Developers can sign up for a free Ecwid account and create custom apps or private tokens via the control panel self-serve at no cost.",
+  "api_styles": [
+    "rest"
+  ],
+  "api_breadth": "broad",
+  "api_notes": "Comprehensive REST API covering products, categories, orders, customers, discounts, shipping, and payment settings.",
+  "official_mcp": "no",
+  "mcp_notes": "No official MCP server published by Ecwid; community MCP servers may exist independently.",
+  "buildability": "ready_now",
+  "primary_blocker": "none",
+  "rationale": "Ecwid provides fully documented public REST APIs, OAuth2/token authentication, and free self-serve developer account creation.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "auth",
+      "url": "https://api-docs.ecwid.com/reference/authentication",
+      "note": "Describes authentication options including OAuth2 and private app access tokens."
+    },
+    {
+      "supports": "api",
+      "url": "https://api-docs.ecwid.com",
+      "note": "Shows the main documentation portal covering REST API, store themes, webhooks, and JS API features."
+    }
+  ],
+  "open_questions": "",
+  "id": 47,
+  "app": "Ecwid",
+  "category": "Ecommerce",
+  "official_url": "https://api-docs.ecwid.com",
+  "stage": "pass1",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://docs.ecwid.com/"
+    },
+    {
+      "title": "",
+      "url": "https://docs.ecwid.com/"
+    },
+    {
+      "title": "",
+      "url": "https://docs.ecwid.com/"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://api-docs.ecwid.com",
+    "https://api-docs.ecwid.com/",
+    "https://api-docs.ecwid.com/reference/authentication",
+    "https://api-docs.ecwid.com/reference/getting-started-with-rest-api",
+    "https://support.ecwid.com/hc/en-us/articles/360000780211-Ecwid-API-pricing-and-plans",
+    "https://my.ecwid.com/cp/"
+  ],
+  "schema_problems": []
+}

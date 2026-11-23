@@ -1,0 +1,84 @@
+{
+  "description": "Issue tracking, project management, and agile workflow tool for software and business teams.",
+  "auth_methods": [
+    "oauth2",
+    "basic",
+    "bearer_token"
+  ],
+  "auth_notes": "OAuth 2.0 (3LO) for distributed apps, API tokens with basic auth (email + token) for personal scripts/bots, and JWT/scopes for Forge/Connect apps.",
+  "credential_access": "self_serve_free",
+  "credential_notes": "Developers can sign up for a free Atlassian account/cloud site and generate API tokens or configure OAuth apps self-serve via the developer console.",
+  "api_styles": [
+    "rest",
+    "graphql"
+  ],
+  "api_breadth": "broad",
+  "api_notes": "Comprehensive REST API v3 and GraphQL support covering issues, projects, workflows, boards, sprints, filters, users, and comments.",
+  "official_mcp": "yes",
+  "mcp_notes": "Atlassian officially publishes the Atlassian MCP server to bridge Jira and Confluence with external AI solutions.",
+  "buildability": "ready_now",
+  "primary_blocker": "none",
+  "rationale": "Jira provides extensive public REST/GraphQL APIs, self-serve free developer credentials, and an official Atlassian MCP server.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "auth",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/basic-auth-for-rest-apis/",
+      "note": "Documents basic auth using API tokens and Atlassian account email for Jira REST APIs."
+    },
+    {
+      "supports": "credentials",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/intro/",
+      "note": "Outlines REST API v3 authentication options including OAuth 2.0 3LO and ad-hoc personal credentials."
+    },
+    {
+      "supports": "mcp",
+      "url": "https://developer.atlassian.com",
+      "note": "Highlights the official Atlassian MCP server for connecting Jira and Confluence with external AI solutions."
+    },
+    {
+      "supports": "api",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rate-limiting/",
+      "note": "Details rate-limiting structure, quotas, and endpoints for Jira Cloud REST and GraphQL APIs."
+    }
+  ],
+  "open_questions": "",
+  "id": 74,
+  "app": "Jira",
+  "category": "Productivity and Project Management",
+  "official_url": "https://developer.atlassian.com",
+  "stage": "pass2",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://developer.atlassian.com/"
+    },
+    {
+      "title": "",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/intro/"
+    },
+    {
+      "title": "",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/basic-auth-for-rest-apis/"
+    },
+    {
+      "title": "",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rate-limiting/"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://developer.atlassian.com",
+    "https://developer.atlassian.com/cloud/jira/platform/rest/v3/intro/",
+    "https://developer.atlassian.com/cloud/jira/platform/security-for-rest-apis/",
+    "https://developer.atlassian.com/cloud/jira/platform/basic-auth-for-rest-apis/",
+    "https://developer.atlassian.com/cloud/jira/platform/oauth-2-3-legged/",
+    "https://developer.atlassian.com/console/myapps/",
+    "https://developer.atlassian.com/cloud/jira/platform/rate-limiting/",
+    "https://support.atlassian.com/jira-cloud-administration/docs/use-api-tokens/"
+  ],
+  "schema_problems": [],
+  "changes": "not flagged, kept from pass1"
+}

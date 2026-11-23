@@ -1,0 +1,66 @@
+{
+  "description": "An e-commerce platform that allows creators to sell products, services, and memberships directly to consumers.",
+  "auth_methods": [
+    "oauth2",
+    "bearer_token"
+  ],
+  "auth_notes": "Supports OAuth2 for applications and developer access tokens generated via account settings for private use.",
+  "credential_access": "self_serve_free",
+  "credential_notes": "Developers can sign up for a free Gumroad account and generate access tokens or create applications self-serve.",
+  "api_styles": [
+    "rest"
+  ],
+  "api_breadth": "moderate",
+  "api_notes": "Covers products, sales, subscribers, licenses, and resource management via a JSON REST API.",
+  "official_mcp": "no",
+  "mcp_notes": "No official MCP server published by Gumroad; community MCP status is unverified.",
+  "buildability": "ready_now",
+  "primary_blocker": "none",
+  "rationale": "Gumroad provides a documented REST API with self-serve free credential generation via account settings and OAuth.",
+  "confidence": "medium",
+  "evidence": [
+    {
+      "supports": "api",
+      "url": "https://gumroad.com/api",
+      "note": "Gumroad official API landing and documentation reference"
+    },
+    {
+      "supports": "credentials",
+      "url": "https://app.gumroad.com/settings/advanced",
+      "note": "Developer settings page for obtaining application tokens"
+    }
+  ],
+  "open_questions": "Detailed pagination and endpoint granularity specs are limited without full direct browsing access to sub-docs.",
+  "id": 48,
+  "app": "Gumroad",
+  "category": "Ecommerce",
+  "official_url": "https://gumroad.com/api",
+  "stage": "pass1",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://gumroad.com/api"
+    },
+    {
+      "title": "",
+      "url": "https://gumroad.com/login?next=%2Fsettings%2Fadvanced"
+    },
+    {
+      "title": "",
+      "url": "https://gumroad.com/api"
+    },
+    {
+      "title": "",
+      "url": "https://github.com/gumroad"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://gumroad.com/api",
+    "https://app.gumroad.com/settings/advanced",
+    "https://github.com/gumroad/api"
+  ],
+  "schema_problems": []
+}

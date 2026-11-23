@@ -1,0 +1,51 @@
+{
+  "description": "Payment gateway service provider offering credit card, convenience store, carrier, and other online payment processing solutions.",
+  "auth_methods": [
+    "api_key",
+    "hmac_signature"
+  ],
+  "auth_notes": "Uses merchant ID, connection ID, and encrypted or hashed request authentication parameters for secure server-to-server API connectivity.",
+  "credential_access": "partner_or_sales_gated",
+  "credential_notes": "Requires entering into a merchant contract, business screening, and sales outreach to obtain production or sandbox credentials.",
+  "api_styles": [
+    "rest",
+    "soap"
+  ],
+  "api_breadth": "broad",
+  "api_notes": "Covers comprehensive online payment operations including authorization, capture, refunds, cancellations, and status inquiries across multiple payment methods.",
+  "official_mcp": "no",
+  "mcp_notes": "No official Model Context Protocol (MCP) server exists from Paygent; none found in the community either.",
+  "buildability": "outreach_required",
+  "primary_blocker": "admin_or_partner_approval",
+  "rationale": "A developer cannot obtain API credentials self-serve because setting up an account requires commercial contracts and business verification.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "api",
+      "url": "https://www.paygent.co.jp/",
+      "note": "Main site detailing Paygent payment gateway services, connection types, and merchant support."
+    }
+  ],
+  "open_questions": "",
+  "id": 84,
+  "app": "Paygent Connect",
+  "category": "Finance and Fintech",
+  "official_url": "",
+  "stage": "pass1",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://www.paygent.co.jp/"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "",
+    "https://www.paygent.co.jp/",
+    "https://www.paygent.co.jp/developer/",
+    "https://www.paygent.co.jp/service/connect/"
+  ],
+  "schema_problems": []
+}

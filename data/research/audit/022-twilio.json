@@ -1,0 +1,84 @@
+{
+  "description": "Cloud communications platform providing APIs for messaging, voice, email, and verification",
+  "auth_methods": [
+    "basic",
+    "api_key"
+  ],
+  "auth_notes": "HTTP Basic authentication using Account SID and Auth Token, or API Key SID and Secret.",
+  "credential_access": "self_serve_free",
+  "credential_notes": "Developers can sign up for a free trial account instantly with no credit card required to obtain API credentials.",
+  "api_styles": [
+    "rest",
+    "websocket"
+  ],
+  "api_breadth": "broad",
+  "api_notes": "Comprehensive APIs covering SMS, MMS, WhatsApp, Voice, Video, Verify, Lookup, TaskRouter, and Serverless functions.",
+  "official_mcp": "no",
+  "mcp_notes": "No official Model Context Protocol (MCP) server published by Twilio.",
+  "buildability": "ready_now",
+  "primary_blocker": "none",
+  "rationale": "Twilio offers a fully documented public REST API with immediate self-serve trial credentials and comprehensive client SDKs.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "auth",
+      "url": "https://www.twilio.com/docs/usage/api",
+      "note": "Describes Twilio REST API request principles, authentication, and HTTP usage."
+    },
+    {
+      "supports": "credentials",
+      "url": "https://twilio.com",
+      "note": "Indicates sign up for a free trial account with no credit card required to get started."
+    },
+    {
+      "supports": "api",
+      "url": "https://www.twilio.com/docs",
+      "note": "Lists extensive API reference documentation across messaging, voice, video, authentication, and builder tools."
+    },
+    {
+      "supports": "mcp",
+      "url": "https://github.com/twilio",
+      "note": "Official GitHub organization showing helper libraries, CLI, and SDKs, but no official MCP server."
+    }
+  ],
+  "open_questions": "",
+  "id": 22,
+  "app": "Twilio",
+  "category": "Communications and Messaging",
+  "official_url": "https://twilio.com",
+  "stage": "audit",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://www.twilio.com/en-us"
+    },
+    {
+      "title": "",
+      "url": "https://www.twilio.com/docs"
+    },
+    {
+      "title": "",
+      "url": "https://www.twilio.com/docs/usage/api"
+    },
+    {
+      "title": "",
+      "url": "https://www.twilio.com/en-us/pricing"
+    },
+    {
+      "title": "",
+      "url": "https://github.com/twilio"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://twilio.com",
+    "https://www.twilio.com/docs",
+    "https://www.twilio.com/docs/iam/credentials/api-keys",
+    "https://www.twilio.com/docs/usage/api",
+    "https://www.twilio.com/pricing",
+    "https://github.com/twilio"
+  ],
+  "schema_problems": []
+}

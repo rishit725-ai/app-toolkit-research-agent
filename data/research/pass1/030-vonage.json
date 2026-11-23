@@ -1,0 +1,87 @@
+{
+  "description": "Cloud communications platform providing APIs for messaging, voice, video, verification, and network features.",
+  "auth_methods": [
+    "api_key",
+    "bearer_token",
+    "basic",
+    "jwt"
+  ],
+  "auth_notes": "Vonage APIs use API keys and secrets (sent as basic auth or header parameters) and JSON Web Tokens (JWT) for secure application access.",
+  "credential_access": "self_serve_free",
+  "credential_notes": "Developers can sign up for a free developer account on the Vonage dashboard self-serve, which typically includes trial credits.",
+  "api_styles": [
+    "rest",
+    "websocket",
+    "sdk_or_cli_only"
+  ],
+  "api_breadth": "broad",
+  "api_notes": "Comprehensive REST and websocket APIs covering SMS, RCS, WhatsApp, Voice, Video, Verify, and Account management.",
+  "official_mcp": "no",
+  "mcp_notes": "No official Model Context Protocol (MCP) server published by Vonage as of current documentation.",
+  "buildability": "ready_now",
+  "primary_blocker": "none",
+  "rationale": "Vonage provides fully documented public APIs and self-serve free developer accounts, making it immediately buildable into an AI agent toolkit.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "auth",
+      "url": "https://developer.vonage.com/en/concepts/guides/authentication",
+      "note": "Details supported authentication methods including API key/secret, basic auth, and JWT."
+    },
+    {
+      "supports": "credentials",
+      "url": "https://developer.vonage.com",
+      "note": "Developer portal allows users to sign up for a free developer account."
+    },
+    {
+      "supports": "api",
+      "url": "https://developer.vonage.com/en/api",
+      "note": "Lists the comprehensive API surface including messaging, voice, video, and verify APIs."
+    },
+    {
+      "supports": "mcp",
+      "url": "https://github.com/Vonage",
+      "note": "Official Vonage GitHub organization does not list any MCP server repositories."
+    }
+  ],
+  "open_questions": "",
+  "id": 30,
+  "app": "Vonage",
+  "category": "Communications and Messaging",
+  "official_url": "https://developer.vonage.com",
+  "stage": "pass1",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://developer.vonage.com/en/home"
+    },
+    {
+      "title": "",
+      "url": "https://developer.vonage.com/en/getting-started/concepts/authentication"
+    },
+    {
+      "title": "",
+      "url": "https://www.vonage.com/communications-apis/video/pricing/"
+    },
+    {
+      "title": "",
+      "url": "https://developer.vonage.com/en/api"
+    },
+    {
+      "title": "",
+      "url": "https://github.com/vonage"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://developer.vonage.com",
+    "https://developer.vonage.com/en/concepts/guides/authentication",
+    "https://developer.vonage.com/en/concepts/guides/dashboard/manage-account",
+    "https://developer.vonage.com/en/pricing",
+    "https://developer.vonage.com/en/api",
+    "https://github.com/Vonage"
+  ],
+  "schema_problems": []
+}

@@ -1,0 +1,71 @@
+{
+  "description": "Cloud-based data warehousing and data platform for data storage, processing, and analytics",
+  "auth_methods": [
+    "oauth2",
+    "jwt"
+  ],
+  "auth_notes": "Uses OAuth or Key Pair (JWT) to authenticate with the Snowflake server for API requests.",
+  "credential_access": "self_serve_trial",
+  "credential_notes": "Developers can sign up for a trial account self-serve to obtain credentials.",
+  "api_styles": [
+    "rest",
+    "sdk_or_cli_only"
+  ],
+  "api_breadth": "broad",
+  "api_notes": "Provides a SQL API (REST) for running queries, managing deployment, handling DDL/DML, alongside extensive SDKs and drivers.",
+  "official_mcp": "no",
+  "mcp_notes": "No official Model Context Protocol (MCP) server published by Snowflake directly as of current docs.",
+  "buildability": "ready_with_constraints",
+  "primary_blocker": "credential_gate",
+  "rationale": "Snowflake offers a robust SQL REST API and client libraries, but credentials require a trial or paid account rather than a permanent free-tier developer plan.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "api",
+      "url": "https://docs.snowflake.com/en/developer-guide/sql-api/index",
+      "note": "Snowflake SQL API overview and rest capabilities"
+    },
+    {
+      "supports": "auth",
+      "url": "https://docs.snowflake.com/en/developer-guide/sql-api/index",
+      "note": "Mentions OAuth and Key Pair (JWT) authentication methods"
+    },
+    {
+      "supports": "credentials",
+      "url": "https://docs.snowflake.com",
+      "note": "Getting a Trial Account for access"
+    }
+  ],
+  "open_questions": "",
+  "id": 67,
+  "app": "Snowflake",
+  "category": "Developer, Infra and Data platforms",
+  "official_url": "https://docs.snowflake.com",
+  "stage": "pass1",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://docs.snowflake.com/en/"
+    },
+    {
+      "title": "",
+      "url": "https://docs.snowflake.com/en/developer-guide/sql-api/index"
+    },
+    {
+      "title": "",
+      "url": "https://github.com/snowflakedb"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://docs.snowflake.com",
+    "https://docs.snowflake.com/en/developer-guide/sql-api/index",
+    "https://docs.snowflake.com/en/sql-reference/sql-api-authenticate",
+    "https://docs.snowflake.com/en/developer-guide/snowflake-rest-apis",
+    "https://docs.snowflake.com/en/sql-reference/intro",
+    "https://github.com/snowflakedb"
+  ],
+  "schema_problems": []
+}

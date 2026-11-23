@@ -1,0 +1,42 @@
+{
+  "description": "Payment gateway and financial transaction processing platform.",
+  "auth_methods": [
+    "api_key",
+    "bearer_token"
+  ],
+  "auth_notes": "Authentication details are not publicly detailed on the landing docs page.",
+  "credential_access": "unclear",
+  "credential_notes": "No self-serve signup or API key provisioning flow is publicly documented without an active account or contact.",
+  "api_styles": [
+    "rest"
+  ],
+  "api_breadth": "unclear",
+  "api_notes": "The public documentation URL redirects or lacks a comprehensive public API reference.",
+  "official_mcp": "no",
+  "mcp_notes": "No official or community Model Context Protocol (MCP) server exists for iPayX.",
+  "buildability": "not_buildable_now",
+  "primary_blocker": "no_public_api",
+  "rationale": "Public documentation is minimal/inaccessible and lacks self-serve API credentials or specifications.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "api",
+      "url": "https://ipayx.ai/docs",
+      "note": "Official documentation landing page is restricted or lacks public API developer specs."
+    }
+  ],
+  "open_questions": "Does iPayX provide a developer portal or public sandbox for API integration?",
+  "id": 85,
+  "app": "iPayX",
+  "category": "Finance and Fintech",
+  "official_url": "https://ipayx.ai/docs",
+  "stage": "pass1",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://ipayx.ai/docs"
+  ],
+  "schema_problems": []
+}

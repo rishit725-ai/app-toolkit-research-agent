@@ -1,0 +1,56 @@
+{
+  "description": "Website building and ecommerce platform that enables users to create websites, online stores, and manage inventory and orders.",
+  "auth_methods": [
+    "oauth2",
+    "api_key"
+  ],
+  "auth_notes": "Uses OAuth 2.0 for public apps and API keys / access tokens for private integrations and extensions.",
+  "credential_access": "paid_plan",
+  "credential_notes": "API access and developer features require a paid Squarespace website plan or developer account setup.",
+  "api_styles": [
+    "rest"
+  ],
+  "api_breadth": "broad",
+  "api_notes": "Offers Commerce APIs (orders, products, inventory, transactions), webhooks, and Reseller APIs.",
+  "official_mcp": "yes",
+  "mcp_notes": "Squarespace provides official documentation and support for integrating its APIs with AI tools like Claude or ChatGPT.",
+  "buildability": "ready_with_constraints",
+  "primary_blocker": "credential_gate",
+  "rationale": "While robust REST APIs and documentation exist, obtaining live credentials requires a paid plan or specific platform access.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "api",
+      "url": "https://developers.squarespace.com",
+      "note": "Describes Commerce APIs, Reseller APIs, custom code spec, and AI compatibility."
+    }
+  ],
+  "open_questions": "",
+  "id": 46,
+  "app": "Squarespace",
+  "category": "Ecommerce",
+  "official_url": "https://developers.squarespace.com",
+  "stage": "pass1",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://developers.squarespace.com/"
+    },
+    {
+      "title": "",
+      "url": "https://developers.squarespace.com/"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://developers.squarespace.com",
+    "https://developers.squarespace.com/",
+    "https://developers.squarespace.com/authentication",
+    "https://developers.squarespace.com/developer-account",
+    "https://developers.squarespace.com/rate-limits",
+    "https://developers.squarespace.com/api-overview"
+  ],
+  "schema_problems": []
+}

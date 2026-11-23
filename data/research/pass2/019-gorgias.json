@@ -1,0 +1,78 @@
+{
+  "description": "Conversational AI and customer support helpdesk platform for e-commerce.",
+  "auth_methods": [
+    "api_key",
+    "oauth2"
+  ],
+  "auth_notes": "API keys are used for private apps, while OAuth2 is mandatory for public apps.",
+  "credential_access": "self_serve_trial",
+  "credential_notes": "Developers can sign up for a free trial to test the helpdesk and API features, but ongoing production usage requires a paid plan.",
+  "api_styles": [
+    "rest"
+  ],
+  "api_breadth": "broad",
+  "api_notes": "Comprehensive REST API covering accounts, customers, tickets, messages, events, rules, macros, integrations, and user management.",
+  "official_mcp": "no",
+  "mcp_notes": "No official MCP server published by Gorgias.",
+  "buildability": "ready_with_constraints",
+  "primary_blocker": "credential_gate",
+  "rationale": "Gorgias provides a fully documented REST API and self-serve access via trial, but full continuous API access requires a paid subscription plan.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "auth",
+      "url": "https://developers.gorgias.com/reference/authentication",
+      "note": "Details private app API keys and public app OAuth2 requirements."
+    },
+    {
+      "supports": "credentials",
+      "url": "https://www.gorgias.com/pricing",
+      "note": "Shows pricing tiers and free trial signup availability."
+    },
+    {
+      "supports": "api",
+      "url": "https://developers.gorgias.com/reference/authentication",
+      "note": "Lists the comprehensive REST endpoints available across multiple objects."
+    }
+  ],
+  "open_questions": "",
+  "id": 19,
+  "app": "Gorgias",
+  "category": "Support and Helpdesk",
+  "official_url": "https://gorgias.com",
+  "stage": "pass2",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://www.gorgias.com/"
+    },
+    {
+      "title": "",
+      "url": "https://developers.gorgias.com/"
+    },
+    {
+      "title": "",
+      "url": "https://developers.gorgias.com/reference/authentication"
+    },
+    {
+      "title": "",
+      "url": "https://developers.gorgias.com/reference/getting-started"
+    },
+    {
+      "title": "",
+      "url": "https://www.gorgias.com/pricing"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://gorgias.com",
+    "https://developers.gorgias.com/",
+    "https://developers.gorgias.com/reference/authentication",
+    "https://developers.gorgias.com/docs/getting-started",
+    "https://www.gorgias.com/pricing"
+  ],
+  "schema_problems": [],
+  "changes": "not flagged, kept from pass1"
+}

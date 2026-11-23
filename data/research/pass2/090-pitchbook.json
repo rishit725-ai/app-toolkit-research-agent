@@ -1,0 +1,49 @@
+{
+  "description": "Financial data and research platform providing comprehensive private market intelligence on companies, investors, deals, and funds.",
+  "auth_methods": [
+    "other",
+    "api_key"
+  ],
+  "auth_notes": "Authentication details for the direct data API and data feed require enterprise subscription credentials, typically managed through enterprise arrangements.",
+  "credential_access": "partner_or_sales_gated",
+  "credential_notes": "API and direct data feeds require contacting sales or entering into an enterprise contract; no self-serve free developer signup is available.",
+  "api_styles": [
+    "rest"
+  ],
+  "api_breadth": "broad",
+  "api_notes": "Covers comprehensive private market data including companies, deals, investors, funds, and financial metrics.",
+  "official_mcp": "no",
+  "mcp_notes": "No official Model Context Protocol (MCP) server published by PitchBook; only enterprise API and data feeds exist.",
+  "buildability": "outreach_required",
+  "primary_blocker": "admin_or_partner_approval",
+  "rationale": "PitchBook provides a robust API and data platform, but access is strictly sales-gated for enterprise customers rather than being self-serve.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "api",
+      "url": "https://pitchbook.com",
+      "note": "Describes PitchBook Direct Data, API, and Data Feed options for connecting private market datasets to internal systems."
+    }
+  ],
+  "open_questions": "Are there any developer sandbox tiers available post-sales contact?",
+  "id": 90,
+  "app": "PitchBook",
+  "category": "Finance and Fintech",
+  "official_url": "https://pitchbook.com",
+  "stage": "pass2",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://pitchbook.com/"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://pitchbook.com",
+    "https://pitchbook.com/features/pitchbook-api"
+  ],
+  "schema_problems": [],
+  "changes": "not flagged, kept from pass1"
+}

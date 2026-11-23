@@ -1,0 +1,21 @@
+{
+  "stage": "pass1",
+  "records": 99,
+  "flagged": 47,
+  "links_checked": 240,
+  "link_status": {
+    "ok": 227,
+    "dead": 7,
+    "unverifiable": 6
+  },
+  "flag_types": {
+    "auth not found on evidence pages": 44,
+    "dead evidence link(s)": 6,
+    "credential access unclear": 5,
+    "no blocker but verdict is ready_with_constraints": 4,
+    "official MCP claimed without MCP evidence": 4,
+    "schema problem": 2,
+    "agent confidence low": 1,
+    "not researched": 1
+  }
+}

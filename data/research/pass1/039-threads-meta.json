@@ -1,0 +1,68 @@
+{
+  "description": "Create and publish posts, retrieve media and profiles, moderate replies, and access insights on Meta's Threads platform.",
+  "auth_methods": [
+    "oauth2"
+  ],
+  "auth_notes": "OAuth 2.0 authorization code flow yielding short-lived user access tokens that can be exchanged for long-lived tokens.",
+  "credential_access": "self_serve_free",
+  "credential_notes": "Developers can create a Meta app for free via the Meta App Dashboard and select the Threads use case.",
+  "api_styles": [
+    "rest"
+  ],
+  "api_breadth": "moderate",
+  "api_notes": "Covers posting, media retrieval, profile access, reply management, insights, and webhooks via the Threads Graph API.",
+  "official_mcp": "no",
+  "mcp_notes": "No official vendor-published MCP server found; community MCP servers may exist separately.",
+  "buildability": "ready_with_constraints",
+  "primary_blocker": "admin_or_partner_approval",
+  "rationale": "While credentials are self-serve and free, publishing/interacting with external user accounts beyond added test users requires App Review and app publication.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "auth",
+      "url": "https://developers.facebook.com/docs/threads/get-started",
+      "note": "Describes OAuth 2.0 user access tokens, short-lived and long-lived tokens, and the Authorization Window."
+    },
+    {
+      "supports": "credentials",
+      "url": "https://developers.facebook.com/docs/threads/get-started",
+      "note": "Explains creating a Meta app with the Threads use case and adding Threads testers."
+    },
+    {
+      "supports": "api",
+      "url": "https://developers.facebook.com/docs/threads",
+      "note": "Outlines endpoints for posts, profiles, replies, insights, webhooks, and oEmbed."
+    }
+  ],
+  "open_questions": "",
+  "id": 39,
+  "app": "Threads (Meta)",
+  "category": "Marketing, Ads, Email and Social",
+  "official_url": "https://developers.facebook.com/docs/threads",
+  "stage": "pass1",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://developers.facebook.com/documentation/threads"
+    },
+    {
+      "title": "",
+      "url": "https://developers.facebook.com/documentation/threads/get-started"
+    },
+    {
+      "title": "",
+      "url": "https://developers.facebook.com/documentation/threads/overview"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://developers.facebook.com/docs/threads",
+    "https://developers.facebook.com/docs/threads/get-started",
+    "https://developers.facebook.com/docs/threads/overview",
+    "https://developers.facebook.com/docs/threads/access-and-authentication",
+    "https://developers.facebook.com/docs/threads/rate-limits"
+  ],
+  "schema_problems": []
+}

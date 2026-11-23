@@ -1,0 +1,43 @@
+{
+  "description": "Payment platform and financial transaction management infrastructure",
+  "auth_methods": [
+    "unclear"
+  ],
+  "auth_notes": "Unable to verify authentication details due to inaccessible documentation pages.",
+  "credential_access": "unclear",
+  "credential_notes": "No public information or documentation could be retrieved regarding how to obtain credentials.",
+  "api_styles": [
+    "none"
+  ],
+  "api_breadth": "unclear",
+  "api_notes": "API documentation is not accessible for review.",
+  "official_mcp": "unclear",
+  "mcp_notes": "No official MCP server information found.",
+  "buildability": "not_buildable_now",
+  "primary_blocker": "no_public_api",
+  "rationale": "The documentation URL is inaccessible and no public API or credential mechanism can be confirmed.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "buildability",
+      "url": "https://ipayx.ai/docs",
+      "note": "Documentation page is inaccessible or restricted."
+    }
+  ],
+  "open_questions": "Could not access https://ipayx.ai/docs to verify API existence, authentication, or credential access.",
+  "id": 85,
+  "app": "iPayX",
+  "category": "Finance and Fintech",
+  "official_url": "https://ipayx.ai/docs",
+  "stage": "audit",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://ipayx.ai/docs"
+  ],
+  "schema_problems": [
+    "auth_methods has value outside vocabulary: ['unclear']"
+  ]
+}

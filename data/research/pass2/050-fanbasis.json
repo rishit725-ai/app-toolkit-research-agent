@@ -1,0 +1,47 @@
+{
+  "description": "FanBasis (now Commas) is an all-in-one ecommerce platform for creators to sell courses, communities, webinars, and funnels.",
+  "auth_methods": [
+    "none"
+  ],
+  "auth_notes": "No public authentication methods or public API documentation are available.",
+  "credential_access": "unclear",
+  "credential_notes": "No developer portal, self-serve sign-up, or API documentation exists for external developers.",
+  "api_styles": [
+    "none"
+  ],
+  "api_breadth": "none",
+  "api_notes": "There is no public API surface available for integration.",
+  "official_mcp": "no",
+  "mcp_notes": "",
+  "buildability": "not_buildable_now",
+  "primary_blocker": "no_public_api",
+  "rationale": "The platform provides no public API or developer documentation to build an agent integration.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "buildability",
+      "url": "https://fanbasis.com",
+      "note": "Main page shows the platform is a creator commerce tool (Commas) with no developer or API links."
+    }
+  ],
+  "open_questions": "Does FanBasis / Commas plan to release a public developer API or webhooks in the future?",
+  "id": 50,
+  "app": "fanbasis",
+  "category": "Ecommerce",
+  "official_url": "https://fanbasis.com",
+  "stage": "pass2",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://commas.com/"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://fanbasis.com"
+  ],
+  "schema_problems": [],
+  "changes": "not flagged, kept from pass1"
+}

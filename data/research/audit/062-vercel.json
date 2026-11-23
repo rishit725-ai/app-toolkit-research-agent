@@ -1,0 +1,88 @@
+{
+  "description": "Vercel cloud platform for deploying and scaling web applications with a comprehensive REST API and SDKs.",
+  "auth_methods": [
+    "bearer_token",
+    "oauth2"
+  ],
+  "auth_notes": "Uses Vercel Access Tokens passed as a Bearer token in the Authorization header for personal/team resource access, and OAuth2 for public marketplace integrations.",
+  "credential_access": "self_serve_free",
+  "credential_notes": "Any developer can sign up for a free Hobby plan account and instantly generate personal access tokens directly from their account settings.",
+  "api_styles": [
+    "rest",
+    "sdk_or_cli_only"
+  ],
+  "api_breadth": "broad",
+  "api_notes": "Comprehensive REST API covering deployments, domains, projects, environment variables, storage, teams, webhooks, and more.",
+  "official_mcp": "yes",
+  "mcp_notes": "Vercel publishes official Model Context Protocol (MCP) features and documentation via its platform tools (Vercel MCP).",
+  "buildability": "ready_now",
+  "primary_blocker": "none",
+  "rationale": "Vercel provides a fully documented public REST API accessible immediately using self-serve personal access tokens generated on a free account.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "auth",
+      "url": "https://vercel.com/docs/rest-api",
+      "note": "Describes using Vercel Access Tokens via Bearer token authorization for the REST API."
+    },
+    {
+      "supports": "credentials",
+      "url": "https://github.com/vercel/vercel",
+      "note": "GitHub repository documentation outlining how developers can create personal access tokens from their Vercel account settings for API and CLI usage."
+    },
+    {
+      "supports": "api",
+      "url": "https://vercel.com/docs/rest-api",
+      "note": "Lists broad REST API endpoint groups across deployments, projects, domains, and environment configurations."
+    },
+    {
+      "supports": "mcp",
+      "url": "https://vercel.com/docs/rest-api",
+      "note": "References Vercel MCP capabilities within the documentation layout."
+    }
+  ],
+  "open_questions": "",
+  "id": 62,
+  "app": "Vercel",
+  "category": "Developer, Infra and Data platforms",
+  "official_url": "https://vercel.com/docs/rest-api",
+  "stage": "audit",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://vercel.com/docs/rest-api"
+    },
+    {
+      "title": "",
+      "url": "https://vercel.com/docs/rest-api"
+    },
+    {
+      "title": "",
+      "url": "https://vercel.com/docs/rest-api"
+    },
+    {
+      "title": "",
+      "url": "https://vercel.com/pricing"
+    },
+    {
+      "title": "",
+      "url": "https://github.com/vercel/vercel"
+    },
+    {
+      "title": "",
+      "url": "https://vercel.com/docs/integrations/create-integration"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://vercel.com/docs/rest-api",
+    "https://vercel.com/docs/rest-api#authentication",
+    "https://vercel.com/docs/rest-api#introduction",
+    "https://vercel.com/pricing",
+    "https://github.com/vercel/vercel",
+    "https://vercel.com/docs/integrations/create-integration"
+  ],
+  "schema_problems": []
+}

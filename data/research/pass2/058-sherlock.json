@@ -1,0 +1,50 @@
+{
+  "description": "Hunt down social media accounts by username across social networks",
+  "auth_methods": [
+    "none"
+  ],
+  "auth_notes": "No authentication required as it is a command-line open-source tool.",
+  "credential_access": "open_source_local",
+  "credential_notes": "Open-source software, freely available locally via GitHub or package managers like pipx and Docker.",
+  "api_styles": [
+    "sdk_or_cli_only",
+    "none"
+  ],
+  "api_breadth": "none",
+  "api_notes": "Provides a CLI and Python package structure, but no remote Web API.",
+  "official_mcp": "no",
+  "mcp_notes": "No official MCP server exists; community integration would need to wrap the local CLI or Python library.",
+  "buildability": "not_buildable_now",
+  "primary_blocker": "no_public_api",
+  "rationale": "Sherlock is a local command-line and Python tool without a public web API, making it unsuitable as a direct remote cloud agent toolkit without local hosting wrappers.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "buildability",
+      "url": "https://github.com/sherlock-project/sherlock",
+      "note": "GitHub repository showing Sherlock is an open-source command-line tool with no remote web API."
+    }
+  ],
+  "open_questions": "",
+  "id": 58,
+  "app": "Sherlock",
+  "category": "Data, SEO and Scraping",
+  "official_url": "https://github.com/sherlock-project/sherlock",
+  "stage": "pass2",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://github.com/sherlock-project/sherlock"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://github.com/sherlock-project/sherlock",
+    "https://github.com/sherlock-project/sherlock/blob/master/README.md",
+    "https://github.com/sherlock-project/sherlock/blob/master/CONTRIBUTING.md"
+  ],
+  "schema_problems": [],
+  "changes": "not flagged, kept from pass1"
+}

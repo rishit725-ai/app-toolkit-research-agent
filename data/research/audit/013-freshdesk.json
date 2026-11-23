@@ -1,0 +1,87 @@
+{
+  "description": "Cloud-based customer support software and ticketing platform by Freshworks",
+  "auth_methods": [
+    "api_key",
+    "oauth2"
+  ],
+  "auth_notes": "API key authentication via HTTP basic auth (apikey:X or Base64 encoded) and OAuth 2.0 scopes for public apps.",
+  "credential_access": "self_serve_trial",
+  "credential_notes": "Developers can sign up for a 14-day free trial (which starts on the Enterprise plan) to get API credentials/keys via profile settings.",
+  "api_styles": [
+    "rest"
+  ],
+  "api_breadth": "broad",
+  "api_notes": "Comprehensive REST API v2 covering tickets, conversations, contacts, companies, agents, automation rules, business hours, and custom objects.",
+  "official_mcp": "yes",
+  "mcp_notes": "Freshdesk publishes an official Model Context Protocol (MCP) server integration to connect Freshdesk with AI tools and apps.",
+  "buildability": "ready_with_constraints",
+  "primary_blocker": "none",
+  "rationale": "Freshdesk provides a fully documented REST API and official MCP support, accessible via a standard 14-day trial or paid subscription.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "auth",
+      "url": "https://developers.freshdesk.com/api/#authentication",
+      "note": "Details API key authentication, HTTP basic auth usage, and OAuth 2.0 scopes."
+    },
+    {
+      "supports": "credentials",
+      "url": "https://support.freshdesk.com/en/support/solutions/articles/215517-how-to-find-your-api-key",
+      "note": "Explains how agents find their API key in profile settings after login/verification."
+    },
+    {
+      "supports": "api",
+      "url": "https://developers.freshdesk.com/api/",
+      "note": "Complete REST v2 API reference covering tickets, contacts, agents, companies, etc."
+    },
+    {
+      "supports": "mcp",
+      "url": "https://freshdesk.com",
+      "note": "Mentions the Freshdesk MCP server integration to connect with AI tools and apps."
+    },
+    {
+      "supports": "buildability",
+      "url": "https://freshdesk.com/pricing",
+      "note": "Outlines 14-day free trial providing access to the platform and features."
+    }
+  ],
+  "open_questions": "",
+  "id": 13,
+  "app": "Freshdesk",
+  "category": "Support and Helpdesk",
+  "official_url": "https://freshdesk.com",
+  "stage": "audit",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://www.freshworks.com/freshdesk/"
+    },
+    {
+      "title": "",
+      "url": "https://developers.freshdesk.com/api/"
+    },
+    {
+      "title": "",
+      "url": "https://developers.freshdesk.com/api/"
+    },
+    {
+      "title": "",
+      "url": "https://support.freshdesk.com/support/solutions/articles/215517-how-to-find-your-api-key"
+    },
+    {
+      "title": "",
+      "url": "https://www.freshworks.com/freshdesk/pricing/"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://freshdesk.com",
+    "https://developers.freshdesk.com/api/",
+    "https://developers.freshdesk.com/api/#authentication",
+    "https://support.freshdesk.com/en/support/solutions/articles/215517-how-to-find-your-api-key",
+    "https://freshdesk.com/pricing"
+  ],
+  "schema_problems": []
+}

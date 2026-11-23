@@ -1,0 +1,92 @@
+stage,id,app,field,agent,truth,human_note
+pass1,10,DealCloud,auth_methods,api_key;bearer_token,api_key;bearer_token;oauth2,Changed the blocker: API/MCP access requires an existing licensed tenant plus admin or account-manager enablement.
+pass1,10,DealCloud,credential_access,paid_plan,partner_or_sales_gated,Changed the blocker: API/MCP access requires an existing licensed tenant plus admin or account-manager enablement.
+pass1,10,DealCloud,buildability,ready_with_constraints,outreach_required,Changed the blocker: API/MCP access requires an existing licensed tenant plus admin or account-manager enablement.
+pass1,10,DealCloud,primary_blocker,credential_gate,admin_or_partner_approval,Changed the blocker: API/MCP access requires an existing licensed tenant plus admin or account-manager enablement.
+pass1,8,Close,auth_methods,api_key;oauth2,api_key;basic;oauth2;bearer_token,Added HTTP Basic for API keys and removed sdk_or_cli_only because Close has a documented REST API.
+pass1,8,Close,primary_blocker,none,credential_gate,Added HTTP Basic for API keys and removed sdk_or_cli_only because Close has a documented REST API.
+pass1,13,Freshdesk,auth_methods,api_key;oauth2,api_key;basic;oauth2;bearer_token,Added Basic/Bearer schemes and set credential_gate because working access is tied to the trial or a paid account.
+pass1,13,Freshdesk,credential_access,self_serve_free,self_serve_trial,Added Basic/Bearer schemes and set credential_gate because working access is tied to the trial or a paid account.
+pass1,13,Freshdesk,buildability,ready_now,ready_with_constraints,Added Basic/Bearer schemes and set credential_gate because working access is tied to the trial or a paid account.
+pass1,13,Freshdesk,primary_blocker,none,credential_gate,Added Basic/Bearer schemes and set credential_gate because working access is tied to the trial or a paid account.
+pass1,20,Gladly,auth_methods,bearer_token;oauth2,api_key;basic,Gladly requires an active commercial customer account; an admin must then grant API User permission.
+pass1,29,Aircall,auth_methods,basic;oauth2,api_key;basic;oauth2;bearer_token,"Added API key auth, removed websocket (Aircall documents REST plus webhooks), and recorded the trial credential gate."
+pass1,29,Aircall,credential_access,paid_plan,self_serve_trial,"Added API key auth, removed websocket (Aircall documents REST plus webhooks), and recorded the trial credential gate."
+pass1,29,Aircall,api_styles,rest;websocket,rest,"Added API key auth, removed websocket (Aircall documents REST plus webhooks), and recorded the trial credential gate."
+pass1,22,Twilio,api_styles,rest;sdk_or_cli_only,rest;websocket,Twilio now publishes an official hosted MCP documentation server.
+pass1,22,Twilio,official_mcp,unclear,yes,Twilio now publishes an official hosted MCP documentation server.
+pass1,39,Threads (Meta),auth_methods,oauth2,oauth2;bearer_token,Added bearer access tokens and classified production credential access as app-review approval rather than self-serve.
+pass1,39,Threads (Meta),credential_access,self_serve_free,admin_approval,Added bearer access tokens and classified production credential access as app-review approval rather than self-serve.
+pass1,37,systeme.io,auth_methods,api_key;other,api_key,systeme.io now documents and hosts its own MCP server.
+pass1,37,systeme.io,credential_access,unclear,self_serve_free,systeme.io now documents and hosts its own MCP server.
+pass1,37,systeme.io,official_mcp,no,yes,systeme.io now documents and hosts its own MCP server.
+pass1,37,systeme.io,buildability,not_buildable_now,ready_now,systeme.io now documents and hosts its own MCP server.
+pass1,37,systeme.io,primary_blocker,unstable_or_undocumented,none,systeme.io now documents and hosts its own MCP server.
+pass1,47,Ecwid,credential_access,self_serve_free,paid_plan,"Ecwid REST API access requires a Venture, Business, or Unlimited paid plan; free test upgrades require vendor contact."
+pass1,47,Ecwid,buildability,ready_now,ready_with_constraints,"Ecwid REST API access requires a Venture, Business, or Unlimited paid plan; free test upgrades require vendor contact."
+pass1,47,Ecwid,primary_blocker,none,credential_gate,"Ecwid REST API access requires a Venture, Business, or Unlimited paid plan; free test upgrades require vendor contact."
+pass1,43,BigCommerce,credential_access,self_serve_free,self_serve_trial,"Removed websocket because BigCommerce exposes REST and GraphQL APIs plus webhooks, not a WebSocket API."
+pass1,43,BigCommerce,buildability,ready_now,ready_with_constraints,"Removed websocket because BigCommerce exposes REST and GraphQL APIs plus webhooks, not a WebSocket API."
+pass1,43,BigCommerce,primary_blocker,none,credential_gate,"Removed websocket because BigCommerce exposes REST and GraphQL APIs plus webhooks, not a WebSocket API."
+pass1,51,DataForSEO,credential_access,self_serve_trial,self_serve_free,
+pass1,52,SE Ranking,credential_access,paid_plan,self_serve_trial,SE Ranking offers a 14-day API trial and now includes an official remote MCP server.
+pass1,62,Vercel,auth_methods,bearer_token,bearer_token;oauth2,Removed sdk_or_cli_only because Vercel exposes a public documented REST API.
+pass1,67,Snowflake,auth_methods,jwt;oauth2,oauth2;jwt;bearer_token;other,"Added bearer-token authentication, removed sdk_or_cli_only, and recorded Snowflake managed MCP as official."
+pass1,67,Snowflake,api_styles,rest;sdk_or_cli_only,rest,"Added bearer-token authentication, removed sdk_or_cli_only, and recorded Snowflake managed MCP as official."
+pass1,67,Snowflake,official_mcp,no,yes,"Added bearer-token authentication, removed sdk_or_cli_only, and recorded Snowflake managed MCP as official."
+pass1,72,Airtable,official_mcp,no,yes,Airtable now publishes an official remote MCP server.
+pass1,81,Stripe,auth_methods,api_key;bearer_token,api_key;basic;bearer_token,
+pass1,85,iPayX,auth_methods,api_key;bearer_token,api_key;bearer_token;hmac_signature,"The docs now show bearer API keys, HMAC-signed webhooks, a REST API, and an official MCP server; production API plans are paid."
+pass1,85,iPayX,credential_access,unclear,paid_plan,"The docs now show bearer API keys, HMAC-signed webhooks, a REST API, and an official MCP server; production API plans are paid."
+pass1,85,iPayX,official_mcp,no,yes,"The docs now show bearer API keys, HMAC-signed webhooks, a REST API, and an official MCP server; production API plans are paid."
+pass1,85,iPayX,buildability,not_buildable_now,ready_with_constraints,"The docs now show bearer API keys, HMAC-signed webhooks, a REST API, and an official MCP server; production API plans are paid."
+pass1,85,iPayX,primary_blocker,no_public_api,credential_gate,"The docs now show bearer API keys, HMAC-signed webhooks, a REST API, and an official MCP server; production API plans are paid."
+pass1,96,Devin,auth_methods,bearer_token,bearer_token;api_key,Set credential_gate because Devin API access requires a paid Teams or Enterprise account.
+pass1,98,Mermaid CLI,buildability,ready_now,ready_with_constraints,Classified as constrained because it runs locally and provides no hosted API.
+pass1,98,Mermaid CLI,primary_blocker,none,local_only,Classified as constrained because it runs locally and provides no hosted API.
+pass2,10,DealCloud,auth_methods,api_key;bearer_token,api_key;bearer_token;oauth2,Changed the blocker: API/MCP access requires an existing licensed tenant plus admin or account-manager enablement.
+pass2,10,DealCloud,credential_access,paid_plan,partner_or_sales_gated,Changed the blocker: API/MCP access requires an existing licensed tenant plus admin or account-manager enablement.
+pass2,10,DealCloud,buildability,ready_with_constraints,outreach_required,Changed the blocker: API/MCP access requires an existing licensed tenant plus admin or account-manager enablement.
+pass2,10,DealCloud,primary_blocker,credential_gate,admin_or_partner_approval,Changed the blocker: API/MCP access requires an existing licensed tenant plus admin or account-manager enablement.
+pass2,8,Close,auth_methods,api_key;oauth2,api_key;basic;oauth2;bearer_token,Added HTTP Basic for API keys and removed sdk_or_cli_only because Close has a documented REST API.
+pass2,8,Close,primary_blocker,none,credential_gate,Added HTTP Basic for API keys and removed sdk_or_cli_only because Close has a documented REST API.
+pass2,13,Freshdesk,auth_methods,api_key;oauth2,api_key;basic;oauth2;bearer_token,Added Basic/Bearer schemes and set credential_gate because working access is tied to the trial or a paid account.
+pass2,13,Freshdesk,credential_access,self_serve_free,self_serve_trial,Added Basic/Bearer schemes and set credential_gate because working access is tied to the trial or a paid account.
+pass2,13,Freshdesk,buildability,ready_now,ready_with_constraints,Added Basic/Bearer schemes and set credential_gate because working access is tied to the trial or a paid account.
+pass2,13,Freshdesk,primary_blocker,none,credential_gate,Added Basic/Bearer schemes and set credential_gate because working access is tied to the trial or a paid account.
+pass2,20,Gladly,auth_methods,api_key;bearer_token,api_key;basic,Gladly requires an active commercial customer account; an admin must then grant API User permission.
+pass2,29,Aircall,auth_methods,basic;oauth2,api_key;basic;oauth2;bearer_token,"Added API key auth, removed websocket (Aircall documents REST plus webhooks), and recorded the trial credential gate."
+pass2,29,Aircall,credential_access,paid_plan,self_serve_trial,"Added API key auth, removed websocket (Aircall documents REST plus webhooks), and recorded the trial credential gate."
+pass2,29,Aircall,api_styles,rest;websocket,rest,"Added API key auth, removed websocket (Aircall documents REST plus webhooks), and recorded the trial credential gate."
+pass2,22,Twilio,api_styles,rest;sdk_or_cli_only,rest;websocket,Twilio now publishes an official hosted MCP documentation server.
+pass2,22,Twilio,official_mcp,unclear,yes,Twilio now publishes an official hosted MCP documentation server.
+pass2,39,Threads (Meta),auth_methods,oauth2,oauth2;bearer_token,Added bearer access tokens and classified production credential access as app-review approval rather than self-serve.
+pass2,39,Threads (Meta),credential_access,self_serve_free,admin_approval,Added bearer access tokens and classified production credential access as app-review approval rather than self-serve.
+pass2,37,systeme.io,auth_methods,api_key;other,api_key,systeme.io now documents and hosts its own MCP server.
+pass2,37,systeme.io,credential_access,unclear,self_serve_free,systeme.io now documents and hosts its own MCP server.
+pass2,37,systeme.io,official_mcp,no,yes,systeme.io now documents and hosts its own MCP server.
+pass2,37,systeme.io,buildability,not_buildable_now,ready_now,systeme.io now documents and hosts its own MCP server.
+pass2,37,systeme.io,primary_blocker,unstable_or_undocumented,none,systeme.io now documents and hosts its own MCP server.
+pass2,47,Ecwid,credential_access,self_serve_free,paid_plan,"Ecwid REST API access requires a Venture, Business, or Unlimited paid plan; free test upgrades require vendor contact."
+pass2,47,Ecwid,buildability,ready_now,ready_with_constraints,"Ecwid REST API access requires a Venture, Business, or Unlimited paid plan; free test upgrades require vendor contact."
+pass2,47,Ecwid,primary_blocker,none,credential_gate,"Ecwid REST API access requires a Venture, Business, or Unlimited paid plan; free test upgrades require vendor contact."
+pass2,43,BigCommerce,credential_access,self_serve_free,self_serve_trial,"Removed websocket because BigCommerce exposes REST and GraphQL APIs plus webhooks, not a WebSocket API."
+pass2,43,BigCommerce,buildability,ready_now,ready_with_constraints,"Removed websocket because BigCommerce exposes REST and GraphQL APIs plus webhooks, not a WebSocket API."
+pass2,43,BigCommerce,primary_blocker,none,credential_gate,"Removed websocket because BigCommerce exposes REST and GraphQL APIs plus webhooks, not a WebSocket API."
+pass2,51,DataForSEO,credential_access,self_serve_trial,self_serve_free,
+pass2,52,SE Ranking,buildability,ready_now,ready_with_constraints,SE Ranking offers a 14-day API trial and now includes an official remote MCP server.
+pass2,52,SE Ranking,primary_blocker,none,credential_gate,SE Ranking offers a 14-day API trial and now includes an official remote MCP server.
+pass2,62,Vercel,auth_methods,bearer_token,bearer_token;oauth2,Removed sdk_or_cli_only because Vercel exposes a public documented REST API.
+pass2,67,Snowflake,auth_methods,jwt;oauth2,oauth2;jwt;bearer_token;other,"Added bearer-token authentication, removed sdk_or_cli_only, and recorded Snowflake managed MCP as official."
+pass2,67,Snowflake,api_styles,rest;sdk_or_cli_only,rest,"Added bearer-token authentication, removed sdk_or_cli_only, and recorded Snowflake managed MCP as official."
+pass2,67,Snowflake,official_mcp,no,yes,"Added bearer-token authentication, removed sdk_or_cli_only, and recorded Snowflake managed MCP as official."
+pass2,72,Airtable,official_mcp,no,yes,Airtable now publishes an official remote MCP server.
+pass2,81,Stripe,auth_methods,api_key;bearer_token,api_key;basic;bearer_token,
+pass2,85,iPayX,auth_methods,api_key;bearer_token,api_key;bearer_token;hmac_signature,"The docs now show bearer API keys, HMAC-signed webhooks, a REST API, and an official MCP server; production API plans are paid."
+pass2,85,iPayX,credential_access,unclear,paid_plan,"The docs now show bearer API keys, HMAC-signed webhooks, a REST API, and an official MCP server; production API plans are paid."
+pass2,85,iPayX,official_mcp,no,yes,"The docs now show bearer API keys, HMAC-signed webhooks, a REST API, and an official MCP server; production API plans are paid."
+pass2,85,iPayX,buildability,not_buildable_now,ready_with_constraints,"The docs now show bearer API keys, HMAC-signed webhooks, a REST API, and an official MCP server; production API plans are paid."
+pass2,85,iPayX,primary_blocker,no_public_api,credential_gate,"The docs now show bearer API keys, HMAC-signed webhooks, a REST API, and an official MCP server; production API plans are paid."
+pass2,96,Devin,auth_methods,bearer_token,bearer_token;api_key,Set credential_gate because Devin API access requires a paid Teams or Enterprise account.
+pass2,98,Mermaid CLI,buildability,ready_now,ready_with_constraints,Classified as constrained because it runs locally and provides no hosted API.
+pass2,98,Mermaid CLI,primary_blocker,none,local_only,Classified as constrained because it runs locally and provides no hosted API.

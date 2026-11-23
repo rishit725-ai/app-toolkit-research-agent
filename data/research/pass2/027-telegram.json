@@ -1,0 +1,90 @@
+{
+  "description": "Cloud-based instant messaging platform offering Bot API and MTProto API for building bots and clients.",
+  "auth_methods": [
+    "api_key",
+    "bearer_token"
+  ],
+  "auth_notes": "Bot API uses a token in the URL path (e.g. /bot<token>/METHOD); MTProto API uses api_id, api_hash, and auth keys.",
+  "credential_access": "self_serve_free",
+  "credential_notes": "Developers can generate bot tokens instantly and free via @BotFather, and get MTProto API credentials free via my.telegram.org.",
+  "api_styles": [
+    "rest",
+    "sdk_or_cli_only"
+  ],
+  "api_breadth": "broad",
+  "api_notes": "Extensive API support covering messaging, media, chat administration, payments, inline bots, and updates via webhooks or long polling.",
+  "official_mcp": "no",
+  "mcp_notes": "No official Model Context Protocol (MCP) server published by Telegram; community servers exist.",
+  "buildability": "ready_now",
+  "primary_blocker": "none",
+  "rationale": "Telegram provides fully public, free-to-access Bot and MTProto APIs with instant self-serve credential creation, making it ready to use as an agent toolkit.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "auth",
+      "url": "https://core.telegram.org/bots/api#authorizing-your-bot",
+      "note": "Describes how bot requests use tokens in the HTTPS URL."
+    },
+    {
+      "supports": "credentials",
+      "url": "https://core.telegram.org/api/obtaining_api_id",
+      "note": "Details how developers obtain api_id and api_hash free of charge via my.telegram.org."
+    },
+    {
+      "supports": "api",
+      "url": "https://core.telegram.org/bots/api",
+      "note": "Comprehensive listing of Telegram Bot API methods and types."
+    }
+  ],
+  "open_questions": "",
+  "id": 27,
+  "app": "Telegram",
+  "category": "Communications and Messaging",
+  "official_url": "https://core.telegram.org",
+  "stage": "pass2",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://core.telegram.org/"
+    },
+    {
+      "title": "",
+      "url": "https://core.telegram.org/api/obtaining_api_id"
+    },
+    {
+      "title": "",
+      "url": "https://core.telegram.org/api/auth"
+    },
+    {
+      "title": "",
+      "url": "https://core.telegram.org/"
+    },
+    {
+      "title": "",
+      "url": "https://core.telegram.org/bots/faq"
+    },
+    {
+      "title": "",
+      "url": "https://core.telegram.org/bots/api"
+    },
+    {
+      "title": "",
+      "url": "https://telegram.org/deactivate"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://core.telegram.org",
+    "https://core.telegram.org/",
+    "https://core.telegram.org/api/obtaining_api_id",
+    "https://core.telegram.org/api/auth",
+    "https://core.telegram.org/api",
+    "https://core.telegram.org/bots/faq#limits",
+    "https://core.telegram.org/bots/api",
+    "https://my.telegram.org/"
+  ],
+  "schema_problems": [],
+  "changes": "flagged, not re-checked (time limit), kept from pass1"
+}

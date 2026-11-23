@@ -1,0 +1,88 @@
+{
+  "description": "Collaborative work management platform for teams to track projects, tasks, and workflows.",
+  "auth_methods": [
+    "oauth2",
+    "bearer_token"
+  ],
+  "auth_notes": "Supports Personal Access Tokens (PATs) for quick/single-user scripts, Service Accounts (enterprise feature), and OAuth 2.0 for multi-user applications.",
+  "credential_access": "self_serve_free",
+  "credential_notes": "Any developer can sign up for a free Asana account and generate Personal Access Tokens or create OAuth apps directly in the developer console for free.",
+  "api_styles": [
+    "rest",
+    "sdk_or_cli_only"
+  ],
+  "api_breadth": "broad",
+  "api_notes": "Comprehensive REST API covering tasks, projects, portfolios, goals, custom fields, webhooks, attachments, users, and app components.",
+  "official_mcp": "yes",
+  "mcp_notes": "Asana publishes official Model Context Protocol (MCP) server implementations (such as command-mcp and related repositories on their GitHub organisation).",
+  "buildability": "ready_now",
+  "primary_blocker": "none",
+  "rationale": "The Asana API is fully public, well-documented, uses standard REST patterns, and provides immediate self-serve developer credential generation for free.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "auth",
+      "url": "https://developers.asana.com/docs/authentication",
+      "note": "Documents Personal Access Tokens, Service Accounts, OAuth, and OpenID Connect."
+    },
+    {
+      "supports": "credentials",
+      "url": "https://developers.asana.com/docs/getting-started",
+      "note": "Details access via the developer console and developer sandbox."
+    },
+    {
+      "supports": "api",
+      "url": "https://developers.asana.com/reference/rest-api-reference",
+      "note": "Describes the RESTful API base URL, endpoints, and resource schema."
+    },
+    {
+      "supports": "mcp",
+      "url": "https://github.com/Asana",
+      "note": "Shows official Asana GitHub organization repositories including command-mcp."
+    }
+  ],
+  "open_questions": "",
+  "id": 75,
+  "app": "Asana",
+  "category": "Productivity and Project Management",
+  "official_url": "https://developers.asana.com",
+  "stage": "audit",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://developers.asana.com/"
+    },
+    {
+      "title": "",
+      "url": "https://developers.asana.com/docs/authentication"
+    },
+    {
+      "title": "",
+      "url": "https://developers.asana.com/docs/building-app-components"
+    },
+    {
+      "title": "",
+      "url": "https://developers.asana.com/reference/rest-api-reference"
+    },
+    {
+      "title": "",
+      "url": "https://developers.asana.com/docs/rate-limits"
+    },
+    {
+      "title": "",
+      "url": "https://github.com/asana"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://developers.asana.com",
+    "https://developers.asana.com/docs/authentication",
+    "https://developers.asana.com/docs/getting-started",
+    "https://developers.asana.com/reference/rest-api-reference",
+    "https://developers.asana.com/docs/rate-limits",
+    "https://github.com/Asana"
+  ],
+  "schema_problems": []
+}

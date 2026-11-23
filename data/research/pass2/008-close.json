@@ -1,0 +1,85 @@
+{
+  "description": "An AI-powered sales CRM combining calling, email, SMS, pipeline management, and autonomous AI agents into a single platform.",
+  "auth_methods": [
+    "api_key",
+    "oauth2"
+  ],
+  "auth_notes": "API keys use HTTP Basic Auth (with key as username and empty password) for scripts/internal use; OAuth 2.0 is used for user-facing integrations and public apps.",
+  "credential_access": "self_serve_trial",
+  "credential_notes": "Developers can sign up for a 14-day free trial self-serve without a credit card to access API keys and MCP features, but ongoing API and MCP access require a paid plan.",
+  "api_styles": [
+    "rest"
+  ],
+  "api_breadth": "broad",
+  "api_notes": "Comprehensive REST API covering leads, contacts, opportunities, tasks, activities (calls, emails, SMS, meetings), webhooks, reporting, custom fields/objects, and CRM configurations.",
+  "official_mcp": "yes",
+  "mcp_notes": "Close publishes an official Model Context Protocol (MCP) server enabling AI tools like ChatGPT, Claude, Cursor, and VS Code to connect directly to Close data.",
+  "buildability": "ready_with_constraints",
+  "primary_blocker": "none",
+  "rationale": "Close provides a broad REST API and an official MCP server with self-serve trial signup, but continuous usage requires a paid subscription following the 14-day trial.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "auth",
+      "url": "https://developer.close.com/topics/authentication/",
+      "note": "Documents HTTP Basic authentication with API keys and OAuth 2.0 support."
+    },
+    {
+      "supports": "credentials",
+      "url": "https://close.com/pricing/",
+      "note": "Details a 14-day free trial self-serve option and paid subscription tiers required for ongoing API/MCP access."
+    },
+    {
+      "supports": "api",
+      "url": "https://developer.close.com/",
+      "note": "Outlines the developer platform surface covering REST API endpoints, webhooks, and the MCP server."
+    },
+    {
+      "supports": "mcp",
+      "url": "https://close.com",
+      "note": "Confirms official Model Context Protocol (MCP) support for connecting AI tools like ChatGPT and Claude."
+    }
+  ],
+  "open_questions": "",
+  "changes": "Replaced dead/non-supporting evidence URLs with correct official documentation URLs.",
+  "id": 8,
+  "app": "Close",
+  "category": "CRM and Sales",
+  "official_url": "https://close.com",
+  "stage": "pass2",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://close.com/"
+    },
+    {
+      "title": "",
+      "url": "https://developer.close.com/api/overview/api-key-authentication"
+    },
+    {
+      "title": "",
+      "url": "https://close.com/pricing"
+    },
+    {
+      "title": "",
+      "url": "https://developer.close.com/"
+    },
+    {
+      "title": "",
+      "url": "https://github.com/closeio"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://close.com",
+    "https://developer.close.com/topics/authentication/",
+    "https://close.com/pricing/",
+    "https://developer.close.com/api-reference/",
+    "https://developer.close.com/",
+    "https://help.close.com/en/articles/1838891-api-keys",
+    "https://github.com/closeio"
+  ],
+  "schema_problems": []
+}

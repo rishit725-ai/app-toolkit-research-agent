@@ -1,0 +1,71 @@
+{
+  "description": "Work management platform providing customizable collaboration tools, workspaces, and business workflow automation.",
+  "auth_methods": [
+    "oauth2",
+    "api_key"
+  ],
+  "auth_notes": "Uses OAuth 2.0 authentication code flow for public apps and API keys / client IDs generated from account settings.",
+  "credential_access": "self_serve_free",
+  "credential_notes": "Developers can sign up for a Podio account and generate API keys freely from their account settings page.",
+  "api_styles": [
+    "rest"
+  ],
+  "api_breadth": "broad",
+  "api_notes": "Complete programmable REST interface covering all Podio frontend functionality, data structures, apps, tasks, and webhooks.",
+  "official_mcp": "no",
+  "mcp_notes": "",
+  "buildability": "ready_now",
+  "primary_blocker": "none",
+  "rationale": "Podio provides a fully documented REST API and self-serve API keys via a standard account sign-up.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "auth",
+      "url": "https://developers.podio.com/",
+      "note": "Describes how to get an API key and authenticate applications."
+    },
+    {
+      "supports": "credentials",
+      "url": "https://developers.podio.com/api-key",
+      "note": "Explains that developers can sign up with Podio and generate API keys from settings."
+    },
+    {
+      "supports": "api",
+      "url": "https://developers.podio.com/",
+      "note": "Outlines the comprehensive Podio API covering all frontend functionality and webhooks."
+    }
+  ],
+  "open_questions": "",
+  "id": 6,
+  "app": "Podio",
+  "category": "CRM and Sales",
+  "official_url": "https://podio.com",
+  "stage": "pass2",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://www.podio.com/"
+    },
+    {
+      "title": "",
+      "url": "https://developers.podio.com/"
+    },
+    {
+      "title": "",
+      "url": "https://developers.podio.com/api-key"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://podio.com",
+    "https://developers.podio.com/",
+    "https://developers.podio.com/doc/authentication",
+    "https://developers.podio.com/doc/clients",
+    "https://podio.com/pricing",
+    "https://developers.podio.com/api-key"
+  ],
+  "schema_problems": [],
+  "changes": "flagged, not re-checked (time limit), kept from pass1"
+}

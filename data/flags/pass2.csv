@@ -1,0 +1,101 @@
+id,app,category,flags
+1,Salesforce,CRM and Sales,auth 'oauth2' not found on evidence pages; auth 'jwt' not found on evidence pages
+2,HubSpot,CRM and Sales,
+3,Pipedrive,CRM and Sales,
+4,Attio,CRM and Sales,2 dead evidence link(s)
+5,Twenty,CRM and Sales,auth 'api_key' not found on evidence pages
+6,Podio,CRM and Sales,auth 'oauth2' not found on evidence pages
+7,Zoho CRM,CRM and Sales,
+8,Close,CRM and Sales,no blocker but verdict is ready_with_constraints
+9,Copper,CRM and Sales,no blocker but verdict is ready_with_constraints; auth 'api_key' not found on evidence pages
+10,DealCloud,CRM and Sales,official MCP claimed without MCP evidence
+11,Zendesk,Support and Helpdesk,auth 'oauth2' not found on evidence pages; auth 'bearer_token' not found on evidence pages; auth 'basic' not found on evidence pages
+12,Intercom,Support and Helpdesk,"schema: api_styles has value outside vocabulary: ['rest', 'webhook']"
+13,Freshdesk,Support and Helpdesk,
+14,Front,Support and Helpdesk,
+15,Pylon,Support and Helpdesk,auth 'api_key' not found on evidence pages
+16,LiveAgent,Support and Helpdesk,no blocker but verdict is ready_with_constraints
+17,Plain,Support and Helpdesk,auth 'api_key' not found on evidence pages
+18,Help Scout,Support and Helpdesk,auth 'oauth2' not found on evidence pages; auth 'bearer_token' not found on evidence pages
+19,Gorgias,Support and Helpdesk,
+20,Gladly,Support and Helpdesk,auth 'api_key' not found on evidence pages
+21,Slack,Communications and Messaging,
+22,Twilio,Communications and Messaging,auth 'basic' not found on evidence pages
+23,Zoho Cliq,Communications and Messaging,auth 'oauth2' not found on evidence pages
+24,Lark (Larksuite),Communications and Messaging,auth 'oauth2' not found on evidence pages
+25,Pumble,Communications and Messaging,
+26,Discord,Communications and Messaging,
+27,Telegram,Communications and Messaging,auth 'api_key' not found on evidence pages
+28,WhatsApp Business,Communications and Messaging,
+29,Aircall,Communications and Messaging,
+30,Vonage,Communications and Messaging,
+31,Google Ads,"Marketing, Ads, Email and Social",
+32,Meta Ads,"Marketing, Ads, Email and Social",auth 'oauth2' not found on evidence pages
+33,LinkedIn Ads,"Marketing, Ads, Email and Social",auth 'oauth2' not found on evidence pages
+34,GoHighLevel,"Marketing, Ads, Email and Social",
+35,Mailchimp,"Marketing, Ads, Email and Social",
+36,Klaviyo,"Marketing, Ads, Email and Social",
+37,systeme.io,"Marketing, Ads, Email and Social",agent confidence low; credential access unclear
+38,Pinterest,"Marketing, Ads, Email and Social",
+39,Threads (Meta),"Marketing, Ads, Email and Social",
+40,SendGrid,"Marketing, Ads, Email and Social",
+41,Shopify,Ecommerce,auth 'oauth2' not found on evidence pages; auth 'hmac_signature' not found on evidence pages
+42,WooCommerce,Ecommerce,
+43,BigCommerce,Ecommerce,
+44,Salesforce Commerce Cloud,Ecommerce,
+45,Magento (Adobe Commerce),Ecommerce,"schema: auth_methods has value outside vocabulary: ['bearer_token', 'oauth2', 'token']; auth 'bearer_token' not found on evidence pages; auth 'oauth2' not found on evidence pages"
+46,Squarespace,Ecommerce,official MCP claimed without MCP evidence; auth 'oauth2' not found on evidence pages; auth 'api_key' not found on evidence pages
+47,Ecwid,Ecommerce,auth 'oauth2' not found on evidence pages
+48,Gumroad,Ecommerce,
+49,Amazon Selling Partner,Ecommerce,
+50,fanbasis,Ecommerce,credential access unclear
+51,DataForSEO,"Data, SEO and Scraping",auth 'basic' not found on evidence pages
+52,SE Ranking,"Data, SEO and Scraping",
+53,Ahrefs,"Data, SEO and Scraping",no blocker but verdict is ready_with_constraints; official MCP claimed without MCP evidence
+54,MrScraper,"Data, SEO and Scraping",auth 'api_key' not found on evidence pages
+55,Apify,"Data, SEO and Scraping",
+56,Firecrawl,"Data, SEO and Scraping",
+57,Bright Data,"Data, SEO and Scraping",official MCP claimed without MCP evidence
+58,Sherlock,"Data, SEO and Scraping",
+59,Waterfall.io,"Data, SEO and Scraping",
+60,Clay,"Data, SEO and Scraping",1 dead evidence link(s)
+61,GitHub,"Developer, Infra and Data platforms",
+62,Vercel,"Developer, Infra and Data platforms",1 dead evidence link(s)
+63,Netlify,"Developer, Infra and Data platforms",
+64,Cloudflare,"Developer, Infra and Data platforms",
+65,Supabase,"Developer, Infra and Data platforms",
+66,Neo4j,"Developer, Infra and Data platforms",auth 'basic' not found on evidence pages
+67,Snowflake,"Developer, Infra and Data platforms",
+68,MongoDB Atlas,"Developer, Infra and Data platforms",
+69,Datadog,"Developer, Infra and Data platforms",
+70,Sentry,"Developer, Infra and Data platforms",
+71,Notion,Productivity and Project Management,
+72,Airtable,Productivity and Project Management,
+73,Linear,Productivity and Project Management,1 dead evidence link(s)
+74,Jira,Productivity and Project Management,
+75,Asana,Productivity and Project Management,
+76,Monday.com,Productivity and Project Management,
+77,ClickUp,Productivity and Project Management,
+78,Coda,Productivity and Project Management,
+79,Smartsheet,Productivity and Project Management,auth 'oauth2' not found on evidence pages
+80,Harvest,Productivity and Project Management,auth 'oauth2' not found on evidence pages; auth 'bearer_token' not found on evidence pages
+81,Stripe,Finance and Fintech,
+82,Plaid,Finance and Fintech,
+83,Binance,Finance and Fintech,
+84,Paygent Connect,Finance and Fintech,auth 'api_key' not found on evidence pages; auth 'hmac_signature' not found on evidence pages
+85,iPayX,Finance and Fintech,auth 'api_key' not found on evidence pages; auth 'bearer_token' not found on evidence pages; credential access unclear
+86,QuickBooks,Finance and Fintech,
+87,Xero,Finance and Fintech,
+88,Brex,Finance and Fintech,2 dead evidence link(s); auth 'oauth2' not found on evidence pages
+89,Ramp,Finance and Fintech,auth 'oauth2' not found on evidence pages; auth 'bearer_token' not found on evidence pages
+90,PitchBook,Finance and Fintech,
+91,NotebookLM,"AI, Research and Media-native",
+92,Otter AI,"AI, Research and Media-native",credential access unclear
+93,Fathom,"AI, Research and Media-native",auth 'api_key' not found on evidence pages; auth 'oauth2' not found on evidence pages
+94,Consensus,"AI, Research and Media-native",credential access unclear
+95,Reducto,"AI, Research and Media-native",
+96,Devin,"AI, Research and Media-native",
+97,higgsfield,"AI, Research and Media-native",auth 'oauth2' not found on evidence pages
+98,Mermaid CLI,"AI, Research and Media-native",
+99,YouTube Transcript,"AI, Research and Media-native",
+100,Grain,"AI, Research and Media-native",not researched

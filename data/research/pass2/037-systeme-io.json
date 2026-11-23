@@ -1,0 +1,68 @@
+{
+  "description": "All-in-one online marketing platform for sales funnels, email marketing, and course building.",
+  "auth_methods": [
+    "api_key",
+    "other"
+  ],
+  "auth_notes": "Systeme.io uses API keys generated within the platform settings for API access.",
+  "credential_access": "unclear",
+  "credential_notes": "A free plan exists on systeme.io, but exact self-serve public API documentation or developer token provisioning details could not be verified from the available pages.",
+  "api_styles": [
+    "rest"
+  ],
+  "api_breadth": "unclear",
+  "api_notes": "A public API is mentioned on the main website, but explicit endpoint documentation or breadth details were not found in the provided sources.",
+  "official_mcp": "no",
+  "mcp_notes": "No official MCP server published by the vendor; help center references Model Context Protocol (MCP) in a category slug, but explicit documentation details are unverified.",
+  "buildability": "not_buildable_now",
+  "primary_blocker": "unstable_or_undocumented",
+  "rationale": "While systeme.io provides an all-in-one marketing platform and mentions a public API, detailed developer documentation, API schema, and self-serve credential instructions are not available to build an integration immediately.",
+  "confidence": "low",
+  "evidence": [
+    {
+      "supports": "api",
+      "url": "https://systeme.io",
+      "note": "Mentions 'Public API' in the platform resource links."
+    },
+    {
+      "supports": "credentials",
+      "url": "https://systeme.io",
+      "note": "Offers a free-forever account option."
+    }
+  ],
+  "open_questions": "Where is the official public API documentation hosted, and how do developers generate or request API keys on free tiers?",
+  "id": 37,
+  "app": "systeme.io",
+  "category": "Marketing, Ads, Email and Social",
+  "official_url": "https://systeme.io",
+  "stage": "pass2",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://systeme.io/"
+    },
+    {
+      "title": "",
+      "url": "https://systeme.io/"
+    },
+    {
+      "title": "",
+      "url": "https://help.systeme.io/en"
+    },
+    {
+      "title": "",
+      "url": "https://github.com/systemeio"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://systeme.io",
+    "https://systeme.io/",
+    "https://help.systeme.io/en/",
+    "https://github.com/systemeio"
+  ],
+  "schema_problems": [],
+  "changes": "not flagged, kept from pass1"
+}

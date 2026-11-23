@@ -1,0 +1,609 @@
+{
+  "method": "composio python SDK: Composio().toolkits.list() (paginated)",
+  "toolkit_count": 1842,
+  "apps": {
+    "1": {
+      "app": "Salesforce",
+      "composio_toolkit": true,
+      "match": "exact",
+      "slug": "salesforce"
+    },
+    "2": {
+      "app": "HubSpot",
+      "composio_toolkit": true,
+      "match": "exact",
+      "slug": "hubspot"
+    },
+    "3": {
+      "app": "Pipedrive",
+      "composio_toolkit": true,
+      "match": "exact",
+      "slug": "pipedrive"
+    },
+    "4": {
+      "app": "Attio",
+      "composio_toolkit": true,
+      "match": "exact",
+      "slug": "attio"
+    },
+    "5": {
+      "app": "Twenty",
+      "composio_toolkit": true,
+      "match": "exact",
+      "slug": "twenty"
+    },
+    "6": {
+      "app": "Podio",
+      "composio_toolkit": true,
+      "match": "exact",
+      "slug": "podio"
+    },
+    "7": {
+      "app": "Zoho CRM",
+      "composio_toolkit": true,
+      "match": "human_reviewed",
+      "slug": "zoho",
+      "review_note": "human_reviewed: general Zoho toolkit (115 tools) that includes CRM"
+    },
+    "8": {
+      "app": "Close",
+      "composio_toolkit": true,
+      "match": "exact",
+      "slug": "close"
+    },
+    "9": {
+      "app": "Copper",
+      "composio_toolkit": true,
+      "match": "exact",
+      "slug": "copper"
+    },
+    "10": {
+      "app": "DealCloud",
+      "composio_toolkit": false,
+      "match": "none",
+      "slug": ""
+    },
+    "11": {
+      "app": "Zendesk",
+      "composio_toolkit": true,
+      "match": "exact",
+      "slug": "zendesk"
+    },
+    "12": {
+      "app": "Intercom",
+      "composio_toolkit": true,
+      "match": "exact",
+      "slug": "intercom"
+    },
+    "13": {
+      "app": "Freshdesk",
+      "composio_toolkit": true,
+      "match": "exact",
+      "slug": "freshdesk"
+    },
+    "14": {
+      "app": "Front",
+      "composio_toolkit": true,
+      "match": "exact",
+      "slug": "front"
+    },
+    "15": {
+      "app": "Pylon",
+      "composio_toolkit": false,
+      "match": "none",
+      "slug": ""
+    },
+    "16": {
+      "app": "LiveAgent",
+      "composio_toolkit": false,
+      "match": "none",
+      "slug": ""
+    },
+    "17": {
+      "app": "Plain",
+      "composio_toolkit": true,
+      "match": "exact",
+      "slug": "plain"
+    },
+    "18": {
+      "app": "Help Scout",
+      "composio_toolkit": true,
+      "match": "exact",
+      "slug": "help_scout"
+    },
+    "19": {
+      "app": "Gorgias",
+      "composio_toolkit": true,
+      "match": "exact",
+      "slug": "gorgias"
+    },
+    "20": {
+      "app": "Gladly",
+      "composio_toolkit": false,
+      "match": "none",
+      "slug": ""
+    },
+    "21": {
+      "app": "Slack",
+      "composio_toolkit": true,
+      "match": "exact",
+      "slug": "slack"
+    },
+    "22": {
+      "app": "Twilio",
+      "composio_toolkit": true,
+      "match": "exact",
+      "slug": "twilio"
+    },
+    "23": {
+      "app": "Zoho Cliq",
+      "composio_toolkit": true,
+      "match": "exact",
+      "slug": "zoho_cliq"
+    },
+    "24": {
+      "app": "Lark (Larksuite)",
+      "composio_toolkit": true,
+      "match": "exact",
+      "slug": "lark"
+    },
+    "25": {
+      "app": "Pumble",
+      "composio_toolkit": true,
+      "match": "exact",
+      "slug": "pumble"
+    },
+    "26": {
+      "app": "Discord",
+      "composio_toolkit": true,
+      "match": "exact",
+      "slug": "discord"
+    },
+    "27": {
+      "app": "Telegram",
+      "composio_toolkit": true,
+      "match": "exact",
+      "slug": "telegram"
+    },
+    "28": {
+      "app": "WhatsApp Business",
+      "composio_toolkit": true,
+      "match": "exact",
+      "slug": "whatsapp"
+    },
+    "29": {
+      "app": "Aircall",
+      "composio_toolkit": true,
+      "match": "exact",
+      "slug": "aircall"
+    },
+    "30": {
+      "app": "Vonage",
+      "composio_toolkit": false,
+      "match": "none",
+      "slug": ""
+    },
+    "31": {
+      "app": "Google Ads",
+      "composio_toolkit": true,
+      "match": "exact",
+      "slug": "googleads"
+    },
+    "32": {
+      "app": "Meta Ads",
+      "composio_toolkit": true,
+      "match": "exact",
+      "slug": "metaads"
+    },
+    "33": {
+      "app": "LinkedIn Ads",
+      "composio_toolkit": true,
+      "match": "exact",
+      "slug": "linkedin_ads"
+    },
+    "34": {
+      "app": "GoHighLevel",
+      "composio_toolkit": false,
+      "match": "none",
+      "slug": ""
+    },
+    "35": {
+      "app": "Mailchimp",
+      "composio_toolkit": true,
+      "match": "exact",
+      "slug": "mailchimp"
+    },
+    "36": {
+      "app": "Klaviyo",
+      "composio_toolkit": true,
+      "match": "exact",
+      "slug": "klaviyo"
+    },
+    "37": {
+      "app": "systeme.io",
+      "composio_toolkit": false,
+      "match": "none",
+      "slug": ""
+    },
+    "38": {
+      "app": "Pinterest",
+      "composio_toolkit": true,
+      "match": "exact",
+      "slug": "pinterest"
+    },
+    "39": {
+      "app": "Threads (Meta)",
+      "composio_toolkit": true,
+      "match": "exact",
+      "slug": "threads"
+    },
+    "40": {
+      "app": "SendGrid",
+      "composio_toolkit": true,
+      "match": "exact",
+      "slug": "sendgrid"
+    },
+    "41": {
+      "app": "Shopify",
+      "composio_toolkit": true,
+      "match": "exact",
+      "slug": "shopify"
+    },
+    "42": {
+      "app": "WooCommerce",
+      "composio_toolkit": false,
+      "match": "none",
+      "slug": ""
+    },
+    "43": {
+      "app": "BigCommerce",
+      "composio_toolkit": true,
+      "match": "exact",
+      "slug": "bigcommerce"
+    },
+    "44": {
+      "app": "Salesforce Commerce Cloud",
+      "composio_toolkit": false,
+      "match": "none",
+      "slug": ""
+    },
+    "45": {
+      "app": "Magento (Adobe Commerce)",
+      "composio_toolkit": false,
+      "match": "none",
+      "slug": ""
+    },
+    "46": {
+      "app": "Squarespace",
+      "composio_toolkit": false,
+      "match": "none",
+      "slug": ""
+    },
+    "47": {
+      "app": "Ecwid",
+      "composio_toolkit": false,
+      "match": "none",
+      "slug": ""
+    },
+    "48": {
+      "app": "Gumroad",
+      "composio_toolkit": true,
+      "match": "exact",
+      "slug": "gumroad"
+    },
+    "49": {
+      "app": "Amazon Selling Partner",
+      "composio_toolkit": false,
+      "match": "human_reviewed",
+      "slug": "amazon",
+      "review_note": "human_reviewed: generic Amazon toolkit with 0 tools, not the Selling Partner API"
+    },
+    "50": {
+      "app": "fanbasis",
+      "composio_toolkit": false,
+      "match": "none",
+      "slug": ""
+    },
+    "51": {
+      "app": "DataForSEO",
+      "composio_toolkit": true,
+      "match": "exact",
+      "slug": "dataforseo"
+    },
+    "52": {
+      "app": "SE Ranking",
+      "composio_toolkit": false,
+      "match": "none",
+      "slug": ""
+    },
+    "53": {
+      "app": "Ahrefs",
+      "composio_toolkit": true,
+      "match": "exact",
+      "slug": "ahrefs"
+    },
+    "54": {
+      "app": "MrScraper",
+      "composio_toolkit": true,
+      "match": "exact",
+      "slug": "mrscraper"
+    },
+    "55": {
+      "app": "Apify",
+      "composio_toolkit": true,
+      "match": "exact",
+      "slug": "apify"
+    },
+    "56": {
+      "app": "Firecrawl",
+      "composio_toolkit": true,
+      "match": "exact",
+      "slug": "firecrawl"
+    },
+    "57": {
+      "app": "Bright Data",
+      "composio_toolkit": true,
+      "match": "exact",
+      "slug": "brightdata"
+    },
+    "58": {
+      "app": "Sherlock",
+      "composio_toolkit": false,
+      "match": "none",
+      "slug": ""
+    },
+    "59": {
+      "app": "Waterfall.io",
+      "composio_toolkit": false,
+      "match": "none",
+      "slug": ""
+    },
+    "60": {
+      "app": "Clay",
+      "composio_toolkit": true,
+      "match": "exact",
+      "slug": "clay"
+    },
+    "61": {
+      "app": "GitHub",
+      "composio_toolkit": true,
+      "match": "exact",
+      "slug": "github"
+    },
+    "62": {
+      "app": "Vercel",
+      "composio_toolkit": true,
+      "match": "exact",
+      "slug": "vercel"
+    },
+    "63": {
+      "app": "Netlify",
+      "composio_toolkit": true,
+      "match": "human_reviewed",
+      "slug": "netlify_mcp",
+      "review_note": "human_reviewed: Composio Netlify toolkit (9 tools) via Netlify hosted MCP server"
+    },
+    "64": {
+      "app": "Cloudflare",
+      "composio_toolkit": true,
+      "match": "exact",
+      "slug": "cloudflare"
+    },
+    "65": {
+      "app": "Supabase",
+      "composio_toolkit": true,
+      "match": "exact",
+      "slug": "supabase"
+    },
+    "66": {
+      "app": "Neo4j",
+      "composio_toolkit": true,
+      "match": "exact",
+      "slug": "neo4j"
+    },
+    "67": {
+      "app": "Snowflake",
+      "composio_toolkit": true,
+      "match": "exact",
+      "slug": "snowflake"
+    },
+    "68": {
+      "app": "MongoDB Atlas",
+      "composio_toolkit": false,
+      "match": "none",
+      "slug": ""
+    },
+    "69": {
+      "app": "Datadog",
+      "composio_toolkit": true,
+      "match": "exact",
+      "slug": "datadog"
+    },
+    "70": {
+      "app": "Sentry",
+      "composio_toolkit": true,
+      "match": "exact",
+      "slug": "sentry"
+    },
+    "71": {
+      "app": "Notion",
+      "composio_toolkit": true,
+      "match": "exact",
+      "slug": "notion"
+    },
+    "72": {
+      "app": "Airtable",
+      "composio_toolkit": true,
+      "match": "exact",
+      "slug": "airtable"
+    },
+    "73": {
+      "app": "Linear",
+      "composio_toolkit": true,
+      "match": "exact",
+      "slug": "linear"
+    },
+    "74": {
+      "app": "Jira",
+      "composio_toolkit": true,
+      "match": "exact",
+      "slug": "jira"
+    },
+    "75": {
+      "app": "Asana",
+      "composio_toolkit": true,
+      "match": "exact",
+      "slug": "asana"
+    },
+    "76": {
+      "app": "Monday.com",
+      "composio_toolkit": true,
+      "match": "exact",
+      "slug": "monday"
+    },
+    "77": {
+      "app": "ClickUp",
+      "composio_toolkit": true,
+      "match": "exact",
+      "slug": "clickup"
+    },
+    "78": {
+      "app": "Coda",
+      "composio_toolkit": true,
+      "match": "exact",
+      "slug": "coda"
+    },
+    "79": {
+      "app": "Smartsheet",
+      "composio_toolkit": true,
+      "match": "exact",
+      "slug": "smartsheet"
+    },
+    "80": {
+      "app": "Harvest",
+      "composio_toolkit": true,
+      "match": "exact",
+      "slug": "harvest"
+    },
+    "81": {
+      "app": "Stripe",
+      "composio_toolkit": true,
+      "match": "exact",
+      "slug": "stripe"
+    },
+    "82": {
+      "app": "Plaid",
+      "composio_toolkit": true,
+      "match": "exact",
+      "slug": "plaid"
+    },
+    "83": {
+      "app": "Binance",
+      "composio_toolkit": false,
+      "match": "none",
+      "slug": ""
+    },
+    "84": {
+      "app": "Paygent Connect",
+      "composio_toolkit": false,
+      "match": "none",
+      "slug": ""
+    },
+    "85": {
+      "app": "iPayX",
+      "composio_toolkit": false,
+      "match": "none",
+      "slug": ""
+    },
+    "86": {
+      "app": "QuickBooks",
+      "composio_toolkit": true,
+      "match": "exact",
+      "slug": "quickbooks"
+    },
+    "87": {
+      "app": "Xero",
+      "composio_toolkit": true,
+      "match": "exact",
+      "slug": "xero"
+    },
+    "88": {
+      "app": "Brex",
+      "composio_toolkit": true,
+      "match": "exact",
+      "slug": "brex"
+    },
+    "89": {
+      "app": "Ramp",
+      "composio_toolkit": true,
+      "match": "exact",
+      "slug": "ramp"
+    },
+    "90": {
+      "app": "PitchBook",
+      "composio_toolkit": true,
+      "match": "exact",
+      "slug": "pitchbook"
+    },
+    "91": {
+      "app": "NotebookLM",
+      "composio_toolkit": true,
+      "match": "exact",
+      "slug": "notebook_lm"
+    },
+    "92": {
+      "app": "Otter AI",
+      "composio_toolkit": false,
+      "match": "none",
+      "slug": ""
+    },
+    "93": {
+      "app": "Fathom",
+      "composio_toolkit": true,
+      "match": "exact",
+      "slug": "fathom"
+    },
+    "94": {
+      "app": "Consensus",
+      "composio_toolkit": true,
+      "match": "exact",
+      "slug": "consensus"
+    },
+    "95": {
+      "app": "Reducto",
+      "composio_toolkit": false,
+      "match": "none",
+      "slug": ""
+    },
+    "96": {
+      "app": "Devin",
+      "composio_toolkit": false,
+      "match": "none",
+      "slug": ""
+    },
+    "97": {
+      "app": "higgsfield",
+      "composio_toolkit": true,
+      "match": "exact",
+      "slug": "higgsfield"
+    },
+    "98": {
+      "app": "Mermaid CLI",
+      "composio_toolkit": false,
+      "match": "none",
+      "slug": ""
+    },
+    "99": {
+      "app": "YouTube Transcript",
+      "composio_toolkit": true,
+      "match": "exact",
+      "slug": "youtube_transcript"
+    },
+    "100": {
+      "app": "Grain",
+      "composio_toolkit": true,
+      "match": "exact",
+      "slug": "grain"
+    }
+  }
+}

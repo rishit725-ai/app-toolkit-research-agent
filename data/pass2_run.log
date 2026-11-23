@@ -1,0 +1,44 @@
+pass2 --serious-only: re-researching 47 apps with serious flags
+[1/100] pass2: Close
+    rate-limited / transient error, waiting 20s (503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently exp)
+    rate-limited / transient error, waiting 40s (503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently exp)
+    -> ready_with_constraints / self_serve_trial / ['api_key', 'oauth2'] (high)
+[2/100] pass2: DealCloud
+    rate-limited / transient error, waiting 20s (503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently exp)
+    -> ready_with_constraints / paid_plan / ['api_key', 'bearer_token'] (high)
+[4/100] pass2: Gladly
+    rate-limited / transient error, waiting 20s (503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently exp)
+    -> outreach_required / partner_or_sales_gated / ['bearer_token', 'api_key'] (high)
+[5/100] pass2: Twilio
+    rate-limited / transient error, waiting 20s (503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently exp)
+    -> ready_now / self_serve_free / ['api_key', 'basic'] (high)
+[10/100] pass2: Ecwid
+    -> ready_now / self_serve_free / ['oauth2', 'bearer_token'] (high)
+[11/100] pass2: DataForSEO
+    -> ready_now / self_serve_trial / ['basic'] (high)
+[12/100] pass2: SE Ranking
+    -> ready_now / self_serve_trial / ['api_key'] (high)
+[13/100] pass2: Vercel
+    rate-limited / transient error, waiting 20s (503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently exp)
+    rate-limited / transient error, waiting 40s (503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently exp)
+    rate-limited / transient error, waiting 20s (503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently exp)
+    rate-limited / transient error, waiting 40s (503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently exp)
+    rate-limited / transient error, waiting 60s (503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently exp)
+    rate-limited / transient error, waiting 80s (503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently exp)
+    rate-limited / transient error, waiting 100s (503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently exp)
+    -> ready_now / self_serve_free / ['bearer_token'] (high)
+[14/100] pass2: Snowflake
+    rate-limited / transient error, waiting 20s (503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently exp)
+    -> ready_with_constraints / self_serve_trial / ['oauth2', 'jwt'] (high)
+[18/100] pass2: iPayX
+    rate-limited / transient error, waiting 20s (503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently exp)
+    -> not_buildable_now / unclear / ['api_key', 'bearer_token'] (high)
+[20/100] pass2: Mermaid CLI
+    rate-limited / transient error, waiting 20s (503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently exp)
+    rate-limited / transient error, waiting 40s (503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently exp)
+    -> ready_now / open_source_local / ['none'] (high)
+[21/100] pass2: Salesforce
+    rate-limited / transient error, waiting 20s (503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently exp)
+    rate-limited / transient error, waiting 40s (503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently exp)
+    rate-limited / transient error, waiting 60s (503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently exp)
+    rate-limited / transient error, waiting 20s (503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently exp)

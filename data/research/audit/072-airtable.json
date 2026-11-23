@@ -1,0 +1,73 @@
+{
+  "description": "A cloud collaboration platform and relational database for building custom apps and workflows",
+  "auth_methods": [
+    "oauth2",
+    "bearer_token"
+  ],
+  "auth_notes": "OAuth 2.0 authorization code flow for public integrations; personal access tokens (bearer tokens) for private scripts and individual use.",
+  "credential_access": "self_serve_free",
+  "credential_notes": "Developers can sign up for a free Airtable account and generate personal access tokens or configure OAuth integrations self-serve.",
+  "api_styles": [
+    "rest"
+  ],
+  "api_breadth": "broad",
+  "api_notes": "Comprehensive REST API covering bases, tables, records, fields, comments, webhooks, and metadata operations.",
+  "official_mcp": "no",
+  "mcp_notes": "No official Model Context Protocol (MCP) server published by Airtable.",
+  "buildability": "ready_now",
+  "primary_blocker": "none",
+  "rationale": "Airtable provides a fully documented public REST API and self-serve credential creation (personal access tokens/OAuth) on free accounts.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "auth",
+      "url": "https://airtable.com/developers/web/api/authentication",
+      "note": "Describes personal access tokens and OAuth 2.0 authentication methods for the Airtable API."
+    },
+    {
+      "supports": "api",
+      "url": "https://airtable.com/developers/web/api/introduction",
+      "note": "Introduces the Airtable Web API structure, endpoints, and operations."
+    },
+    {
+      "supports": "credentials",
+      "url": "https://airtable.com/pricing",
+      "note": "Shows a free plan is available for users to sign up and start building."
+    }
+  ],
+  "open_questions": "",
+  "id": 72,
+  "app": "Airtable",
+  "category": "Productivity and Project Management",
+  "official_url": "https://airtable.com/developers",
+  "stage": "audit",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://airtable.com/developers/agents"
+    },
+    {
+      "title": "",
+      "url": "https://airtable.com/developers/web/api/introduction"
+    },
+    {
+      "title": "",
+      "url": "https://airtable.com/developers/web/api/introduction"
+    },
+    {
+      "title": "",
+      "url": "https://airtable.com/pricing"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://airtable.com/developers",
+    "https://airtable.com/developers/web/api/authentication",
+    "https://airtable.com/developers/web/api/introduction",
+    "https://airtable.com/create/tokens",
+    "https://airtable.com/pricing"
+  ],
+  "schema_problems": []
+}

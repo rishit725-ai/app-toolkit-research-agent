@@ -1,0 +1,63 @@
+{
+  "gold_apps": 20,
+  "fields": [
+    "auth_methods",
+    "credential_access",
+    "api_styles",
+    "official_mcp",
+    "buildability",
+    "primary_blocker"
+  ],
+  "stages": {
+    "pass1": {
+      "field_accuracy": 0.625,
+      "right": 75,
+      "total": 120,
+      "perfect_apps": 1,
+      "apps_scored": 20,
+      "per_field": {
+        "auth_methods": 0.4,
+        "credential_access": 0.5,
+        "api_styles": 0.85,
+        "official_mcp": 0.75,
+        "buildability": 0.65,
+        "primary_blocker": 0.6
+      }
+    },
+    "pass2": {
+      "field_accuracy": 0.617,
+      "right": 74,
+      "total": 120,
+      "perfect_apps": 1,
+      "apps_scored": 20,
+      "per_field": {
+        "auth_methods": 0.4,
+        "credential_access": 0.55,
+        "api_styles": 0.85,
+        "official_mcp": 0.75,
+        "buildability": 0.6,
+        "primary_blocker": 0.55
+      }
+    },
+    "audit": {
+      "field_accuracy": 0.692,
+      "right": 83,
+      "total": 120,
+      "perfect_apps": 2,
+      "apps_scored": 20,
+      "per_field": {
+        "auth_methods": 0.65,
+        "credential_access": 0.75,
+        "api_styles": 0.65,
+        "official_mcp": 0.7,
+        "buildability": 0.8,
+        "primary_blocker": 0.6
+      }
+    }
+  },
+  "human_status": {
+    "confirmed": 2,
+    "corrected": 18,
+    "unresolved": 0
+  }
+}

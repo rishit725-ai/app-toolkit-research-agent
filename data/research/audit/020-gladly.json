@@ -1,0 +1,65 @@
+{
+  "description": "Agentic customer service and commerce platform for retail and support teams",
+  "auth_methods": [
+    "bearer_token",
+    "api_key"
+  ],
+  "auth_notes": "Uses API tokens (bearer tokens) generated from the Gladly admin settings to authenticate REST API requests.",
+  "credential_access": "paid_plan",
+  "credential_notes": "API access requires an active commercial Gladly customer account and admin privileges to generate API tokens.",
+  "api_styles": [
+    "rest"
+  ],
+  "api_breadth": "moderate",
+  "api_notes": "Covers REST APIs for customer data, conversations, tasks, webhooks, and lookup integrations.",
+  "official_mcp": "no",
+  "mcp_notes": "No official Model Context Protocol (MCP) server published by Gladly.",
+  "buildability": "ready_with_constraints",
+  "primary_blocker": "credential_gate",
+  "rationale": "The REST API is publicly documented and accessible, but obtaining API credentials requires a paid commercial Gladly account.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "api",
+      "url": "https://developer.gladly.com/",
+      "note": "Gladly developer portal showing REST APIs, webhooks, and SDKs."
+    },
+    {
+      "supports": "credentials",
+      "url": "https://help.gladly.com/docs/api-tokens",
+      "note": "Documentation detailing how to generate API tokens from Gladly settings."
+    }
+  ],
+  "open_questions": "",
+  "id": 20,
+  "app": "Gladly",
+  "category": "Support and Helpdesk",
+  "official_url": "https://gladly.com",
+  "stage": "audit",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://www.gladly.ai/"
+    },
+    {
+      "title": "",
+      "url": "https://developer.gladly.com/"
+    },
+    {
+      "title": "",
+      "url": "https://www.gladly.ai/"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://gladly.com",
+    "https://developer.gladly.com/",
+    "https://developer.gladly.com/api/",
+    "https://developer.gladly.com/authentication/",
+    "https://help.gladly.com/docs/api-tokens",
+    "https://gladly.com/pricing/"
+  ],
+  "schema_problems": []
+}

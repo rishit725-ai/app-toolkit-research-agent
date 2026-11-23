@@ -1,0 +1,98 @@
+{
+  "description": "An open source Firebase alternative providing a full Postgres database, authentication, instant APIs, and storage.",
+  "auth_methods": [
+    "api_key",
+    "bearer_token",
+    "jwt",
+    "oauth2"
+  ],
+  "auth_notes": "Uses project API keys (anon/service_role), JWT tokens for user sessions, and OAuth2/OIDC/SSO for identity providers.",
+  "credential_access": "self_serve_free",
+  "credential_notes": "Developers can sign up instantly on the website and create free projects with API keys available on a self-serve basis.",
+  "api_styles": [
+    "rest",
+    "graphql",
+    "websocket",
+    "sdk_or_cli_only"
+  ],
+  "api_breadth": "broad",
+  "api_notes": "Covers auto-generated REST/GraphQL data APIs, auth, storage, edge functions, realtime subscriptions, and platform management.",
+  "official_mcp": "yes",
+  "mcp_notes": "Supabase provides official toolsets and support for Model Context Protocol (MCP) integrations.",
+  "buildability": "ready_now",
+  "primary_blocker": "none",
+  "rationale": "Supabase provides broad, fully documented APIs and self-serve free credentials, making it immediately buildable as an agent toolkit.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "auth",
+      "url": "https://supabase.com/docs/guides/auth",
+      "note": "Describes Supabase Auth mechanisms, JWT tokens, and OAuth support."
+    },
+    {
+      "supports": "credentials",
+      "url": "https://supabase.com/pricing",
+      "note": "Outlines the Free Plan and self-serve project tier details."
+    },
+    {
+      "supports": "api",
+      "url": "https://supabase.com/docs/guides/api",
+      "note": "Details auto-generated REST and GraphQL data APIs."
+    },
+    {
+      "supports": "mcp",
+      "url": "https://supabase.com/docs",
+      "note": "References MCP integration under developer AI tools and documentation."
+    }
+  ],
+  "open_questions": "",
+  "id": 65,
+  "app": "Supabase",
+  "category": "Developer, Infra and Data platforms",
+  "official_url": "https://supabase.com/docs",
+  "stage": "pass2",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://supabase.com/docs"
+    },
+    {
+      "title": "",
+      "url": "https://supabase.com/docs/guides/auth"
+    },
+    {
+      "title": "",
+      "url": "https://supabase.com/docs/guides/api"
+    },
+    {
+      "title": "",
+      "url": "https://supabase.com/docs/guides/getting-started"
+    },
+    {
+      "title": "",
+      "url": "https://supabase.com/pricing"
+    },
+    {
+      "title": "",
+      "url": "https://supabase.com/docs/reference/javascript/introduction"
+    },
+    {
+      "title": "",
+      "url": "https://github.com/supabase/supabase"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://supabase.com/docs",
+    "https://supabase.com/docs/guides/auth",
+    "https://supabase.com/docs/guides/api",
+    "https://supabase.com/docs/guides/getting-started/quickstarts",
+    "https://supabase.com/pricing",
+    "https://supabase.com/docs/reference/javascript/introduction",
+    "https://github.com/supabase/supabase"
+  ],
+  "schema_problems": [],
+  "changes": "not flagged, kept from pass1"
+}

@@ -1,0 +1,95 @@
+{
+  "description": "An enterprise collaboration suite providing chat, docs, calendar, and workflow tools with a broad developer platform and APIs.",
+  "auth_methods": [
+    "oauth2",
+    "bearer_token"
+  ],
+  "auth_notes": "Uses OAuth2 authorization code flow and tenant/user access tokens for API requests.",
+  "credential_access": "self_serve_free",
+  "credential_notes": "Developers can sign up and create apps on the Lark Open Platform developer console for free.",
+  "api_styles": [
+    "rest",
+    "websocket"
+  ],
+  "api_breadth": "broad",
+  "api_notes": "Offers over 2500+ APIs covering Contacts, Messenger, Calendar, Drive, Doc, Sheet, Base, Wiki, and approvals.",
+  "official_mcp": "yes",
+  "mcp_notes": "Official Model Context Protocol (MCP) server published by Larksuite (`larksuite/lark-openapi-mcp`), alongside the Lark CLI and agent plugins.",
+  "buildability": "ready_now",
+  "primary_blocker": "none",
+  "rationale": "Lark provides comprehensive public REST/WebSocket APIs, self-serve free developer credentials, official SDKs, and an official MCP server.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "auth",
+      "url": "https://open.larksuite.com/document/home/tenant-or-user-access-token/tenant-access-token",
+      "note": "Details on tenant and user access token mechanisms."
+    },
+    {
+      "supports": "credentials",
+      "url": "https://open.larksuite.com/document/home/index",
+      "note": "Open Platform documentation for creating apps and developer tools."
+    },
+    {
+      "supports": "api",
+      "url": "https://open.larksuite.com",
+      "note": "Lark Developer homepage showcasing 2500+ APIs across Messenger, Docs, Calendar, Base, etc."
+    },
+    {
+      "supports": "mcp",
+      "url": "https://github.com/larksuite",
+      "note": "Official Lark GitHub organization hosting lark-openapi-mcp and the Lark CLI tool."
+    }
+  ],
+  "open_questions": "",
+  "id": 24,
+  "app": "Lark (Larksuite)",
+  "category": "Communications and Messaging",
+  "official_url": "https://open.larksuite.com",
+  "stage": "pass2",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://open.larksuite.com/"
+    },
+    {
+      "title": "",
+      "url": "https://open.larksuite.com/document"
+    },
+    {
+      "title": "",
+      "url": "https://open.larksuite.com/document/uAjLw4CM/ukTMukTMukTM/understanding-app-types"
+    },
+    {
+      "title": "",
+      "url": "https://open.larksuite.com/document/ukTMukTMukTM/uUDN04SN0QjL1QDN"
+    },
+    {
+      "title": "",
+      "url": "https://open.larksuite.com/document/home/tenant-or-user-access-token/tenant-access-token"
+    },
+    {
+      "title": "",
+      "url": "https://open.larksuite.com/document/home/pricing-plan/introduction"
+    },
+    {
+      "title": "",
+      "url": "https://github.com/larksuite"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://open.larksuite.com",
+    "https://open.larksuite.com/",
+    "https://open.larksuite.com/document/home/index",
+    "https://open.larksuite.com/document/uAjLw4CM/ukTMukTMukTM/understanding-app-types",
+    "https://open.larksuite.com/document/ukTMukTMukTM/uUDN04SN0QjL1QDN",
+    "https://open.larksuite.com/document/home/tenant-or-user-access-token/tenant-access-token",
+    "https://open.larksuite.com/document/home/pricing-plan/introduction",
+    "https://github.com/larksuite"
+  ],
+  "schema_problems": [],
+  "changes": "flagged, not re-checked (time limit), kept from pass1"
+}

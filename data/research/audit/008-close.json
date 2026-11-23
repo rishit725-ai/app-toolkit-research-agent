@@ -1,0 +1,84 @@
+{
+  "description": "Close is a sales CRM featuring built-in calling, email, SMS, pipeline management, AI agents, and a native Model Context Protocol (MCP) server.",
+  "auth_methods": [
+    "api_key",
+    "oauth2",
+    "bearer_token"
+  ],
+  "auth_notes": "Supports API keys using HTTP Basic auth with the key as username and blank password, alongside OAuth 2.0 for user-facing applications.",
+  "credential_access": "self_serve_trial",
+  "credential_notes": "API credentials are generated self-serve within an account settings page, but require a paid subscription or an active 14-day free trial.",
+  "api_styles": [
+    "rest",
+    "sdk_or_cli_only"
+  ],
+  "api_breadth": "broad",
+  "api_notes": "Comprehensive REST API covering leads, contacts, opportunities, tasks, activities, webhooks, reporting, workflows, and custom objects.",
+  "official_mcp": "yes",
+  "mcp_notes": "Official Model Context Protocol (MCP) server published directly by Close for connecting AI tools like Claude and ChatGPT.",
+  "buildability": "ready_with_constraints",
+  "primary_blocker": "credential_gate",
+  "rationale": "The API is fully documented and broad, but requires an active trial or paid plan to obtain credentials and use the API.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "auth",
+      "url": "https://developer.close.com/topics/authentication/",
+      "note": "Details authentication via API keys using HTTP Basic auth and OAuth 2.0."
+    },
+    {
+      "supports": "credentials",
+      "url": "https://close.com/pricing/",
+      "note": "Shows pricing plans and indicates that API access requires a paid subscription or 14-day free trial."
+    },
+    {
+      "supports": "api",
+      "url": "https://developer.close.com/api/",
+      "note": "Lists the comprehensive REST API resources and coverage."
+    },
+    {
+      "supports": "mcp",
+      "url": "https://developer.close.com",
+      "note": "Documents the official vendor-published Model Context Protocol (MCP) server for AI agents."
+    }
+  ],
+  "open_questions": "",
+  "id": 8,
+  "app": "Close",
+  "category": "CRM and Sales",
+  "official_url": "https://close.com",
+  "stage": "audit",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://close.com/"
+    },
+    {
+      "title": "",
+      "url": "https://developer.close.com/"
+    },
+    {
+      "title": "",
+      "url": "https://developer.close.com/api/overview/api-key-authentication"
+    },
+    {
+      "title": "",
+      "url": "https://developer.close.com/api/overview"
+    },
+    {
+      "title": "",
+      "url": "https://close.com/pricing"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://close.com",
+    "https://developer.close.com",
+    "https://developer.close.com/topics/authentication/",
+    "https://developer.close.com/api/",
+    "https://close.com/pricing/"
+  ],
+  "schema_problems": []
+}

@@ -1,0 +1,84 @@
+{
+  "description": "Cloud-based accounting software platform for small businesses, accountants, and bookkeepers.",
+  "auth_methods": [
+    "oauth2"
+  ],
+  "auth_notes": "OAuth 2.0 authorization code flow and client credentials grant (for custom connections).",
+  "credential_access": "self_serve_free",
+  "credential_notes": "Developers can sign up for a free developer account on the Xero developer portal with a free Starter plan tier (supporting up to 5 connections).",
+  "api_styles": [
+    "rest"
+  ],
+  "api_breadth": "broad",
+  "api_notes": "Comprehensive Accounting API covering invoices, contacts, bank transactions, accounts, reports, payroll, and more.",
+  "official_mcp": "yes",
+  "mcp_notes": "Official Model Context Protocol (MCP) server published by Xero on GitHub (xero-mcp-server).",
+  "buildability": "ready_now",
+  "primary_blocker": "none",
+  "rationale": "Xero provides self-serve free developer credentials, comprehensive REST APIs, and an official MCP server, making it fully ready to build agent toolkits today.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "auth",
+      "url": "https://developer.xero.com/documentation/oauth2/overview",
+      "note": "Details OAuth 2.0 implementation and grant types for Xero APIs"
+    },
+    {
+      "supports": "credentials",
+      "url": "https://developer.xero.com/pricing",
+      "note": "Shows the free Starter developer plan tier with self-serve signup and 5 connections"
+    },
+    {
+      "supports": "api",
+      "url": "https://developer.xero.com/documentation/api/api-overview",
+      "note": "Outlines the breadth of the Accounting API and other endpoint groups"
+    },
+    {
+      "supports": "mcp",
+      "url": "https://github.com/XeroAPI/xero-mcp-server",
+      "note": "Official open-source Xero MCP server repository"
+    }
+  ],
+  "open_questions": "",
+  "id": 87,
+  "app": "Xero",
+  "category": "Finance and Fintech",
+  "official_url": "https://developer.xero.com",
+  "stage": "pass2",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://developer.xero.com/"
+    },
+    {
+      "title": "",
+      "url": "https://developer.xero.com/documentation/guides/oauth2/overview"
+    },
+    {
+      "title": "",
+      "url": "https://developer.xero.com/documentation/api/accounting/overview"
+    },
+    {
+      "title": "",
+      "url": "https://developer.xero.com/pricing"
+    },
+    {
+      "title": "",
+      "url": "https://github.com/xeroapi"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://developer.xero.com",
+    "https://developer.xero.com/",
+    "https://developer.xero.com/documentation/get-started/getting-started-guide",
+    "https://developer.xero.com/documentation/oauth2/overview",
+    "https://developer.xero.com/documentation/api/api-overview",
+    "https://developer.xero.com/pricing",
+    "https://github.com/XeroAPI"
+  ],
+  "schema_problems": [],
+  "changes": "not flagged, kept from pass1"
+}

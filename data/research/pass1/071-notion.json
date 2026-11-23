@@ -1,0 +1,82 @@
+{
+  "description": "All-in-one workspace for notes, docs, project management, and databases.",
+  "auth_methods": [
+    "oauth2",
+    "bearer_token"
+  ],
+  "auth_notes": "Supports OAuth2 for public integrations/apps, personal access tokens (PATs), and internal connection tokens using Bearer authentication.",
+  "credential_access": "self_serve_free",
+  "credential_notes": "Developers can sign up for a free Notion account and immediately generate personal access tokens or configure internal/OAuth integrations via the Developer portal for free.",
+  "api_styles": [
+    "rest"
+  ],
+  "api_breadth": "broad",
+  "api_notes": "Comprehensive REST API covering pages, blocks, databases, comments, users, file uploads, search, and agent capabilities.",
+  "official_mcp": "yes",
+  "mcp_notes": "Official Notion MCP server is published by Notion on GitHub (makenotion/notion-mcp-server).",
+  "buildability": "ready_now",
+  "primary_blocker": "none",
+  "rationale": "Notion provides a fully documented public REST API, free self-serve credential creation via personal access tokens or OAuth, and an official MCP server, making it fully ready to use as an agent toolkit today.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "auth",
+      "url": "https://developers.notion.com/docs/authorization",
+      "note": "Details OAuth2 flow, personal access tokens, and internal connection token authentication."
+    },
+    {
+      "supports": "credentials",
+      "url": "https://developers.notion.com/docs/getting-started",
+      "note": "Explains how developers can set up personal access tokens and connections free via the Developer portal."
+    },
+    {
+      "supports": "api",
+      "url": "https://developers.notion.com/reference/intro",
+      "note": "Outlines the Notion REST API endpoints, base URL, versioning, and object models."
+    },
+    {
+      "supports": "mcp",
+      "url": "https://github.com/makenotion",
+      "note": "Shows the official makenotion/notion-mcp-server repository published by Notion."
+    }
+  ],
+  "open_questions": "",
+  "id": 71,
+  "app": "Notion",
+  "category": "Productivity and Project Management",
+  "official_url": "https://developers.notion.com",
+  "stage": "pass1",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://developers.notion.com/guides/notion-api/quick-start"
+    },
+    {
+      "title": "",
+      "url": "https://developers.notion.com/guides/authorization/overview"
+    },
+    {
+      "title": "",
+      "url": "https://developers.notion.com/guides/connections-and-tokens/overview"
+    },
+    {
+      "title": "",
+      "url": "https://developers.notion.com/reference/intro"
+    },
+    {
+      "title": "",
+      "url": "https://github.com/makenotion"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://developers.notion.com",
+    "https://developers.notion.com/docs/authorization",
+    "https://developers.notion.com/docs/getting-started",
+    "https://developers.notion.com/reference/intro",
+    "https://github.com/makenotion"
+  ],
+  "schema_problems": []
+}

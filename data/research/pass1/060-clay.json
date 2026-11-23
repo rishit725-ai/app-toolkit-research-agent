@@ -1,0 +1,65 @@
+{
+  "description": "Build GTM plays, multi-provider data enrichment workflows, and automated outbound systems using an AI-powered sales platform.",
+  "auth_methods": [
+    "api_key"
+  ],
+  "auth_notes": "API keys can be found and managed in workspace settings to authenticate API requests.",
+  "credential_access": "self_serve_free",
+  "credential_notes": "Developers can sign up for a free plan self-serve which includes free actions/credits and API key access.",
+  "api_styles": [
+    "rest",
+    "sdk_or_cli_only"
+  ],
+  "api_breadth": "moderate",
+  "api_notes": "Provides API and CLI capabilities for building in Clay directly via coding agents, alongside webhook integrations on higher tiers.",
+  "official_mcp": "yes",
+  "mcp_notes": "Clay officially publishes the Clay MCP for Reps (\"agent-plugins\") to search, enrich, and reach out to leads from AI chat tools.",
+  "buildability": "ready_now",
+  "primary_blocker": "none",
+  "rationale": "Clay provides public developer access via self-serve free accounts, API/CLI tooling, and an official MCP server for agent integration.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "auth",
+      "url": "https://help.clay.com/en/articles/8617502-how-to-find-your-clay-api-key",
+      "note": "Documentation covering how to find your Clay API key for authentication."
+    },
+    {
+      "supports": "credentials",
+      "url": "https://clay.com/pricing",
+      "note": "Pricing page showing free tier availability with self-serve signup and API key support."
+    },
+    {
+      "supports": "mcp",
+      "url": "https://clay.com",
+      "note": "Main page referencing the Clay MCP for Reps and installation via agent-plugins."
+    }
+  ],
+  "open_questions": "",
+  "id": 60,
+  "app": "Clay",
+  "category": "Data, SEO and Scraping",
+  "official_url": "https://clay.com",
+  "stage": "pass1",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://www.clay.com/"
+    },
+    {
+      "title": "",
+      "url": "https://www.clay.com/pricing"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://clay.com",
+    "https://help.clay.com/en/articles/8617502-how-to-find-your-clay-api-key",
+    "https://help.clay.com/en/articles/8617500-how-to-use-clay-api",
+    "https://clay.com/pricing",
+    "https://github.com/clay-com"
+  ],
+  "schema_problems": []
+}

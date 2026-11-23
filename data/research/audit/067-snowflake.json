@@ -1,0 +1,82 @@
+{
+  "description": "Cloud-based data storage and analytics platform providing data warehousing and data lakes",
+  "auth_methods": [
+    "oauth2",
+    "jwt",
+    "other"
+  ],
+  "auth_notes": "Supports OAuth, key-pair authentication (JWT), and workload identity federation (AWS, Azure, GCP, OIDC).",
+  "credential_access": "self_serve_trial",
+  "credential_notes": "Developers can sign up for a self-serve trial account, which provides API and database access.",
+  "api_styles": [
+    "rest",
+    "sdk_or_cli_only"
+  ],
+  "api_breadth": "broad",
+  "api_notes": "Offers a SQL REST API for executing queries, managing deployments, and handling transactions, alongside extensive SDKs, drivers, and CLI tools.",
+  "official_mcp": "no",
+  "mcp_notes": "No official Model Context Protocol (MCP) server published by Snowflake as of current data; only community-driven integrations exist.",
+  "buildability": "ready_with_constraints",
+  "primary_blocker": "credential_gate",
+  "rationale": "Snowflake provides a fully documented SQL REST API and robust developer tools, but requires signing up for a trial or paid account before API credentials can be provisioned.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "auth",
+      "url": "https://docs.snowflake.com/en/developer-guide/sql-api/authenticating",
+      "note": "Documents OAuth, key-pair authentication (JWT), and workload identity federation."
+    },
+    {
+      "supports": "credentials",
+      "url": "https://docs.snowflake.com",
+      "note": "Provides options to sign up for a trial account to get started."
+    },
+    {
+      "supports": "api",
+      "url": "https://docs.snowflake.com/en/developer-guide/sql-api/index",
+      "note": "Describes the Snowflake SQL REST API capabilities for querying and managing deployments."
+    },
+    {
+      "supports": "mcp",
+      "url": "https://github.com/snowflakedb",
+      "note": "Official Snowflake GitHub organization showing drivers, SDKs, and CLI tools, but no official MCP server."
+    }
+  ],
+  "open_questions": "",
+  "id": 67,
+  "app": "Snowflake",
+  "category": "Developer, Infra and Data platforms",
+  "official_url": "https://docs.snowflake.com",
+  "stage": "audit",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://docs.snowflake.com/en/"
+    },
+    {
+      "title": "",
+      "url": "https://docs.snowflake.com/en/developer-guide/sql-api/index"
+    },
+    {
+      "title": "",
+      "url": "https://docs.snowflake.com/en/developer-guide/sql-api/authenticating"
+    },
+    {
+      "title": "",
+      "url": "https://github.com/snowflakedb"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://docs.snowflake.com",
+    "https://docs.snowflake.com/en/developer-guide/sql-api/index",
+    "https://docs.snowflake.com/en/developer-guide/sql-api/authenticating",
+    "https://docs.snowflake.com/en/developer-guide/snowflake-rest-apis",
+    "https://docs.snowflake.com/en/sql-reference/stored-procedures-python",
+    "https://www.snowflake.com/legal/pricing-terms/",
+    "https://github.com/snowflakedb"
+  ],
+  "schema_problems": []
+}

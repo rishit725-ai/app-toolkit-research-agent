@@ -1,0 +1,72 @@
+{
+  "description": "Devin is an autonomous AI software engineer built to write, run, and test code, handle tickets, and build applications.",
+  "auth_methods": [
+    "bearer_token"
+  ],
+  "auth_notes": "Uses a Bearer token (`cog_`-prefixed service user API key or personal access token) in the Authorization header.",
+  "credential_access": "paid_plan",
+  "credential_notes": "Requires signing up for a paid Devin plan (Individual or Teams) via the web app to provision credentials.",
+  "api_styles": [
+    "rest"
+  ],
+  "api_breadth": "broad",
+  "api_notes": "Covers session management, enterprise analytics, audit logs, knowledge notes, playbooks, secrets, and repository setups.",
+  "official_mcp": "yes",
+  "mcp_notes": "Official MCP support is provided via the Devin MCP server maintained by Cognition Labs.",
+  "buildability": "ready_with_constraints",
+  "primary_blocker": "credential_gate",
+  "rationale": "The API is fully documented and functional, but API credential generation requires access to a paid Devin account plan.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "auth",
+      "url": "https://docs.devin.ai/api-reference/authentication",
+      "note": "Describes token and principal model using Bearer authentication with cog_ keys."
+    },
+    {
+      "supports": "credentials",
+      "url": "https://docs.devin.ai",
+      "note": "Mentions signing up via app.devin.ai with Individual and Teams plans available."
+    },
+    {
+      "supports": "api",
+      "url": "https://docs.devin.ai/api-reference/overview",
+      "note": "Outlines REST API structure for organization and enterprise scopes."
+    },
+    {
+      "supports": "mcp",
+      "url": "https://docs.devin.ai",
+      "note": "References MCP (Model Context Protocol) and Devin MCP support in documentation index."
+    }
+  ],
+  "open_questions": "",
+  "id": 96,
+  "app": "Devin",
+  "category": "AI, Research and Media-native",
+  "official_url": "https://docs.devin.ai",
+  "stage": "pass1",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://docs.devin.ai/get-started/devin-intro"
+    },
+    {
+      "title": "",
+      "url": "https://docs.devin.ai/api-reference/overview"
+    },
+    {
+      "title": "",
+      "url": "https://docs.devin.ai/api-reference/authentication"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://docs.devin.ai",
+    "https://docs.devin.ai/api-reference/overview",
+    "https://docs.devin.ai/api-reference/authentication",
+    "https://github.com/Cognition-Labs/devin-mcp"
+  ],
+  "schema_problems": []
+}

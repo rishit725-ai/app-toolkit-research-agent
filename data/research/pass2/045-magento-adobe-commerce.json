@@ -1,0 +1,57 @@
+{
+  "description": "An enterprise-grade ecommerce platform offering flexible B2B and B2C online store management and catalog solutions.",
+  "auth_methods": [
+    "bearer_token",
+    "oauth2",
+    "token"
+  ],
+  "auth_notes": "Supports token-based authentication (administrator or customer tokens via bearer tokens) and OAuth authentication.",
+  "credential_access": "open_source_local",
+  "credential_notes": "Adobe Commerce (Magento Open Source) can be self-hosted or run locally for free by developers to generate API credentials.",
+  "api_styles": [
+    "rest",
+    "graphql",
+    "soap"
+  ],
+  "api_breadth": "broad",
+  "api_notes": "Comprehensive API coverage for products, categories, customers, carts, orders, and inventory via REST, GraphQL, and SOAP.",
+  "official_mcp": "no",
+  "mcp_notes": "No official Model Context Protocol (MCP) server published by Adobe; community-created integrations may exist.",
+  "buildability": "ready_now",
+  "primary_blocker": "none",
+  "rationale": "Magento Open Source is freely downloadable and locally deployable with a robust, fully documented REST, GraphQL, and SOAP API surface.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "buildability",
+      "url": "https://developer.adobe.com/commerce",
+      "note": "Provides documentation and tools for integrating and extending Adobe Commerce/Magento."
+    }
+  ],
+  "open_questions": "",
+  "id": 45,
+  "app": "Magento (Adobe Commerce)",
+  "category": "Ecommerce",
+  "official_url": "https://developer.adobe.com/commerce",
+  "stage": "pass2",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://developer.adobe.com/commerce/"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://developer.adobe.com/commerce",
+    "https://developer.adobe.com/commerce/extensibility/graphql/security/authentication",
+    "https://developer.adobe.com/commerce/webservices/rest/security/authentication",
+    "https://developer.adobe.com/commerce/extensibility/graphql/api-reference",
+    "https://developer.adobe.com/commerce/webservices/rest/introduction"
+  ],
+  "schema_problems": [
+    "auth_methods has value outside vocabulary: ['bearer_token', 'oauth2', 'token']"
+  ],
+  "changes": "flagged, not re-checked (time limit), kept from pass1"
+}

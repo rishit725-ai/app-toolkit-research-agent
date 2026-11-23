@@ -1,0 +1,63 @@
+{
+  "description": "Command-line and Node.js tool for the Mermaid library to generate SVG, PNG, or PDF files from Mermaid diagram definitions.",
+  "auth_methods": [
+    "none"
+  ],
+  "auth_notes": "No authentication or API credentials required as it is a local command-line and Node.js package.",
+  "credential_access": "open_source_local",
+  "credential_notes": "Open source tool available freely via npm or Docker without any account or API key requirements.",
+  "api_styles": [
+    "sdk_or_cli_only"
+  ],
+  "api_breadth": "narrow",
+  "api_notes": "Provides a local CLI command (mmdc) and a simple Node.js package function (run) to compile diagram text files into graphical formats.",
+  "official_mcp": "no",
+  "mcp_notes": "No official MCP server published by the vendor.",
+  "buildability": "ready_now",
+  "primary_blocker": "none",
+  "rationale": "It is an open-source, locally executable CLI and Node.js tool that can be embedded directly into agent environments instantly without credentials.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "auth",
+      "url": "https://github.com/mermaid-js/mermaid-cli",
+      "note": "Documentation shows it is a local CLI and Node.js package requiring no web API authentication."
+    },
+    {
+      "supports": "credentials",
+      "url": "https://github.com/mermaid-js/mermaid-cli",
+      "note": "Installation is completely open source via npm install -g @mermaid-js/mermaid-cli or Docker with no account needed."
+    },
+    {
+      "supports": "api",
+      "url": "https://github.com/mermaid-js/mermaid-cli/blob/master/README.md",
+      "note": "Exposes command line interface options (mmdc) and a Node.js run function."
+    }
+  ],
+  "open_questions": "",
+  "changes": "none",
+  "id": 98,
+  "app": "Mermaid CLI",
+  "category": "AI, Research and Media-native",
+  "official_url": "https://github.com/mermaid-js/mermaid-cli",
+  "stage": "pass2",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://github.com/mermaid-js/mermaid-cli"
+    },
+    {
+      "title": "",
+      "url": "https://github.com/mermaid-js/mermaid-cli/blob/master/README.md"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://github.com/mermaid-js/mermaid-cli",
+    "https://github.com/mermaid-js/mermaid-cli/blob/master/README.md",
+    "https://github.com/mermaid-js/mermaid"
+  ],
+  "schema_problems": []
+}

@@ -1,0 +1,73 @@
+{
+  "description": "Cloud platform for frontend frameworks and static sites, providing fast deployments, serverless functions, and infrastructure.",
+  "auth_methods": [
+    "bearer_token"
+  ],
+  "auth_notes": "Vercel API requests are authenticated using Vercel Access Tokens passed in the Authorization header as a Bearer token.",
+  "credential_access": "self_serve_free",
+  "credential_notes": "Developers can sign up for a free Hobby account and create Personal Access Tokens directly in their account settings at no cost.",
+  "api_styles": [
+    "rest"
+  ],
+  "api_breadth": "broad",
+  "api_notes": "Comprehensive REST API covering deployments, domains, projects, environment variables, storage, logs, and more.",
+  "official_mcp": "yes",
+  "mcp_notes": "Official Model Context Protocol server published by Vercel on GitHub (vercel/mcp-server-vercel).",
+  "buildability": "ready_now",
+  "primary_blocker": "none",
+  "rationale": "Vercel provides a fully documented REST API, free self-serve account creation with access tokens, and an official MCP server, making it instantly buildable as an AI agent toolkit.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "auth",
+      "url": "https://vercel.com/docs/rest-api",
+      "note": "Documents the REST API and Bearer token authentication mechanism using Vercel Access Tokens."
+    },
+    {
+      "supports": "credentials",
+      "url": "https://vercel.com/pricing",
+      "note": "Shows the free Hobby tier allowing users to sign up and access platform features."
+    },
+    {
+      "supports": "api",
+      "url": "https://vercel.com/docs/rest-api",
+      "note": "Lists extensive endpoints across deployments, projects, domains, environment, etc."
+    },
+    {
+      "supports": "mcp",
+      "url": "https://github.com/vercel/mcp-server-vercel",
+      "note": "Official Vercel MCP server repository."
+    }
+  ],
+  "open_questions": "",
+  "changes": "none",
+  "id": 62,
+  "app": "Vercel",
+  "category": "Developer, Infra and Data platforms",
+  "official_url": "https://vercel.com/docs/rest-api",
+  "stage": "pass2",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://vercel.com/docs/rest-api"
+    },
+    {
+      "title": "",
+      "url": "https://vercel.com/pricing"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://vercel.com/docs/rest-api",
+    "https://vercel.com/pricing",
+    "https://github.com/vercel/mcp-server-vercel",
+    "https://vercel.com/docs/rest-api#authentication",
+    "https://vercel.com/docs/rest-api#getting-started",
+    "https://vercel.com/docs/accounts/plans/fair-use-policy",
+    "https://vercel.com/docs/rest-api#endpoints",
+    "https://github.com/vercel/mcp"
+  ],
+  "schema_problems": []
+}

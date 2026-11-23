@@ -1,0 +1,90 @@
+{
+  "description": "Voice, video, and text communication service for building communities and gaming groups.",
+  "auth_methods": [
+    "oauth2",
+    "bearer_token",
+    "basic"
+  ],
+  "auth_notes": "Bot tokens, OAuth2 bearer tokens, or HTTP Basic authentication using client ID and secret for token endpoints.",
+  "credential_access": "self_serve_free",
+  "credential_notes": "Developers can sign up for a free Discord account and create applications/bots on the Developer Portal at no cost.",
+  "api_styles": [
+    "rest",
+    "websocket"
+  ],
+  "api_breadth": "broad",
+  "api_notes": "Covers channels, guilds, messages, users, webhooks, interactions, voice, audit logs, and real-time events via Gateway WebSockets.",
+  "official_mcp": "no",
+  "mcp_notes": "No official MCP server published by Discord. Community-built MCP servers exist on GitHub.",
+  "buildability": "ready_now",
+  "primary_blocker": "none",
+  "rationale": "Discord provides a comprehensive, publicly documented REST and WebSocket API with free self-serve developer credential creation.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "auth",
+      "url": "https://discord.com/developers/docs/reference",
+      "note": "Details authentication options including bot tokens, bearer tokens, and basic auth."
+    },
+    {
+      "supports": "credentials",
+      "url": "https://discord.com/developers/applications",
+      "note": "Developer Portal where applications and bot credentials can be created freely."
+    },
+    {
+      "supports": "api",
+      "url": "https://discord.com/developers/docs",
+      "note": "Comprehensive documentation covering Discord REST API resources and Gateway WebSockets."
+    }
+  ],
+  "open_questions": "",
+  "id": 26,
+  "app": "Discord",
+  "category": "Communications and Messaging",
+  "official_url": "https://discord.com",
+  "stage": "pass2",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://discord.com/"
+    },
+    {
+      "title": "",
+      "url": "https://docs.discord.com/developers/intro"
+    },
+    {
+      "title": "",
+      "url": "https://discord.com/developers/applications"
+    },
+    {
+      "title": "",
+      "url": "https://docs.discord.com/developers/topics/rate-limits"
+    },
+    {
+      "title": "",
+      "url": "https://docs.discord.com/developers/reference"
+    },
+    {
+      "title": "",
+      "url": "https://docs.discord.com/developers/topics/oauth2"
+    },
+    {
+      "title": "",
+      "url": "https://github.com/discord"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://discord.com",
+    "https://discord.com/developers/docs",
+    "https://discord.com/developers/applications",
+    "https://discord.com/developers/docs/topics/rate-limits",
+    "https://discord.com/developers/docs/reference",
+    "https://discord.com/developers/docs/topics/oauth2",
+    "https://github.com/discord"
+  ],
+  "schema_problems": [],
+  "changes": "not flagged, kept from pass1"
+}

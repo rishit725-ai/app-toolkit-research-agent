@@ -1,0 +1,72 @@
+{
+  "description": "Collaborative work management platform for tracking projects, managing workflows, and organizing data in spreadsheet-like sheets.",
+  "auth_methods": [
+    "oauth2",
+    "bearer_token"
+  ],
+  "auth_notes": "OAuth2 auth code flow for public apps, and API access tokens (bearer tokens) generated from the Smartsheet account UI for private/personal use.",
+  "credential_access": "self_serve_free",
+  "credential_notes": "Developers can sign up for a Smartsheet account and generate API access tokens or register apps via the developer portal self-serve.",
+  "api_styles": [
+    "rest"
+  ],
+  "api_breadth": "broad",
+  "api_notes": "Comprehensive REST API covering sheets, rows, columns, reports, users, workspaces, folders, attachments, and webhooks.",
+  "official_mcp": "yes",
+  "mcp_notes": "Official Smartsheet MCP server provided by Smartsheet for AI integration.",
+  "buildability": "ready_now",
+  "primary_blocker": "none",
+  "rationale": "Smartsheet provides a robust public REST API, self-serve developer access, and an official MCP server, making it fully ready for agent toolkits today.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "auth",
+      "url": "https://smartsheet.com/developers",
+      "note": "Developer portal overview mentioning authentication and API guides."
+    },
+    {
+      "supports": "mcp",
+      "url": "https://smartsheet.com/developers",
+      "note": "Official references and links to the AI & Smartsheet MCP Server."
+    },
+    {
+      "supports": "api",
+      "url": "https://smartsheet.redoc.ly/",
+      "note": "Official API reference documentation site for Smartsheet."
+    }
+  ],
+  "open_questions": "",
+  "id": 79,
+  "app": "Smartsheet",
+  "category": "Productivity and Project Management",
+  "official_url": "https://smartsheet.com/developers",
+  "stage": "pass1",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://developers.smartsheet.com/"
+    },
+    {
+      "title": "",
+      "url": "https://smartsheet.redoc.ly/"
+    },
+    {
+      "title": "",
+      "url": "https://github.com/smartsheet"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://smartsheet.com/developers",
+    "https://developer.smartsheet.com/",
+    "https://smartsheet.redoc.ly/",
+    "https://help.smartsheet.com/developers/api-documentation",
+    "https://help.smartsheet.com/articles/2482329-developer-portal-and-api-keys",
+    "https://help.smartsheet.com/articles/2476594-authentication-and-access-tokens",
+    "https://help.smartsheet.com/articles/2482260-rate-limits",
+    "https://github.com/smartsheet"
+  ],
+  "schema_problems": []
+}

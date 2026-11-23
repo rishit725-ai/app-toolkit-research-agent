@@ -1,0 +1,57 @@
+{
+  "description": "Command-line tool and Node.js wrapper for the Mermaid library to render diagrams from text definitions",
+  "auth_methods": [
+    "none"
+  ],
+  "auth_notes": "Mermaid CLI is an open-source local library and CLI tool requiring no authentication.",
+  "credential_access": "open_source_local",
+  "credential_notes": "Free and open source under the MIT license, available via npm or Docker without credentials.",
+  "api_styles": [
+    "sdk_or_cli_only"
+  ],
+  "api_breadth": "narrow",
+  "api_notes": "Exposes a CLI command (mmdc) and a programmatic Node.js function (`run`) to transform text definitions into images.",
+  "official_mcp": "no",
+  "mcp_notes": "No official MCP server published by the vendor.",
+  "buildability": "ready_now",
+  "primary_blocker": "none",
+  "rationale": "It is a fully open-source local tool that can be immediately installed and executed via CLI or Node.js without any credentials or web APIs.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "buildability",
+      "url": "https://github.com/mermaid-js/mermaid-cli",
+      "note": "Shows installation via npm/Docker and usage of the open-source Mermaid CLI."
+    },
+    {
+      "supports": "api",
+      "url": "https://github.com/mermaid-js/mermaid-cli",
+      "note": "Documents the Node.js API import { run } from '@mermaid-js/mermaid-cli'."
+    }
+  ],
+  "open_questions": "",
+  "id": 98,
+  "app": "Mermaid CLI",
+  "category": "AI, Research and Media-native",
+  "official_url": "https://github.com/mermaid-js/mermaid-cli",
+  "stage": "audit",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://github.com/mermaid-js/mermaid-cli"
+    },
+    {
+      "title": "",
+      "url": "https://github.com/mermaid-js/mermaid"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://github.com/mermaid-js/mermaid-cli",
+    "https://github.com/mermaid-js/mermaid-cli/blob/main/README.md",
+    "https://github.com/mermaid-js/mermaid"
+  ],
+  "schema_problems": []
+}

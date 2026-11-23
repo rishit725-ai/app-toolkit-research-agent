@@ -1,0 +1,72 @@
+{
+  "description": "Web data infrastructure platform providing proxy networks, web scraping APIs, unblocking solutions, and remote browsers for developers and AI agents.",
+  "auth_methods": [
+    "bearer_token",
+    "api_key",
+    "basic"
+  ],
+  "auth_notes": "API access uses Bearer tokens (API keys) in HTTP headers or via SDK/CLI; proxy and native access use basic-style username and password formats.",
+  "credential_access": "self_serve_free",
+  "credential_notes": "Developers can sign up for a free account/trial and generate API keys or access tokens self-serve through the dashboard control panel.",
+  "api_styles": [
+    "rest",
+    "websocket",
+    "sdk_or_cli_only"
+  ],
+  "api_breadth": "broad",
+  "api_notes": "Covers web scraping APIs, Web Unlocker, SERP APIs, Scraping Browser automation, dataset marketplaces, proxy management, and an official MCP server.",
+  "official_mcp": "yes",
+  "mcp_notes": "Bright Data publishes an official Model Context Protocol (MCP) server for AI agents to query web data and execute actions.",
+  "buildability": "ready_now",
+  "primary_blocker": "none",
+  "rationale": "Bright Data provides extensive public REST APIs, official SDKs/CLI, an official MCP server, and self-serve developer account access.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "auth",
+      "url": "https://docs.brightdata.com/api-reference/introduction",
+      "note": "Details Bearer token API key authentication headers and SDK initialization parameters."
+    },
+    {
+      "supports": "credentials",
+      "url": "https://docs.brightdata.com/api-reference/introduction",
+      "note": "Explains self-serve account sign-up and control panel API key generation."
+    },
+    {
+      "supports": "api",
+      "url": "https://brightdata.com",
+      "note": "Lists products including Web Access APIs, Scraper APIs, Browser APIs, and the Bright Data MCP server."
+    }
+  ],
+  "open_questions": "",
+  "id": 57,
+  "app": "Bright Data",
+  "category": "Data, SEO and Scraping",
+  "official_url": "https://brightdata.com",
+  "stage": "pass1",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://brightdata.com/"
+    },
+    {
+      "title": "",
+      "url": "https://brightdata.com/pricing"
+    },
+    {
+      "title": "",
+      "url": "https://docs.brightdata.com/api-reference/authentication"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://brightdata.com",
+    "https://brightdata.com/api",
+    "https://brightdata.com/cp/api_keys",
+    "https://brightdata.com/pricing",
+    "https://docs.brightdata.com/api-reference/introduction"
+  ],
+  "schema_problems": []
+}

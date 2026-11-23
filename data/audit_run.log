@@ -1,0 +1,59 @@
+[1/20] audit: Close
+    -> ready_with_constraints / self_serve_trial / ['api_key', 'oauth2', 'bearer_token'] (high)
+[2/20] audit: DealCloud
+    rate-limited / transient error, waiting 20s (503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently exp)
+    -> outreach_required / partner_or_sales_gated / ['api_key', 'bearer_token', 'oauth2'] (high)
+[3/20] audit: Freshdesk
+    -> ready_with_constraints / self_serve_trial / ['api_key', 'oauth2'] (high)
+[4/20] audit: Gladly
+    -> ready_with_constraints / paid_plan / ['bearer_token', 'api_key'] (high)
+[5/20] audit: Twilio
+    rate-limited / transient error, waiting 20s (503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently exp)
+    rate-limited / transient error, waiting 40s (503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently exp)
+    -> ready_now / self_serve_free / ['basic', 'api_key'] (high)
+[6/20] audit: Aircall
+    rate-limited / transient error, waiting 20s (503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently exp)
+    rate-limited / transient error, waiting 40s (503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently exp)
+    -> ready_with_constraints / self_serve_trial / ['oauth2', 'bearer_token', 'basic'] (high)
+[7/20] audit: systeme.io
+    -> ready_now / self_serve_free / ['api_key'] (medium)
+[8/20] audit: Threads (Meta)
+    rate-limited / transient error, waiting 20s (503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently exp)
+    rate-limited / transient error, waiting 40s (503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently exp)
+    -> ready_with_constraints / self_serve_free / ['oauth2'] (high)
+[9/20] audit: BigCommerce
+    -> ready_with_constraints / self_serve_trial / ['oauth2', 'bearer_token', 'jwt', 'hmac_signature'] (high)
+[10/20] audit: Ecwid
+    -> ready_now / self_serve_free / ['oauth2', 'bearer_token'] (high)
+[11/20] audit: DataForSEO
+    -> ready_now / self_serve_free / ['basic'] (high)
+[12/20] audit: SE Ranking
+    rate-limited / transient error, waiting 20s (503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently exp)
+    -> ready_with_constraints / paid_plan / ['api_key'] (high)
+[13/20] audit: Vercel
+    -> ready_now / self_serve_free / ['bearer_token', 'oauth2'] (high)
+[14/20] audit: Snowflake
+    -> ready_with_constraints / self_serve_trial / ['oauth2', 'jwt', 'other'] (high)
+[15/20] audit: Airtable
+    rate-limited / transient error, waiting 20s (503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently exp)
+    rate-limited / transient error, waiting 20s (503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently exp)
+    -> ready_now / self_serve_free / ['oauth2', 'bearer_token'] (high)
+[16/20] audit: Asana
+    -> ready_now / self_serve_free / ['oauth2', 'bearer_token'] (high)
+[17/20] audit: Stripe
+    rate-limited / transient error, waiting 20s (503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently exp)
+    -> ready_now / self_serve_free / ['api_key', 'basic', 'bearer_token'] (high)
+[18/20] audit: iPayX
+    -> not_buildable_now / unclear / ['unclear'] (high)  schema problems: ["auth_methods has value outside vocabulary: ['unclear']"]
+[19/20] audit: Devin
+    rate-limited / transient error, waiting 20s (503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently exp)
+    rate-limited / transient error, waiting 40s (503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently exp)
+    rate-limited / transient error, waiting 60s (503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently exp)
+    -> ready_with_constraints / paid_plan / ['bearer_token', 'api_key'] (high)
+[20/20] audit: Mermaid CLI
+    rate-limited / transient error, waiting 20s (503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently exp)
+    -> ready_now / open_source_local / ['none'] (high)
+
+Done. researched=20 failed=0 carried_over=0
+
+Done. researched=0 failed=0 carried_over=0

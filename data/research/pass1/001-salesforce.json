@@ -1,0 +1,84 @@
+{
+  "description": "Enterprise customer relationship management (CRM) platform providing sales, service, marketing, and AI agent orchestration.",
+  "auth_methods": [
+    "oauth2",
+    "jwt"
+  ],
+  "auth_notes": "OAuth 2.0 authorization code, client credentials flows, and JWT-based bearer tokens via Connected Apps or External Client Apps.",
+  "credential_access": "self_serve_free",
+  "credential_notes": "Any developer can sign up for a free Salesforce Developer Edition account online to obtain sandbox/API credentials.",
+  "api_styles": [
+    "rest",
+    "soap",
+    "graphql"
+  ],
+  "api_breadth": "broad",
+  "api_notes": "Comprehensive public API coverage including REST API, SOAP API, Bulk API, Metadata API, and Connect REST API for full CRM objects and data operations.",
+  "official_mcp": "yes",
+  "mcp_notes": "Salesforce publishes official developer tools and MCP (Model Context Protocol) integrations such as Metadata Grounding MCP and Headless Toolkit support for AI clients.",
+  "buildability": "ready_now",
+  "primary_blocker": "none",
+  "rationale": "Salesforce provides public REST/SOAP/GraphQL APIs, official MCP support, and self-serve free Developer Edition accounts for immediate agent toolkit development.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "auth",
+      "url": "https://help.salesforce.com/s/articleView?id=sf.remoteaccess_authenticate.htm",
+      "note": "Documentation on remote access and authentication via connected apps and OAuth 2.0."
+    },
+    {
+      "supports": "credentials",
+      "url": "https://salesforce.com",
+      "note": "Offers free Developer Edition signup for building enterprise apps and accessing the platform."
+    },
+    {
+      "supports": "api",
+      "url": "https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_what_is_rest_api.htm",
+      "note": "Overview of Salesforce REST API for creating, manipulating, and searching data."
+    },
+    {
+      "supports": "mcp",
+      "url": "https://developer.salesforce.com/",
+      "note": "Developer portal details official MCP servers like Metadata Grounding MCP and Headless Toolkit."
+    }
+  ],
+  "open_questions": "",
+  "id": 1,
+  "app": "Salesforce",
+  "category": "CRM and Sales",
+  "official_url": "https://salesforce.com",
+  "stage": "pass1",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://www.salesforce.com/"
+    },
+    {
+      "title": "",
+      "url": "https://developer.salesforce.com/"
+    },
+    {
+      "title": "",
+      "url": "https://help.salesforce.com/s/articleView?language=en_US&id=sf.remoteaccess_authenticate.htm"
+    },
+    {
+      "title": "",
+      "url": "https://developer.salesforce.com/docs/platform/api-rest/guide/intro-what-is-rest-api.html"
+    },
+    {
+      "title": "",
+      "url": "https://developer.salesforce.com/docs/platform/salesforce-app-limits-cheatsheet/guide/salesforce-app-limits-platform-api.html"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://salesforce.com",
+    "https://developer.salesforce.com/",
+    "https://help.salesforce.com/s/articleView?id=sf.remoteaccess_authenticate.htm",
+    "https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_what_is_rest_api.htm",
+    "https://developer.salesforce.com/docs/atlas.en-us.salesforce_app_limits_cheatsheet.meta/salesforce_app_limits_cheatsheet/salesforce_app_limits_platform_api.htm"
+  ],
+  "schema_problems": []
+}

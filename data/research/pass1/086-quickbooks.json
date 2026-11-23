@@ -1,0 +1,82 @@
+{
+  "description": "Cloud-based accounting and financial management software for small and medium-sized businesses",
+  "auth_methods": [
+    "oauth2"
+  ],
+  "auth_notes": "OAuth 2.0 authorization code flow for user-authenticated access to QuickBooks Online APIs.",
+  "credential_access": "self_serve_free",
+  "credential_notes": "Developers can sign up for a free Intuit Developer account and create apps to access sandbox environments at no cost.",
+  "api_styles": [
+    "rest"
+  ],
+  "api_breadth": "broad",
+  "api_notes": "Comprehensive REST API covering accounting entities like invoices, customers, accounts, vendors, and reports.",
+  "official_mcp": "no",
+  "mcp_notes": "No official Model Context Protocol (MCP) server published by Intuit; community alternatives may exist.",
+  "buildability": "ready_now",
+  "primary_blocker": "none",
+  "rationale": "QuickBooks provides a robust public REST API with OAuth 2.0 and free self-serve developer access via sandbox accounts.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "auth",
+      "url": "https://developer.intuit.com/app/developer/qbo/docs/develop/authentication-and-authorization",
+      "note": "Details OAuth 2.0 implementation for QuickBooks Online APIs."
+    },
+    {
+      "supports": "credentials",
+      "url": "https://developer.intuit.com/app/developer/qbo/docs/get-started",
+      "note": "Explains how developers sign up for free developer accounts and use sandboxes."
+    },
+    {
+      "supports": "api",
+      "url": "https://developer.intuit.com/app/developer/qbo/docs/api/accounting/all-entities/account",
+      "note": "Documents the REST accounting API surface area."
+    }
+  ],
+  "open_questions": "",
+  "id": 86,
+  "app": "QuickBooks",
+  "category": "Finance and Fintech",
+  "official_url": "https://developer.intuit.com",
+  "stage": "pass1",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://developer.intuit.com/"
+    },
+    {
+      "title": "",
+      "url": "https://developer.intuit.com/app/developer/qbo/docs/get-started"
+    },
+    {
+      "title": "",
+      "url": "https://developer.intuit.com/app/developer/qbo/docs/develop/authentication-and-authorization"
+    },
+    {
+      "title": "",
+      "url": "https://developer.intuit.com/app/developer/qbo/docs/api/accounting/all-entities/account"
+    },
+    {
+      "title": "",
+      "url": "https://developer.intuit.com/app/developer/qbo/docs/learn/rest-api-features"
+    },
+    {
+      "title": "",
+      "url": "https://github.com/intuit"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://developer.intuit.com",
+    "https://developer.intuit.com/app/developer/qbo/docs/get-started",
+    "https://developer.intuit.com/app/developer/qbo/docs/develop/authentication-and-authorization",
+    "https://developer.intuit.com/app/developer/qbo/docs/api/accounting/all-entities/account",
+    "https://developer.intuit.com/app/developer/pricing",
+    "https://developer.intuit.com/app/developer/qbo/docs/learn/rest-api-features",
+    "https://github.com/intuit"
+  ],
+  "schema_problems": []
+}

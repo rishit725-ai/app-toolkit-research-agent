@@ -1,0 +1,92 @@
+{
+  "description": "Programmatic interface for managing Google Ads accounts, campaigns, reporting, and bidding strategies.",
+  "auth_methods": [
+    "oauth2"
+  ],
+  "auth_notes": "Uses OAuth 2.0 (single-user or multi-user workflow) combined with a developer token to authorize API requests.",
+  "credential_access": "admin_approval",
+  "credential_notes": "Developers can sign up for a Google Cloud project and obtain a developer token, but standard production/real use requires navigating access levels and administrative/developer token approval.",
+  "api_styles": [
+    "rest",
+    "soap"
+  ],
+  "api_breadth": "broad",
+  "api_notes": "Comprehensive API surface covering account management, campaign creation, reporting via GAQL, billing, budgeting, and keyword planning.",
+  "official_mcp": "yes",
+  "mcp_notes": "Google provides an official Google Ads MCP server as part of its developer toolkit.",
+  "buildability": "ready_with_constraints",
+  "primary_blocker": "credential_gate",
+  "rationale": "While a broad public API and official MCP server exist, getting fully functional live credentials and production access requires developer token approval and access levels.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "auth",
+      "url": "https://developers.google.com/google-ads/api/docs/oauth/overview",
+      "note": "Describes OAuth 2.0 authentication workflows and developer token requirement."
+    },
+    {
+      "supports": "credentials",
+      "url": "https://developers.google.com/google-ads/api/docs/get-started",
+      "note": "Outlines getting started steps, project setup, and access levels."
+    },
+    {
+      "supports": "api",
+      "url": "https://developers.google.com/google-ads/api/reference/rpc",
+      "note": "Details the comprehensive Google Ads API reference and services."
+    },
+    {
+      "supports": "mcp",
+      "url": "https://developers.google.com/google-ads",
+      "note": "Links to the Google Ads MCP server in the developer toolkit."
+    }
+  ],
+  "open_questions": "",
+  "id": 31,
+  "app": "Google Ads",
+  "category": "Marketing, Ads, Email and Social",
+  "official_url": "https://developers.google.com/google-ads",
+  "stage": "pass1",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://developers.google.com/google-ads"
+    },
+    {
+      "title": "",
+      "url": "https://developers.google.com/google-ads/api/docs/get-started/introduction"
+    },
+    {
+      "title": "",
+      "url": "https://developers.google.com/google-ads/api/docs/oauth/overview"
+    },
+    {
+      "title": "",
+      "url": "https://developers.google.com/google-ads/api/docs/get-started/introduction"
+    },
+    {
+      "title": "",
+      "url": "https://developers.google.com/google-ads/api/docs/billing/overview"
+    },
+    {
+      "title": "",
+      "url": "https://developers.google.com/google-ads/api/reference/rpc/v26/overview"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://developers.google.com/google-ads",
+    "https://developers.google.com/google-ads/api/docs/first-call/overview",
+    "https://developers.google.com/google-ads/api/docs/oauth/overview",
+    "https://developers.google.com/google-ads/api/docs/get-started",
+    "https://developers.google.com/google-ads/api/docs/billing/overview",
+    "https://developers.google.com/google-ads/api/reference/rpc",
+    "https://github.com/google/ads-api-dotnet",
+    "https://github.com/google/ads-api-java",
+    "https://github.com/google/ads-api-php",
+    "https://github.com/google/ads-api-python",
+    "https://github.com/google/ads-api-ruby"
+  ],
+  "schema_problems": []
+}

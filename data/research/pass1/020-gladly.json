@@ -1,0 +1,64 @@
+{
+  "description": "Customer service and agentic commerce platform unifying conversations, customer profiles, and omnichannel support.",
+  "auth_methods": [
+    "oauth2",
+    "bearer_token"
+  ],
+  "auth_notes": "Uses OAuth 2.0 and API access tokens/bearer tokens for integration authentication.",
+  "credential_access": "partner_or_sales_gated",
+  "credential_notes": "Gladly requires contacting sales or entering an enterprise contract for account access; no self-serve free developer sandbox tier is available.",
+  "api_styles": [
+    "rest"
+  ],
+  "api_breadth": "moderate",
+  "api_notes": "Provides REST APIs, webhooks, and App Platform integrations to retrieve customer data and automate workflows.",
+  "official_mcp": "no",
+  "mcp_notes": "No official Model Context Protocol (MCP) server published by Gladly.",
+  "buildability": "outreach_required",
+  "primary_blocker": "admin_or_partner_approval",
+  "rationale": "Gladly offers a well-documented REST API, but obtaining credentials requires sales outreach or an enterprise subscription rather than a self-serve free sign-up.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "api",
+      "url": "https://developer.gladly.com/",
+      "note": "Developer portal detailing REST APIs, webhooks, and Chat SDKs"
+    },
+    {
+      "supports": "credentials",
+      "url": "https://gladly.com",
+      "note": "Pricing and onboarding flow require demo/sales contact rather than self-serve free accounts"
+    }
+  ],
+  "open_questions": "",
+  "id": 20,
+  "app": "Gladly",
+  "category": "Support and Helpdesk",
+  "official_url": "https://gladly.com",
+  "stage": "pass1",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://www.gladly.ai/"
+    },
+    {
+      "title": "",
+      "url": "https://developer.gladly.com/"
+    },
+    {
+      "title": "",
+      "url": "https://www.gladly.ai/"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://gladly.com",
+    "https://developer.gladly.com/",
+    "https://developer.gladly.com/api/",
+    "https://developer.gladly.com/authentication/",
+    "https://gladly.com/pricing/"
+  ],
+  "schema_problems": []
+}

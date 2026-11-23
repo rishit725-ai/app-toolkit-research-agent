@@ -1,0 +1,71 @@
+{
+  "description": "CRM software for Google Workspace that manages contacts, sales pipelines, projects, and client relationships directly inside Gmail.",
+  "auth_methods": [
+    "api_key",
+    "oauth2"
+  ],
+  "auth_notes": "Uses OAuth 2.0 for public apps and personal access tokens / API keys associated with an account user for integration use.",
+  "credential_access": "paid_plan",
+  "credential_notes": "API access requires an active paid subscription plan (or a 14-day free trial of a paid plan), as credentials are tied to user seats.",
+  "api_styles": [
+    "rest"
+  ],
+  "api_breadth": "broad",
+  "api_notes": "Provides a comprehensive REST API covering leads, people, companies, opportunities, projects, tasks, activities, custom fields, and webhooks.",
+  "official_mcp": "no",
+  "mcp_notes": "No official Model Context Protocol (MCP) server published by Copper; only community-driven setups if any.",
+  "buildability": "ready_with_constraints",
+  "primary_blocker": "none",
+  "rationale": "Copper provides a robust, fully documented public REST API, but developer access and API keys require a paid subscription or trial plan.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "auth",
+      "url": "https://developer.copper.com/",
+      "note": "Developer portal and API documentation overview covering REST endpoints and authentication methods."
+    },
+    {
+      "supports": "credentials",
+      "url": "https://www.copper.com/pricing",
+      "note": "Pricing tiers and plan features showing that access requires starting a trial or purchasing a plan."
+    },
+    {
+      "supports": "api",
+      "url": "https://developer.copper.com/",
+      "note": "Lists extensive endpoints for leads, people, companies, opportunities, projects, tasks, custom fields, and webhooks."
+    }
+  ],
+  "open_questions": "",
+  "id": 9,
+  "app": "Copper",
+  "category": "CRM and Sales",
+  "official_url": "https://copper.com",
+  "stage": "pass2",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://www.copper.com/"
+    },
+    {
+      "title": "",
+      "url": "https://developer.copper.com/"
+    },
+    {
+      "title": "",
+      "url": "https://www.copper.com/pricing"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://copper.com",
+    "https://developer.copper.com/",
+    "https://developer.copper.com/overview.html",
+    "https://developer.copper.com/authentication.html",
+    "https://support.copper.com/hc/en-us/articles/115006066343-Manage-your-API-keys",
+    "https://www.copper.com/pricing"
+  ],
+  "schema_problems": [],
+  "changes": "flagged, not re-checked (time limit), kept from pass1"
+}

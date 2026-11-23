@@ -1,0 +1,53 @@
+{
+  "description": "SE Ranking is an all-in-one SEO and digital marketing platform providing tools for rank tracking, competitor analysis, keyword research, and website auditing.",
+  "auth_methods": [
+    "api_key"
+  ],
+  "auth_notes": "The SE Ranking API uses an API key (access token) passed with requests to authenticate.",
+  "credential_access": "paid_plan",
+  "credential_notes": "API access is available on higher-tier plans (Pro and Business) or via specialized API pricing packages requiring a paid subscription.",
+  "api_styles": [
+    "rest"
+  ],
+  "api_breadth": "broad",
+  "api_notes": "The API covers rank tracking, keyword research, competitor research, website audits, and project management data.",
+  "official_mcp": "no",
+  "mcp_notes": "No official Model Context Protocol (MCP) server published by SE Ranking.",
+  "buildability": "ready_with_constraints",
+  "primary_blocker": "credential_gate",
+  "rationale": "The API is fully documented and functional, but requires a paid subscription or specific API plan tier to obtain credentials.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "api",
+      "url": "https://seranking.com/api",
+      "note": "SE Ranking official API landing page outlining features and documentation."
+    },
+    {
+      "supports": "credentials",
+      "url": "https://seranking.com/api/pricing.html",
+      "note": "SE Ranking API pricing details showing paid subscription requirement."
+    },
+    {
+      "supports": "auth",
+      "url": "https://seranking.com/api/documentation.html",
+      "note": "SE Ranking API documentation explaining authentication via API keys."
+    }
+  ],
+  "open_questions": "",
+  "id": 52,
+  "app": "SE Ranking",
+  "category": "Data, SEO and Scraping",
+  "official_url": "https://seranking.com/api",
+  "stage": "audit",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://seranking.com/api",
+    "https://seranking.com/api/pricing.html",
+    "https://seranking.com/api/documentation.html"
+  ],
+  "schema_problems": []
+}

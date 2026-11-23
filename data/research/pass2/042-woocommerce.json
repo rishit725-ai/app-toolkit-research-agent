@@ -1,0 +1,79 @@
+{
+  "description": "An open-source e-commerce platform built on WordPress that allows users to build and manage online stores.",
+  "auth_methods": [
+    "api_key",
+    "basic"
+  ],
+  "auth_notes": "Uses Consumer Key and Consumer Secret via HTTP Basic Authentication or query parameters.",
+  "credential_access": "open_source_local",
+  "credential_notes": "WooCommerce is open-source and self-hosted; developers generate API keys directly inside their own store's admin dashboard for free.",
+  "api_styles": [
+    "rest"
+  ],
+  "api_breadth": "broad",
+  "api_notes": "Comprehensive REST API covering products, orders, customers, coupons, and more via WordPress/WooCommerce endpoints.",
+  "official_mcp": "no",
+  "mcp_notes": "No official vendor-published MCP server found; community options or internal evaluation folders exist in code.",
+  "buildability": "ready_now",
+  "primary_blocker": "none",
+  "rationale": "WooCommerce provides a fully documented, robust REST API and self-generated API keys on self-hosted instances, allowing immediate agent integration.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "auth",
+      "url": "https://woocommerce.github.io/woocommerce-rest-api-docs/",
+      "note": "Describes using Basic Auth with consumer key and consumer secret."
+    },
+    {
+      "supports": "credentials",
+      "url": "https://woocommerce.com/document/woocommerce-rest-api",
+      "note": "Explains how to generate REST API keys inside WooCommerce settings."
+    },
+    {
+      "supports": "api",
+      "url": "https://woocommerce.github.io/woocommerce-rest-api-docs/",
+      "note": "Provides the complete technical reference for WooCommerce REST API endpoints."
+    }
+  ],
+  "open_questions": "",
+  "id": 42,
+  "app": "WooCommerce",
+  "category": "Ecommerce",
+  "official_url": "https://woocommerce.com/document/woocommerce-rest-api",
+  "stage": "pass2",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://woocommerce.com/document/woocommerce-rest-api/"
+    },
+    {
+      "title": "",
+      "url": "https://woocommerce.com/document/woocommerce-rest-api/"
+    },
+    {
+      "title": "",
+      "url": "https://woocommerce.com/document/woocommerce-rest-api/"
+    },
+    {
+      "title": "",
+      "url": "https://developer.woocommerce.com/docs/apis/rest-api/"
+    },
+    {
+      "title": "",
+      "url": "https://github.com/woocommerce/woocommerce"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://woocommerce.com/document/woocommerce-rest-api",
+    "https://woocommerce.com/document/woocommerce-rest-api/",
+    "https://woocommerce.com/document/woocommerce-rest-api/#authentication",
+    "https://woocommerce.com/document/woocommerce-rest-api/#rest-api-keys",
+    "https://woocommerce.github.io/woocommerce-rest-api-docs/",
+    "https://github.com/woocommerce/woocommerce"
+  ],
+  "schema_problems": [],
+  "changes": "not flagged, kept from pass1"
+}

@@ -1,0 +1,46 @@
+{
+  "description": "AI-powered meeting assistant that records audio, writes notes, generates summaries, and extracts action items.",
+  "auth_methods": [
+    "none"
+  ],
+  "auth_notes": "No public API or developer auth method is documented for Otter.ai.",
+  "credential_access": "unclear",
+  "credential_notes": "No self-serve developer API or developer credentials portal is publicly available.",
+  "api_styles": [
+    "none"
+  ],
+  "api_breadth": "none",
+  "api_notes": "No public developer API is available; integrations are limited to native platform connectors like Zapier, Slack, and CRM tools.",
+  "official_mcp": "no",
+  "mcp_notes": "No official Model Context Protocol (MCP) server provided by Otter.ai.",
+  "buildability": "not_buildable_now",
+  "primary_blocker": "no_public_api",
+  "rationale": "Otter.ai does not offer a public developer API or self-serve API credentials, making direct agent integration impossible today.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "api",
+      "url": "https://help.otter.ai",
+      "note": "Help center shows integrations are restricted to predefined app connectors (Zapier, Slack, Salesforce, HubSpot) with no public API documentation."
+    }
+  ],
+  "open_questions": "Does Otter.ai offer a private or enterprise-gated API for partner integrations?",
+  "id": 92,
+  "app": "Otter AI",
+  "category": "AI, Research and Media-native",
+  "official_url": "https://help.otter.ai",
+  "stage": "pass1",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://help.otter.ai/hc/en-us"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://help.otter.ai"
+  ],
+  "schema_problems": []
+}

@@ -1,0 +1,96 @@
+{
+  "description": "Web crawling, scraping, search, and data extraction API designed for AI agents and LLMs.",
+  "auth_methods": [
+    "api_key",
+    "bearer_token",
+    "oauth2"
+  ],
+  "auth_notes": "Authenticate via Bearer token using an API key (Authorization: Bearer <token>) or via MCP/OAuth login flows.",
+  "credential_access": "self_serve_free",
+  "credential_notes": "Developers can sign up for a free account self-serve to get 1,000 free credits per month without a credit card.",
+  "api_styles": [
+    "rest",
+    "sdk_or_cli_only"
+  ],
+  "api_breadth": "broad",
+  "api_notes": "Covers search, scrape, batch scrape, crawl, map, browser interaction sessions, parse, and agent endpoints.",
+  "official_mcp": "yes",
+  "mcp_notes": "Official MCP server and connectors provided by MendableAI/Firecrawl for AI agents and clients.",
+  "buildability": "ready_now",
+  "primary_blocker": "none",
+  "rationale": "Firecrawl offers a fully documented public REST API, official SDKs, an official MCP server, and self-serve free credentials.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "auth",
+      "url": "https://docs.firecrawl.dev/api-reference/endpoint/scrape",
+      "note": "Shows Bearer token authentication via header."
+    },
+    {
+      "supports": "credentials",
+      "url": "https://www.firecrawl.dev/pricing",
+      "note": "Details the free plan providing 1,000 credits/month self-serve without a credit card."
+    },
+    {
+      "supports": "api",
+      "url": "https://docs.firecrawl.dev/",
+      "note": "Outlines core endpoints like search, scrape, crawl, map, and interact."
+    },
+    {
+      "supports": "mcp",
+      "url": "https://github.com/mendableai/firecrawl",
+      "note": "References official MCP and CLI integrations for AI agents."
+    }
+  ],
+  "open_questions": "",
+  "id": 56,
+  "app": "Firecrawl",
+  "category": "Data, SEO and Scraping",
+  "official_url": "https://firecrawl.dev",
+  "stage": "pass2",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://www.firecrawl.dev/"
+    },
+    {
+      "title": "",
+      "url": "https://www.firecrawl.dev/"
+    },
+    {
+      "title": "",
+      "url": "https://docs.firecrawl.dev/introduction"
+    },
+    {
+      "title": "",
+      "url": "https://docs.firecrawl.dev/api-reference/endpoint/scrape"
+    },
+    {
+      "title": "",
+      "url": "https://www.firecrawl.dev/pricing"
+    },
+    {
+      "title": "",
+      "url": "https://www.firecrawl.dev/signin?redirect=%2Fapp%2Fapi-keys"
+    },
+    {
+      "title": "",
+      "url": "https://github.com/firecrawl/firecrawl"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://firecrawl.dev",
+    "https://www.firecrawl.dev/",
+    "https://docs.firecrawl.dev/",
+    "https://docs.firecrawl.dev/api-reference/endpoint/scrape",
+    "https://www.firecrawl.dev/pricing",
+    "https://www.firecrawl.dev/app/api-keys",
+    "https://github.com/mendableai/firecrawl",
+    "https://github.com/mendableai/mcp-firecrawl"
+  ],
+  "schema_problems": [],
+  "changes": "not flagged, kept from pass1"
+}

@@ -1,0 +1,89 @@
+{
+  "description": "Payment processing and financial infrastructure platform for online and in-person businesses",
+  "auth_methods": [
+    "api_key",
+    "basic",
+    "bearer_token"
+  ],
+  "auth_notes": "The Stripe API uses API keys provided via HTTP Basic Auth (username as API key, no password) or Bearer token.",
+  "credential_access": "self_serve_free",
+  "credential_notes": "Developers can sign up for a free account instantly and generate test/live API keys from the Stripe Dashboard at no cost.",
+  "api_styles": [
+    "rest"
+  ],
+  "api_breadth": "broad",
+  "api_notes": "Covers payments, subscriptions, billing, invoicing, financial connections, payouts, fraud prevention, and issuing.",
+  "official_mcp": "yes",
+  "mcp_notes": "Stripe provides an official Model Context Protocol (MCP) implementation or resources for AI integration (e.g. stripe/ai or Model Context Protocol docs).",
+  "buildability": "ready_now",
+  "primary_blocker": "none",
+  "rationale": "The API is fully documented, uses standard REST, and provides free self-serve test credentials immediately upon account creation.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "auth",
+      "url": "https://stripe.com/docs/api/authentication",
+      "note": "Describes API key authentication using HTTP Basic Auth or Bearer tokens."
+    },
+    {
+      "supports": "credentials",
+      "url": "https://dashboard.stripe.com/apikeys",
+      "note": "Stripe Dashboard page for viewing and managing API keys."
+    },
+    {
+      "supports": "api",
+      "url": "https://stripe.com/docs/api",
+      "note": "Outlines the REST API architecture and endpoints."
+    },
+    {
+      "supports": "mcp",
+      "url": "https://stripe.com/docs/rate-limits",
+      "note": "References Model Context Protocol (MCP) agent tools under developer resources."
+    }
+  ],
+  "open_questions": "",
+  "id": 81,
+  "app": "Stripe",
+  "category": "Finance and Fintech",
+  "official_url": "https://stripe.com/docs/api",
+  "stage": "audit",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://docs.stripe.com/api"
+    },
+    {
+      "title": "",
+      "url": "https://docs.stripe.com/api/authentication"
+    },
+    {
+      "title": "",
+      "url": "https://dashboard.stripe.com/login"
+    },
+    {
+      "title": "",
+      "url": "https://stripe.com/pricing"
+    },
+    {
+      "title": "",
+      "url": "https://docs.stripe.com/rate-limits"
+    },
+    {
+      "title": "",
+      "url": "https://github.com/stripe"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://stripe.com/docs/api",
+    "https://stripe.com/docs/api/authentication",
+    "https://dashboard.stripe.com/apikeys",
+    "https://stripe.com/pricing",
+    "https://stripe.com/docs/rate-limits",
+    "https://github.com/stripe/stripe-mcp",
+    "https://github.com/stripe"
+  ],
+  "schema_problems": []
+}

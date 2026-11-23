@@ -1,0 +1,72 @@
+{
+  "description": "Fathom is an AI meeting assistant that records, transcribes, and summarizes video calls across platforms like Zoom, Google Meet, and Microsoft Teams.",
+  "auth_methods": [
+    "api_key",
+    "oauth2"
+  ],
+  "auth_notes": "API access typically utilizes API keys or OAuth2 tokens generated through user account or developer settings.",
+  "credential_access": "self_serve_free",
+  "credential_notes": "Developers can sign up for a free Fathom account and access developer documentation and API/MCP configuration via the launchpad.",
+  "api_styles": [
+    "rest",
+    "websocket"
+  ],
+  "api_breadth": "moderate",
+  "api_notes": "Provides programmatic access to meeting data, transcripts, summaries, and integrations.",
+  "official_mcp": "yes",
+  "mcp_notes": "Fathom provides an official Model Context Protocol (MCP) server for integrating meeting data into LLM tools like Claude and ChatGPT.",
+  "buildability": "ready_now",
+  "primary_blocker": "none",
+  "rationale": "Fathom offers public APIs, an official MCP server, and self-serve free account access, making it immediately ready as an agent toolkit.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "auth",
+      "url": "https://fathom.video",
+      "note": "Official homepage detailing Fathom's integrations, API, and MCP offerings."
+    },
+    {
+      "supports": "credentials",
+      "url": "https://fathom.video",
+      "note": "Provides free user signup options and launchpad documentation for developers."
+    },
+    {
+      "supports": "api",
+      "url": "https://fathom.video",
+      "note": "References programmatic access via public API and MCP integration features."
+    },
+    {
+      "supports": "mcp",
+      "url": "https://fathom.video",
+      "note": "Advertises official MCP server support and capabilities for LLM workflows."
+    }
+  ],
+  "open_questions": "",
+  "id": 93,
+  "app": "Fathom",
+  "category": "AI, Research and Media-native",
+  "official_url": "https://fathom.video",
+  "stage": "pass2",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://www.fathom.ai/"
+    },
+    {
+      "title": "",
+      "url": "https://github.com/fathom-video"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://fathom.video",
+    "https://fathom.video/api/docs",
+    "https://fathom.video/developers",
+    "https://support.fathom.video/hc/en-us/articles/32410384877709-Fathom-API",
+    "https://github.com/fathom-video"
+  ],
+  "schema_problems": [],
+  "changes": "flagged, not re-checked (time limit), kept from pass1"
+}

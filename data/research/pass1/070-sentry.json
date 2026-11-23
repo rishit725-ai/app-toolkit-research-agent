@@ -1,0 +1,84 @@
+{
+  "description": "Developer-first error tracking, performance monitoring, and application debugging platform",
+  "auth_methods": [
+    "oauth2",
+    "bearer_token",
+    "api_key"
+  ],
+  "auth_notes": "Supports OAuth2 (authorization code and device flow), internal integration auth tokens (Bearer), user auth tokens, and legacy API keys.",
+  "credential_access": "self_serve_free",
+  "credential_notes": "Developers can sign up for a free developer account/plan self-serve and generate auth tokens or internal integrations immediately.",
+  "api_styles": [
+    "rest"
+  ],
+  "api_breadth": "broad",
+  "api_notes": "Comprehensive REST API v0 covering organizations, projects, issues, events, releases, teams, and user configurations.",
+  "official_mcp": "yes",
+  "mcp_notes": "Sentry provides official MCP support ('MCP access' is listed as part of its developer plan and platform features).",
+  "buildability": "ready_now",
+  "primary_blocker": "none",
+  "rationale": "Sentry provides a broad public REST API, flexible authentication methods, and free self-serve developer tier credentials, making it fully ready to build an agent toolkit today.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "auth",
+      "url": "https://docs.sentry.io/api/auth/",
+      "note": "Details on Bearer tokens, internal integrations, user tokens, and OAuth2/device authorization flows."
+    },
+    {
+      "supports": "credentials",
+      "url": "https://sentry.io/pricing/",
+      "note": "Shows the free Developer plan allowing solo developers to sign up and access platform features including MCP/API."
+    },
+    {
+      "supports": "api",
+      "url": "https://docs.sentry.io/api",
+      "note": "Describes the Sentry web API surface for managing account-level resources, data, and organizations."
+    },
+    {
+      "supports": "mcp",
+      "url": "https://sentry.io/pricing/",
+      "note": "Indicates official MCP access included in plans."
+    }
+  ],
+  "open_questions": "",
+  "id": 70,
+  "app": "Sentry",
+  "category": "Developer, Infra and Data platforms",
+  "official_url": "https://docs.sentry.io/api",
+  "stage": "pass1",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://docs.sentry.io/api/"
+    },
+    {
+      "title": "",
+      "url": "https://docs.sentry.io/api/"
+    },
+    {
+      "title": "",
+      "url": "https://docs.sentry.io/api/auth/"
+    },
+    {
+      "title": "",
+      "url": "https://sentry.io/pricing/"
+    },
+    {
+      "title": "",
+      "url": "https://github.com/getsentry"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://docs.sentry.io/api",
+    "https://docs.sentry.io/api/",
+    "https://docs.sentry.io/api/auth/",
+    "https://docs.sentry.io/api/settings/integrations/",
+    "https://sentry.io/pricing/",
+    "https://github.com/getsentry"
+  ],
+  "schema_problems": []
+}

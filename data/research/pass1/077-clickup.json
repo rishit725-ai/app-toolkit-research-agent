@@ -1,0 +1,73 @@
+{
+  "description": "A productivity and project management platform for organizing tasks, docs, goals, and team collaboration.",
+  "auth_methods": [
+    "oauth2",
+    "bearer_token"
+  ],
+  "auth_notes": "Supports personal tokens (starting with pk_) for individual testing/use and OAuth 2.0 authorization code flow for public apps.",
+  "credential_access": "self_serve_free",
+  "credential_notes": "Developers can sign up for a free ClickUp account and self-serve generate personal API tokens or create OAuth apps via settings.",
+  "api_styles": [
+    "rest"
+  ],
+  "api_breadth": "broad",
+  "api_notes": "Covers comprehensive task management, custom fields, views, comments, webhooks, and general workspace resources.",
+  "official_mcp": "yes",
+  "mcp_notes": "ClickUp publishes an official Model Context Protocol (MCP) server to connect AI assistants directly to ClickUp.",
+  "buildability": "ready_now",
+  "primary_blocker": "none",
+  "rationale": "ClickUp features a broad public REST API, self-serve free credential generation via user settings, and an official MCP server.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "auth",
+      "url": "https://clickup.com/api/developer-portal/authentication",
+      "note": "Details personal tokens and OAuth 2.0 flow configuration."
+    },
+    {
+      "supports": "credentials",
+      "url": "https://clickup.com/api/developer-portal/authentication",
+      "note": "Explains how to generate personal API tokens and create OAuth apps from account settings."
+    },
+    {
+      "supports": "api",
+      "url": "https://clickup.com/api/developer-portal/rate-limits",
+      "note": "Lists the API documentation sections covering tasks, custom fields, views, comments, and webhooks."
+    },
+    {
+      "supports": "mcp",
+      "url": "https://clickup.com/api",
+      "note": "Highlights ClickUp's official MCP server offering for AI assistants."
+    }
+  ],
+  "open_questions": "",
+  "id": 77,
+  "app": "ClickUp",
+  "category": "Productivity and Project Management",
+  "official_url": "https://clickup.com/api",
+  "stage": "pass1",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://developer.clickup.com/"
+    },
+    {
+      "title": "",
+      "url": "https://developer.clickup.com/docs/authentication"
+    },
+    {
+      "title": "",
+      "url": "https://developer.clickup.com/docs/rate-limits"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://clickup.com/api",
+    "https://clickup.com/api/developer-portal",
+    "https://clickup.com/api/developer-portal/authentication",
+    "https://clickup.com/api/developer-portal/rate-limits"
+  ],
+  "schema_problems": []
+}

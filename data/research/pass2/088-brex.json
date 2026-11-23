@@ -1,0 +1,63 @@
+{
+  "description": "Corporate card, expense management, and financial software platform for businesses",
+  "auth_methods": [
+    "oauth2",
+    "bearer_token"
+  ],
+  "auth_notes": "Uses OAuth 2.0 authorization code flow for public apps and user tokens / user access tokens for private/developer integrations.",
+  "credential_access": "admin_approval",
+  "credential_notes": "Requires an active Brex business account and organization admin access to create developer applications or API tokens.",
+  "api_styles": [
+    "rest"
+  ],
+  "api_breadth": "broad",
+  "api_notes": "Covers corporate cards, expenses, transactions, transfers, limits, users, and statement endpoints.",
+  "official_mcp": "no",
+  "mcp_notes": "No official Brex MCP server found; community MCP servers may exist independently.",
+  "buildability": "ready_with_constraints",
+  "primary_blocker": "credential_gate",
+  "rationale": "The API is fully documented and broad, but requires an active corporate account and organization admin access to obtain credentials.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "auth",
+      "url": "https://developer.brex.com/docs/authentication/",
+      "note": "Brex developer docs covering authentication methods including user tokens and OAuth2."
+    },
+    {
+      "supports": "credentials",
+      "url": "https://developer.brex.com/docs/get-started/",
+      "note": "Brex developer getting started guide explaining how to access API tokens within the Brex dashboard."
+    },
+    {
+      "supports": "api",
+      "url": "https://developer.brex.com/reference/",
+      "note": "Brex API reference covering expenses, cards, transfers, and user management."
+    }
+  ],
+  "open_questions": "",
+  "id": 88,
+  "app": "Brex",
+  "category": "Finance and Fintech",
+  "official_url": "https://developer.brex.com",
+  "stage": "pass2",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://github.com/brex"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://developer.brex.com",
+    "https://developer.brex.com/",
+    "https://developer.brex.com/docs/authentication/",
+    "https://developer.brex.com/docs/get-started/",
+    "https://developer.brex.com/reference/",
+    "https://github.com/brex"
+  ],
+  "schema_problems": [],
+  "changes": "flagged, not re-checked (time limit), kept from pass1"
+}

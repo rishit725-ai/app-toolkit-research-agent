@@ -1,0 +1,75 @@
+{
+  "description": "Comprehensive SEO, marketing, and LLM data APIs providing SERP, keyword, backlink, and domain analytics data.",
+  "auth_methods": [
+    "basic"
+  ],
+  "auth_notes": "Basic HTTP authentication using login (email) and password (API password) in request headers.",
+  "credential_access": "self_serve_free",
+  "credential_notes": "Developers can sign up instantly for an account with $1 trial credits to test the API via pay-as-you-go pricing.",
+  "api_styles": [
+    "rest"
+  ],
+  "api_breadth": "broad",
+  "api_notes": "Extensive coverage of SERP, keywords data, backlinks, on-page SEO, domain analytics, merchant data, and AI/LLM search scraping.",
+  "official_mcp": "yes",
+  "mcp_notes": "Official TypeScript-based Model Context Protocol server published in their GitHub organization (mcp-server-typescript).",
+  "buildability": "ready_now",
+  "primary_blocker": "none",
+  "rationale": "Public REST APIs are fully documented with instant self-service account registration providing trial credits and an official MCP server.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "auth",
+      "url": "https://docs.dataforseo.com",
+      "note": "Documents REST technology and usage patterns for DataForSEO API."
+    },
+    {
+      "supports": "credentials",
+      "url": "https://app.dataforseo.com/register",
+      "note": "Allows instant registration with $1 trial credits and pay-as-you-go pricing."
+    },
+    {
+      "supports": "api",
+      "url": "https://docs.dataforseo.com",
+      "note": "Lists broad API scope including SERP, Keywords, Backlinks, OnPage, and Labs APIs."
+    },
+    {
+      "supports": "mcp",
+      "url": "https://github.com/dataforseo",
+      "note": "Official GitHub repository contains mcp-server-typescript for Model Context Protocol."
+    }
+  ],
+  "open_questions": "",
+  "id": 51,
+  "app": "DataForSEO",
+  "category": "Data, SEO and Scraping",
+  "official_url": "https://docs.dataforseo.com",
+  "stage": "audit",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://docs.dataforseo.com/v3/"
+    },
+    {
+      "title": "",
+      "url": "https://app.dataforseo.com/register"
+    },
+    {
+      "title": "",
+      "url": "https://github.com/dataforseo"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://docs.dataforseo.com",
+    "https://docs.dataforseo.com/",
+    "https://docs.dataforseo.com/v3/",
+    "https://docs.dataforseo.com/v3/getting-started/authentication/",
+    "https://docs.dataforseo.com/pricing/",
+    "https://app.dataforseo.com/register",
+    "https://github.com/dataforseo"
+  ],
+  "schema_problems": []
+}

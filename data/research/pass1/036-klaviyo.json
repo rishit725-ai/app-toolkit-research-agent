@@ -1,0 +1,71 @@
+{
+  "description": "Marketing automation platform for email, SMS, and data-driven customer experiences",
+  "auth_methods": [
+    "api_key",
+    "oauth2"
+  ],
+  "auth_notes": "Uses private API keys via Authorization header (Klaviyo-API-Key) for server-side APIs, public API keys for client-side endpoints, and OAuth2 for tech partner integrations.",
+  "credential_access": "self_serve_free",
+  "credential_notes": "Developers can sign up for a free account, test without risk using test accounts, and generate private API keys or set up OAuth self-serve.",
+  "api_styles": [
+    "rest"
+  ],
+  "api_breadth": "broad",
+  "api_notes": "Extensive REST API surface covering profiles, events, campaigns, flows, lists, segments, catalogs, metrics, webhooks, and billing.",
+  "official_mcp": "no",
+  "mcp_notes": "No official MCP server published by Klaviyo yet.",
+  "buildability": "ready_now",
+  "primary_blocker": "none",
+  "rationale": "Klaviyo provides a comprehensive, well-documented REST API with self-serve free developer accounts and standard API key/OAuth authentication.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "auth",
+      "url": "https://developers.klaviyo.com",
+      "note": "Details private key authentication, OAuth, and public key authentication mechanisms."
+    },
+    {
+      "supports": "credentials",
+      "url": "https://developers.klaviyo.com",
+      "note": "Mentions starting for free and creating test accounts to obtain API credentials."
+    },
+    {
+      "supports": "api",
+      "url": "https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview",
+      "note": "Comprehensive listing of REST resources like campaigns, flows, profiles, and metrics."
+    }
+  ],
+  "open_questions": "",
+  "id": 36,
+  "app": "Klaviyo",
+  "category": "Marketing, Ads, Email and Social",
+  "official_url": "https://developers.klaviyo.com",
+  "stage": "pass1",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://developers.klaviyo.com/"
+    },
+    {
+      "title": "",
+      "url": "https://developers.klaviyo.com/en/reference"
+    },
+    {
+      "title": "",
+      "url": "https://github.com/klaviyo"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://developers.klaviyo.com",
+    "https://developers.klaviyo.com/",
+    "https://developers.klaviyo.com/en/docs/authentication",
+    "https://developers.klaviyo.com/en/docs/get-started-api-keys",
+    "https://developers.klaviyo.com/en/docs/rate_limits",
+    "https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview",
+    "https://github.com/klaviyo"
+  ],
+  "schema_problems": []
+}

@@ -1,0 +1,75 @@
+{
+  "description": "Customer platform with marketing, sales, customer service, and CRM software tools",
+  "auth_methods": [
+    "oauth2",
+    "bearer_token"
+  ],
+  "auth_notes": "OAuth2 auth code for public apps and private app access tokens (bearer tokens)",
+  "credential_access": "self_serve_free",
+  "credential_notes": "Developers can sign up for a free HubSpot Developer account and create private apps or public apps for self-serve credentials.",
+  "api_styles": [
+    "rest"
+  ],
+  "api_breadth": "broad",
+  "api_notes": "Extensive REST APIs covering CRM objects (contacts, companies, deals), marketing, conversations, workflows, and account settings.",
+  "official_mcp": "no",
+  "mcp_notes": "No official MCP server published by HubSpot; community options may exist.",
+  "buildability": "ready_now",
+  "primary_blocker": "none",
+  "rationale": "HubSpot offers comprehensive REST APIs with self-serve developer account creation and access tokens, making it fully ready for integration.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "auth",
+      "url": "https://developers.hubspot.com/docs/api/overview",
+      "note": "Covers API reference, authentication overview, and endpoints structure."
+    },
+    {
+      "supports": "credentials",
+      "url": "https://developers.hubspot.com/",
+      "note": "Allows developers to create a free HubSpot Developer account self-serve."
+    },
+    {
+      "supports": "api",
+      "url": "https://developers.hubspot.com/docs/api/overview",
+      "note": "Details comprehensive API surface including CRM, marketing, and CMS endpoints."
+    }
+  ],
+  "open_questions": "",
+  "id": 2,
+  "app": "HubSpot",
+  "category": "CRM and Sales",
+  "official_url": "https://hubspot.com",
+  "stage": "pass1",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://www.hubspot.com/"
+    },
+    {
+      "title": "",
+      "url": "https://developers.hubspot.com/"
+    },
+    {
+      "title": "",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/overview"
+    },
+    {
+      "title": "",
+      "url": "https://github.com/hubspot"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://hubspot.com",
+    "https://developers.hubspot.com/",
+    "https://developers.hubspot.com/docs/api/authentication",
+    "https://developers.hubspot.com/docs/api/get-started",
+    "https://developers.hubspot.com/pricing",
+    "https://developers.hubspot.com/docs/api/overview",
+    "https://github.com/HubSpot"
+  ],
+  "schema_problems": []
+}

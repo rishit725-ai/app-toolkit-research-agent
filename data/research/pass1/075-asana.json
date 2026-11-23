@@ -1,0 +1,83 @@
+{
+  "description": "Work management platform for teams to track projects, tasks, goals, and workflows.",
+  "auth_methods": [
+    "oauth2",
+    "bearer_token"
+  ],
+  "auth_notes": "OAuth2 auth code flow for public/multi-user apps; Personal Access Tokens (PATs) and Service Accounts for scripts and internal tools.",
+  "credential_access": "self_serve_free",
+  "credential_notes": "Developers can sign up for a free Asana account and create apps or Personal Access Tokens free in the developer console.",
+  "api_styles": [
+    "rest"
+  ],
+  "api_breadth": "broad",
+  "api_notes": "Comprehensive REST API covering tasks, projects, portfolios, goals, custom fields, users, webhooks, and batch requests.",
+  "official_mcp": "yes",
+  "mcp_notes": "Asana provides an official Model Context Protocol (MCP) server implementation for AI client integrations.",
+  "buildability": "ready_now",
+  "primary_blocker": "none",
+  "rationale": "Asana provides a fully documented REST API, self-serve free developer access via PATs or OAuth, and an official MCP server, making it immediately ready for AI agent integration.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "auth",
+      "url": "https://developers.asana.com/docs/authentication",
+      "note": "Details authentication options including OAuth, Personal Access Tokens, and Service Accounts."
+    },
+    {
+      "supports": "credentials",
+      "url": "https://developers.asana.com",
+      "note": "Explains getting started via the developer console and free testing options."
+    },
+    {
+      "supports": "api",
+      "url": "https://developers.asana.com/reference",
+      "note": "Provides the OpenAPI-generated REST API reference covering broad object scopes."
+    },
+    {
+      "supports": "mcp",
+      "url": "https://developers.asana.com/docs",
+      "note": "Lists documentation for Asana's official MCP Server implementation and client integration guides."
+    }
+  ],
+  "open_questions": "",
+  "id": 75,
+  "app": "Asana",
+  "category": "Productivity and Project Management",
+  "official_url": "https://developers.asana.com",
+  "stage": "pass1",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://developers.asana.com/"
+    },
+    {
+      "title": "",
+      "url": "https://developers.asana.com/docs/overview"
+    },
+    {
+      "title": "",
+      "url": "https://developers.asana.com/reference/rest-api-reference"
+    },
+    {
+      "title": "",
+      "url": "https://developers.asana.com/docs/authentication"
+    },
+    {
+      "title": "",
+      "url": "https://developers.asana.com/docs/rate-limits"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://developers.asana.com",
+    "https://developers.asana.com/docs",
+    "https://developers.asana.com/reference",
+    "https://developers.asana.com/docs/authentication",
+    "https://developers.asana.com/docs/app-management",
+    "https://developers.asana.com/docs/rate-limits"
+  ],
+  "schema_problems": []
+}

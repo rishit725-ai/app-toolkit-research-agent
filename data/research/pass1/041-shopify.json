@@ -1,0 +1,78 @@
+{
+  "description": "Multichannel ecommerce platform and API suite for online stores, products, orders, and customer data management.",
+  "auth_methods": [
+    "oauth2",
+    "bearer_token",
+    "hmac_signature"
+  ],
+  "auth_notes": "OAuth2 auth code flow for public apps; custom app access tokens via bearer tokens and HMAC signature verification.",
+  "credential_access": "self_serve_free",
+  "credential_notes": "Developers can sign up for a Shopify Partner account and create development stores and apps for free.",
+  "api_styles": [
+    "rest",
+    "graphql"
+  ],
+  "api_breadth": "broad",
+  "api_notes": "Comprehensive coverage of products, variants, inventory, orders, customers, fulfillment, and analytics via GraphQL and REST Admin APIs.",
+  "official_mcp": "yes",
+  "mcp_notes": "Shopify provides an official Shopify MCP server (Shopify AI Toolkit / Shopify MCP).",
+  "buildability": "ready_now",
+  "primary_blocker": "none",
+  "rationale": "Shopify offers extensive public GraphQL and REST APIs, free self-serve partner/development accounts, and an official MCP server.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "auth",
+      "url": "https://shopify.dev/docs/api",
+      "note": "Details API authentication tokens, headers, and access scopes."
+    },
+    {
+      "supports": "credentials",
+      "url": "https://shopify.dev",
+      "note": "Allows signing up as a developer and using the Shopify CLI and Dev Dashboard free."
+    },
+    {
+      "supports": "api",
+      "url": "https://shopify.dev/docs/api",
+      "note": "Outlines GraphQL Admin API, REST Admin API, Storefront API, and webhooks."
+    },
+    {
+      "supports": "mcp",
+      "url": "https://shopify.dev/docs/api",
+      "note": "References Shopify MCP and Shopify AI Toolkit for AI agents."
+    }
+  ],
+  "open_questions": "",
+  "id": 41,
+  "app": "Shopify",
+  "category": "Ecommerce",
+  "official_url": "https://shopify.dev",
+  "stage": "pass1",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://shopify.dev/docs"
+    },
+    {
+      "title": "",
+      "url": "https://shopify.dev/docs/apps/build"
+    },
+    {
+      "title": "",
+      "url": "https://shopify.dev/docs/api"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://shopify.dev",
+    "https://shopify.dev/",
+    "https://shopify.dev/docs/apps/build/authentication",
+    "https://shopify.dev/docs/apps/getting-started",
+    "https://shopify.dev/docs/apps/build/rate-limits",
+    "https://shopify.dev/docs/api",
+    "https://github.com/Shopify"
+  ],
+  "schema_problems": []
+}

@@ -1,0 +1,71 @@
+{
+  "description": "Native graph database platform storing and querying connected data, supporting vector search, graph analytics, and AI knowledge graphs.",
+  "auth_methods": [
+    "basic",
+    "bearer_token",
+    "api_key"
+  ],
+  "auth_notes": "Connects via Bolt protocol or query APIs using database username and password, or bearer tokens/API keys for Aura cloud management.",
+  "credential_access": "self_serve_free",
+  "credential_notes": "Developers can sign up for a free Neo4j AuraDB instance tier or download the free community edition instantly with no credit card required.",
+  "api_styles": [
+    "rest",
+    "sdk_or_cli_only",
+    "websocket"
+  ],
+  "api_breadth": "broad",
+  "api_notes": "Comprehensive programmatic access via Bolt binary protocol, official language drivers (Python, JavaScript, etc.), HTTP query APIs, and cloud provisioning APIs.",
+  "official_mcp": "yes",
+  "mcp_notes": "Neo4j Labs publishes official MCP servers under neo4j-contrib/mcp-neo4j supporting Cypher queries, memory graphs, cloud management, and data modeling.",
+  "buildability": "ready_now",
+  "primary_blocker": "none",
+  "rationale": "Neo4j provides fully documented native drivers, HTTP query capabilities, free self-serve Aura instances, and official Model Context Protocol (MCP) servers.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "credentials",
+      "url": "https://neo4j.com/pricing/",
+      "note": "AuraDB Free plan is available at $0 with no credit card or payment method required."
+    },
+    {
+      "supports": "mcp",
+      "url": "https://github.com/neo4j-contrib/mcp-neo4j",
+      "note": "Neo4j Labs official MCP servers repository maintained by Neo4j Field GenAI team."
+    }
+  ],
+  "open_questions": "",
+  "id": 66,
+  "app": "Neo4j",
+  "category": "Developer, Infra and Data platforms",
+  "official_url": "https://neo4j.com/docs/api",
+  "stage": "pass2",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://support.neo4j.com/s/article/Archived-Knowledge-Base-Article"
+    },
+    {
+      "title": "",
+      "url": "https://neo4j.com/pricing/"
+    },
+    {
+      "title": "",
+      "url": "https://github.com/neo4j-contrib/mcp-neo4j"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://neo4j.com/docs/api",
+    "https://neo4j.com/docs/cypher-manual/current/authentication-authorization/",
+    "https://neo4j.com/docs/operations-manual/current/authentication/",
+    "https://neo4j.com/developer/kb/how-do-i-find-my-neo4j-aura-credentials/",
+    "https://neo4j.com/pricing/",
+    "https://neo4j.com/docs/api/javascript/current/",
+    "https://neo4j.com/docs/api/python/current/",
+    "https://github.com/neo4j-contrib/mcp-neo4j"
+  ],
+  "schema_problems": [],
+  "changes": "flagged, not re-checked (time limit), kept from pass1"
+}

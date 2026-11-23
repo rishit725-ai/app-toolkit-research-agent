@@ -1,0 +1,79 @@
+{
+  "description": "Cloud communications platform providing APIs for messaging, voice, email, and verification",
+  "auth_methods": [
+    "api_key",
+    "basic"
+  ],
+  "auth_notes": "Authenticate using HTTP Basic Authentication with your Account SID and Auth Token, or via Twilio API keys.",
+  "credential_access": "self_serve_free",
+  "credential_notes": "Developers can sign up for a free account/trial instantly online without a credit card to obtain credentials.",
+  "api_styles": [
+    "rest",
+    "sdk_or_cli_only"
+  ],
+  "api_breadth": "broad",
+  "api_notes": "Extensive REST APIs covering SMS, MMS, WhatsApp, Voice, Lookup, Verify, Conversations, and TaskRouter.",
+  "official_mcp": "unclear",
+  "mcp_notes": "No official vendor-published MCP server found in documentation, though community integrations may exist.",
+  "buildability": "ready_now",
+  "primary_blocker": "none",
+  "rationale": "Twilio offers comprehensive REST APIs, official SDKs, and self-serve free trial credentials that allow developers to build immediately.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "auth",
+      "url": "https://www.twilio.com/docs/iam/api-keys",
+      "note": "Describes API keys and authentication methods for Twilio REST APIs."
+    },
+    {
+      "supports": "credentials",
+      "url": "https://www.twilio.com/pricing",
+      "note": "Details sign up for free trial without a credit card."
+    },
+    {
+      "supports": "api",
+      "url": "https://www.twilio.com/docs/usage/api",
+      "note": "Explains REST API structure and usage across Twilio products."
+    }
+  ],
+  "open_questions": "Whether an official Model Context Protocol (MCP) server will be released by Twilio in the near future.",
+  "id": 22,
+  "app": "Twilio",
+  "category": "Communications and Messaging",
+  "official_url": "https://twilio.com",
+  "stage": "pass1",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://www.twilio.com/en-us"
+    },
+    {
+      "title": "",
+      "url": "https://www.twilio.com/docs/iam/api-keys"
+    },
+    {
+      "title": "",
+      "url": "https://www.twilio.com/docs/usage/api"
+    },
+    {
+      "title": "",
+      "url": "https://www.twilio.com/en-us/pricing"
+    },
+    {
+      "title": "",
+      "url": "https://www.twilio.com/docs"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://twilio.com",
+    "https://www.twilio.com/docs/iam/api-keys",
+    "https://www.twilio.com/docs/usage/api",
+    "https://www.twilio.com/pricing",
+    "https://www.twilio.com/docs/api",
+    "https://console.twilio.com/"
+  ],
+  "schema_problems": []
+}

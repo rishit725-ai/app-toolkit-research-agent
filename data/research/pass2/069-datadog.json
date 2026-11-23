@@ -1,0 +1,79 @@
+{
+  "description": "Cloud-scale monitoring, security, and observability platform for infrastructure, application performance, logs, and metrics.",
+  "auth_methods": [
+    "api_key"
+  ],
+  "auth_notes": "Authenticate via API key (DD-API-KEY header) for writing/reporting data, and an application key (DD-APPLICATION-KEY header) for reading data.",
+  "credential_access": "self_serve_free",
+  "credential_notes": "Developers can sign up for a free trial or free tier account self-serve and generate API and application keys directly inside the platform dashboard.",
+  "api_styles": [
+    "rest",
+    "sdk_or_cli_only"
+  ],
+  "api_breadth": "broad",
+  "api_notes": "Extensive REST API covering dashboards, monitors, metrics, logs, APM, security, service level objectives, and user management, supported by official client libraries.",
+  "official_mcp": "yes",
+  "mcp_notes": "Datadog explicitly lists an official MCP Server in their documentation and platform capabilities.",
+  "buildability": "ready_now",
+  "primary_blocker": "none",
+  "rationale": "Datadog provides an extensive, well-documented REST API with self-serve free trial account access and official client libraries, making it immediately ready for integration into agent toolkits.",
+  "confidence": "high",
+  "evidence": [
+    {
+      "supports": "auth",
+      "url": "https://docs.datadoghq.com/api/latest/authentication/",
+      "note": "Describes DD-API-KEY and DD-APPLICATION-KEY headers required for API authentication."
+    },
+    {
+      "supports": "credentials",
+      "url": "https://docs.datadoghq.com/api",
+      "note": "Shows getting started documentation and availability of free trial/getting started accounts."
+    },
+    {
+      "supports": "api",
+      "url": "https://docs.datadoghq.com/api",
+      "note": "Details the comprehensive REST API structure and official client libraries."
+    },
+    {
+      "supports": "mcp",
+      "url": "https://docs.datadoghq.com/api",
+      "note": "Lists MCP Server as an official offering under AI / Extensibility platform capabilities."
+    }
+  ],
+  "open_questions": "",
+  "id": 69,
+  "app": "Datadog",
+  "category": "Developer, Infra and Data platforms",
+  "official_url": "https://docs.datadoghq.com/api",
+  "stage": "pass2",
+  "model": "gemini-3.5-flash-lite",
+  "researched_on": "2026-11-23",
+  "grounding_sources": [
+    {
+      "title": "",
+      "url": "https://docs.datadoghq.com/api/latest/"
+    },
+    {
+      "title": "",
+      "url": "https://docs.datadoghq.com/api/latest/"
+    },
+    {
+      "title": "",
+      "url": "https://docs.datadoghq.com/api/latest/authentication/"
+    },
+    {
+      "title": "",
+      "url": "https://www.datadoghq.com/pricing/"
+    }
+  ],
+  "search_queries": [],
+  "candidate_urls": [
+    "https://docs.datadoghq.com/api",
+    "https://docs.datadoghq.com/api/",
+    "https://docs.datadoghq.com/account_management/api-key-ops/",
+    "https://docs.datadoghq.com/api/latest/authentication/",
+    "https://www.datadoghq.com/pricing/"
+  ],
+  "schema_problems": [],
+  "changes": "not flagged, kept from pass1"
+}
