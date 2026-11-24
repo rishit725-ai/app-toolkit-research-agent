@@ -279,7 +279,7 @@ def main():
             (str(k["ready_now"]), f"of {n} are ready to build today"),
             (str(k["outreach"]), "need vendor outreach first"),
             (str(k["easy_wins"]), "easy wins not yet on Composio")]
-    kpi_html = "".join(f"<div class='kpi'><span class='big'>{x}</span><span class='cap'>{E(l)}</span></div>" for x, l in kpis)
+    kpi_html = "".join(f"<div class='kpi'><span class='big' data-count>{x}</span><span class='cap'>{E(l)}</span></div>" for x, l in kpis)
 
     insights_html = md(insights) if insights.strip() else (
         "<ol class='findings'>"
@@ -315,7 +315,7 @@ def main():
 </div>
 </section>
 
-<section id="findings">
+<section class="reveal" id="findings">
 <h2>What the patterns say</h2>
 <div class="lead-findings">{insights_html}</div>
 <h3>Where each category lands</h3><p class="muted small">Apps per verdict. Darker means more of that category.</p>{heatmap(final)}
@@ -332,7 +332,7 @@ def main():
 </details>
 </section>
 
-<section id="apps">
+<section class="reveal" id="apps">
 <h2>All {n} apps</h2>
 <p class="muted">Click a row for the reasoning and evidence links. Rows marked Human-checked were verified by hand against official docs.</p>
 <div class="filters"><input id="q" type="search" placeholder="Search" aria-label="Search apps">
@@ -344,7 +344,7 @@ def main():
 <tbody>{app_rows(final)}</tbody></table></div>
 </section>
 
-<section id="how">
+<section class="reveal" id="how">
 <h2>How it works</h2>
 <p class="muted">A Python pipeline. Every number on this page is computed from its output, none typed by hand.</p>
 <ol class="steps">
@@ -362,7 +362,7 @@ def main():
 <li>Writing the pattern summary from the computed numbers.</li></ul></div>
 </section>
 
-<section id="verify">
+<section class="reveal" id="verify">
 <h2>Verification</h2>
 <div class="cols">
 <div><h3>Accuracy on the hand-checked sample</h3>{acc_hero if scored else ''}{acc_detail}</div>
@@ -372,7 +372,7 @@ def main():
 <h3>Every miss on the audited sample{f' ({n_miss})' if n_miss else ''}</h3>{miss_html}
 </section>
 
-<section id="limits">
+<section class="reveal" id="limits">
 <h2>Where it fell short</h2>
 <div class="panel warn"><p><strong>{len(unresolved)} apps the agent could not settle</strong> (credentials, blocker or MCP left "unclear"): {E(', '.join(unresolved) or 'none')}. Public docs don't say; these need a human or a vendor conversation.</p>
 {f"<p><strong>{len(pending)} apps without a result</strong>: {E(', '.join(pending))}.</p>" if pending else ''}</div>
@@ -387,10 +387,19 @@ def main():
 <li>Results reflect the docs on {today}; APIs and pricing change.</li></ul>
 </section>
 
-<section id="run">
+<section class="reveal" id="run">
 <h2>Run it yourself</h2>
-<p>Research one app (GitHub) in under a minute with free Gemini and Composio keys in <code>.env</code>:</p>
-<div class="cmd"><code id="cmd">python agent/02_research.py --mode pass1 --only 61</code><button id="copy" type="button">Copy</button></div>
+<div class="cols two runopts">
+<div class="panel"><p class="eyebrow">No keys needed</p><h3>See a real agent run</h3>
+<p>Every answer on this page is saved as data. Open the agent's raw output for GitHub, before and after the fact-check pass, or the run logs:</p>
+<ul class="links"><li><a href="{repo}/blob/main/data/research/pass1/061-github.json">GitHub, pass 1 output (JSON)</a></li>
+<li><a href="{repo}/blob/main/data/research/pass2/061-github.json">GitHub, after fact-check (JSON)</a></li>
+<li><a href="{repo}/blob/main/data/pass1_run.log">Full pass 1 run log</a></li>
+<li><a href="final.json">All 100 final records</a></li></ul></div>
+<div class="panel"><p class="eyebrow">With your own free keys</p><h3>Re-run the agent locally</h3>
+<p>Clone the repo, copy <code>.env.example</code> to <code>.env</code> and add <strong>your own</strong> free Gemini and Composio keys. <code>.env</code> is gitignored: keys stay on your machine and are never committed or shown on this page. Then research one app (GitHub, #61) in about a minute:</p>
+<div class="cmd"><code id="cmd">python agent/02_research.py --mode pass1 --only 61</code><button id="copy" type="button">Copy</button></div></div>
+</div>
 <details><summary>Full pipeline</summary><pre>pip install -r requirements.txt
 python agent/01_extract_apps.py
 python agent/02_research.py --mode pass1
@@ -496,7 +505,36 @@ footer{padding:64px 24px 48px;border-top:1px solid var(--line);margin-top:72px}
 @media (max-width:820px){.kpis{grid-template-columns:1fr 1fr}.kpi:nth-child(3){padding-left:0;border-left:0}.kpi:nth-child(n+3){border-top:1px solid var(--line)}
 .proof,.cols,.cols.three{grid-template-columns:1fr}.steps{grid-template-columns:1fr}.apps{columns:1}.dgrid{grid-template-columns:1fr}
 .brand{display:none}.lead-findings .findings{columns:1}nav{gap:16px}section{padding-top:56px}}
-@media print{.top,.filters,.cmd button{display:none}.tablebox{max-height:none;overflow:visible}details{display:block}.detail{display:table-row!important}}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}.reveal.in{opacity:1;transform:none}
+.hero>*{animation:rise .8s ease both}.hero>*:nth-child(2){animation-delay:.08s}.hero>*:nth-child(3){animation-delay:.16s}.hero>*:nth-child(4){animation-delay:.24s}.hero>*:nth-child(5){animation-delay:.32s}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.kpi{transition:background .2s}.kpi:hover{background:var(--surface)}
+.proofcard,.panel,.steps li{transition:transform .2s ease,box-shadow .2s ease,border-color .2s}
+.proofcard:hover,.panel:hover,.steps li:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.06)}
+.track i{transform-origin:left;transform:scaleX(0);transition:transform 1s cubic-bezier(.2,.7,.2,1)}.in .track i{transform:scaleX(1)}
+.hm{transition:filter .15s}.hm:hover{filter:brightness(.92)}
+.pill{transition:transform .15s}.row:hover .pill{transform:translateY(-1px)}
+nav a{position:relative;transition:color .2s}nav a.active{color:var(--accent)}
+nav a::after{content:"";position:absolute;left:0;right:0;bottom:-18px;height:2px;background:var(--accent);transform:scaleX(0);transition:transform .25s}nav a.active::after{transform:scaleX(1)}
+.top{transition:box-shadow .2s}.top.scrolled{box-shadow:0 2px 14px rgba(0,0,0,.06)}
+.runopts .panel p{font-size:15px;color:var(--ink2)}.runopts .cmd{margin-top:14px}.runopts .cmd code{white-space:normal;word-break:break-word}.cmd button{flex:none}
+html,body{overflow-x:clip}
+.hero{position:relative}.hero::before{content:"";position:absolute;z-index:-1;inset:-40px -10% auto auto;width:560px;height:420px;border-radius:50%;
+background:radial-gradient(circle at 30% 30%,rgba(63,81,181,.18),transparent 60%),radial-gradient(circle at 70% 60%,rgba(21,128,61,.12),transparent 60%);filter:blur(30px);animation:drift 14s ease-in-out infinite alternate;pointer-events:none}
+@keyframes drift{from{transform:translate(0,0) scale(1)}to{transform:translate(-80px,40px) scale(1.15)}}
+h1{background:linear-gradient(90deg,var(--ink) 0%,var(--ink) 55%,var(--accent) 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.big.accent{animation:pulse 2.4s ease-in-out 1.6s 2}@keyframes pulse{50%{opacity:.55}}
+.reveal h2::after{content:"";display:block;width:0;height:3px;border-radius:2px;background:var(--accent);margin-top:10px;transition:width .9s .2s ease}.reveal.in h2::after{width:48px}
+.in .hm{animation:pop .5s ease both}.in tr:nth-child(2) .hm{animation-delay:.05s}.in tr:nth-child(3) .hm{animation-delay:.1s}.in tr:nth-child(4) .hm{animation-delay:.15s}.in tr:nth-child(5) .hm{animation-delay:.2s}.in tr:nth-child(6) .hm{animation-delay:.25s}.in tr:nth-child(7) .hm{animation-delay:.3s}.in tr:nth-child(8) .hm{animation-delay:.35s}.in tr:nth-child(9) .hm{animation-delay:.4s}.in tr:nth-child(10) .hm{animation-delay:.45s}
+@keyframes pop{from{opacity:0;transform:scale(.85)}to{opacity:1;transform:none}}
+.in .steps li,.in .findings li,.in .apps li{animation:rise .6s ease both}
+.in .steps li:nth-child(2),.in .findings li:nth-child(2){animation-delay:.1s}.in .steps li:nth-child(3),.in .findings li:nth-child(3){animation-delay:.2s}.in .steps li:nth-child(4),.in .findings li:nth-child(4){animation-delay:.3s}.in .steps li:nth-child(5),.in .findings li:nth-child(5){animation-delay:.4s}.in .steps li:nth-child(6),.in .findings li:nth-child(6){animation-delay:.5s}
+.steps li.human{box-shadow:0 0 0 0 rgba(63,81,181,.35)}.in .steps li.human{animation:rise .6s ease .4s both,ring 2s ease 1.2s 2}@keyframes ring{0%{box-shadow:0 0 0 0 rgba(63,81,181,.35)}100%{box-shadow:0 0 0 12px rgba(63,81,181,0)}}
+.row{transition:background .15s}.kpi .big{transition:color .2s}.kpi:hover .big{color:var(--accent)}
+.cmd button:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+@media (prefers-reduced-motion:reduce){.hero::before,.hm,.steps li,.findings li,.apps li{animation:none!important}}
+@media (prefers-reduced-motion:reduce){.reveal,.hero>*,.track i{opacity:1!important;transform:none!important;animation:none!important;transition:none!important}}
+@media print{.reveal{opacity:1;transform:none}.top,.filters,.cmd button{display:none}.tablebox{max-height:none;overflow:visible}details{display:block}.detail{display:table-row!important}}
 """
 
 JS = """
@@ -514,6 +552,20 @@ JS = """
     r.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();toggle(r)}})});
   var cb=document.getElementById('copy');cb&&cb.addEventListener('click',function(){
     try{navigator.clipboard.writeText(document.getElementById('cmd').textContent).then(function(){cb.textContent='Copied';setTimeout(function(){cb.textContent='Copy'},1500)})}catch(e){}});
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var secs=[].slice.call(document.querySelectorAll('.reveal'));
+  if('IntersectionObserver' in window&&!reduce){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.08});
+    secs.forEach(function(s){io.observe(s)});document.querySelectorAll('details').forEach(function(d){d.addEventListener('toggle',function(){d.classList.add('in')})});}
+  else{secs.forEach(function(s){s.classList.add('in')});document.querySelectorAll('details').forEach(function(d){d.classList.add('in')})}
+  document.querySelectorAll('details').forEach(function(d){d.addEventListener('toggle',function(){d.classList.add('in')})});
+  if(!reduce)document.querySelectorAll('[data-count]').forEach(function(el){var m=el.textContent.match(/^([0-9.]+)(.*)$/);if(!m)return;
+    var end=parseFloat(m[1]),suf=m[2],dec=(m[1].split('.')[1]||'').length,t0=null;el.textContent=(0).toFixed(dec)+suf;
+    function step(ts){if(!t0)t0=ts;var p=Math.min((ts-t0)/1200,1),e=1-Math.pow(1-p,3);el.textContent=(end*e).toFixed(dec)+suf;if(p<1)requestAnimationFrame(step)}
+    setTimeout(function(){requestAnimationFrame(step)},300)});
+  var top=document.querySelector('.top'),links=[].slice.call(document.querySelectorAll('nav a')),ids=links.map(function(a){return document.querySelector(a.getAttribute('href'))});
+  function onScroll(){top.classList.toggle('scrolled',window.scrollY>8);var cur=-1;ids.forEach(function(s,i){if(s&&s.getBoundingClientRect().top<120)cur=i});if(window.innerHeight+window.scrollY>=document.body.scrollHeight-4)cur=links.length-1;
+    links.forEach(function(a,i){a.classList.toggle('active',i===cur)})}
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
 })();
 """
 

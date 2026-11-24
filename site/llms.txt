@@ -2,7 +2,7 @@
 
 > Most of these 100 apps can become agent toolkits today: 77% give developers self-serve credentials, 62 are buildable now, and OAuth2 is the dominant auth (66 apps). The real friction is access gating, not missing APIs, and gating is also where the agent was least accurate.
 
-Researched by an LLM agent with a verification loop and a human-checked audit sample. Data as of 23 Nov 2026.
+Researched by an LLM agent with a verification loop and a human-checked audit sample. Data as of 24 Nov 2026.
 
 ## Key numbers
 - 77% of apps have self-serve credentials; 19% are gated (paid, approval or sales).
