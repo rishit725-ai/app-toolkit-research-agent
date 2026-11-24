@@ -20,7 +20,7 @@ LABEL = {
     "ready_now": "Ready now", "ready_with_constraints": "Ready, with limits",
     "outreach_required": "Needs outreach", "not_buildable_now": "Not buildable",
     "oauth2": "OAuth2", "api_key": "API key", "bearer_token": "Bearer token", "basic": "Basic",
-    "jwt": "JWT", "hmac_signature": "HMAC", "other": "Other", "none": "None",
+    "jwt": "JWT", "token": "Token", "hmac_signature": "HMAC", "other": "Other", "none": "None",
     "credential_gate": "Credential gate", "admin_or_partner_approval": "Admin / partner approval",
     "no_public_api": "No public API", "narrow_or_read_only_api": "Narrow / read-only API",
     "unstable_or_undocumented": "Unstable / undocumented", "local_only": "Local only",
@@ -242,6 +242,97 @@ def write_llms_txt(headline, a, final, repo, live, today):
     (SITE / "llms.txt").write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
+
+# ------------------------------------------------------------------ charts (inline SVG / CSS, no libraries)
+CRED_ORDER = ["self_serve_free", "self_serve_trial", "open_source_local", "paid_plan", "admin_approval",
+              "partner_or_sales_gated", "unclear", "null"]
+CRED_CLS = {"self_serve_free": "s1", "self_serve_trial": "s2", "open_source_local": "s3", "paid_plan": "s4",
+            "admin_approval": "s5", "partner_or_sales_gated": "s6", "unclear": "s7", "null": "s7"}
+BUILD_CLS = {"ready_now": "s1", "ready_with_constraints": "s4", "outreach_required": "s6", "not_buildable_now": "s8"}
+
+
+def donut(counts, n, center, center_label):
+    import math
+    r, C = 70, 2 * math.pi * 70
+    keys = [k for k in CRED_ORDER if counts.get(k)] + [k for k in counts if k not in CRED_ORDER and counts.get(k)]
+    segs, off = [], 0.0
+    for k in keys:
+        L = C * counts[k] / max(n, 1)
+        segs.append(f"<circle class='seg {CRED_CLS.get(k, 's7')}' r='{r}' cx='90' cy='90' stroke-dasharray='{max(L - 2, 0):.1f} {C:.1f}' "
+                    f"stroke-dashoffset='{-off:.1f}'><title>{E(lab(k))}: {counts[k]}</title></circle>")
+        off += L
+    svg = (f"<svg class='donut' viewBox='0 0 180 180' role='img' aria-label='{E(center_label)}: {E(center)}'>"
+           f"<g transform='rotate(-90 90 90)'>{''.join(segs)}<circle class='cover' r='{r}' cx='90' cy='90' "
+           f"stroke-dasharray='{C:.1f} {C:.1f}' style='--C:{C:.1f}'/></g>"
+           f"<text x='90' y='88' class='dv'>{E(center)}</text><text x='90' y='108' class='dl'>{E(center_label)}</text></svg>")
+    legend = "".join(f"<li><i class='sw {CRED_CLS.get(k, 's7')}'></i><span>{E(lab(k))}</span><b>{counts[k]}</b></li>" for k in keys)
+    return f"<div class='donutwrap'>{svg}<ul class='legend'>{legend}</ul></div>"
+
+
+def stacked_by_category(final):
+    cats = sorted({r.get("category", "") for r in final},
+                  key=lambda c: -sum(1 for r in final if r.get("category") == c and r.get("buildability") == "ready_now"))
+    legend = "".join(f"<span><i class='sw {BUILD_CLS[b]}'></i>{E(lab(b))}</span>" for b in BUILD_ORDER)
+    rows = []
+    for c in cats:
+        rs = [r for r in final if r.get("category") == c]
+        segs = []
+        for b in BUILD_ORDER:
+            v = sum(r.get("buildability") == b for r in rs)
+            if v:
+                w = 100 * v / len(rs)
+                segs.append(f"<span class='sg {BUILD_CLS[b]}' style='width:{w:.1f}%' title='{E(lab(b))}: {v}'>{v}</span>")
+        rows.append(f"<div class='srow'><span class='sl'>{E(c)}</span><span class='strack'>{''.join(segs)}</span></div>")
+    return f"<div class='slegend'>{legend}</div><div class='stacked'>{''.join(rows)}</div>"
+
+
+def stage_chart(acc):
+    s = (acc or {}).get("stages", {})
+    items = [("First pass", (s.get("pass1") or {}).get("field_accuracy"), "g"),
+             ("After fact-check", (s.get("pass2") or {}).get("field_accuracy"), "g"),
+             ("Blind 2nd agent", (s.get("audit") or {}).get("field_accuracy"), "a2"),
+             ("After human audit", 1.0, "a")]
+    cols = "".join(f"<div class='col'><span class='cv'>{100 * v:.1f}%</span><span class='cbar {c}' style='height:{100 * v:.1f}%'></span>"
+                   f"<span class='cl'>{E(l)}</span></div>" for l, v, c in items if v is not None)
+    return f"<div class='colchart' role='img' aria-label='Accuracy by stage'>{cols}</div>"
+
+
+def field_chart(acc):
+    s = (acc or {}).get("stages", {})
+    series = [("pass1", "First pass", "g"), ("pass2", "After fact-check", "g2"), ("audit", "Blind 2nd agent", "a2")]
+    legend = "".join(f"<span><i class='sw {c}'></i>{E(l)}</span>" for st, l, c in series if s.get(st))
+    rows = []
+    for f in (acc or {}).get("fields", []):
+        bars_ = "".join(
+            f"<div class='fb'><span class='ft'><i class='{c}' style='width:{100 * s[st]['per_field'][f]:.0f}%'></i></span><b>{100 * s[st]['per_field'][f]:.0f}%</b></div>"
+            for st, l, c in series if s.get(st) and s[st].get("per_field", {}).get(f) is not None)
+        rows.append(f"<div class='frow'><span class='fl'>{E({'api_styles': 'API styles', 'official_mcp': 'Official MCP'}.get(f, f.replace('_', ' ').capitalize()))}</span><div>{bars_}</div></div>")
+    return f"<div class='slegend'>{legend}</div><div class='fchart'>{''.join(rows)}</div>"
+
+
+def flow_svg(p1, v, k, n, gold):
+    steps = [("Research", f"{n} apps · Gemini", ""), ("Auto-verify", f"{p1.get('flagged', '?')} flagged", ""),
+             ("Fact-check", f"{v.get('changed_in_pass2', '?')} changed", ""), ("Composio lookup", f"{k['composio_covered']} matched", ""),
+             ("Human audit", f"{gold} apps checked", "h"), ("Publish", "page + data", "")]
+    w, gap, x0, y = 140, 36, 8, 56
+    parts = []
+    for i, (t, sub, cls) in enumerate(steps):
+        x = x0 + i * (w + gap)
+        parts.append(f"<g class='node {cls}' style='--d:{i * 0.12:.2f}s'><rect x='{x}' y='{y}' width='{w}' height='74' rx='12'/>"
+                     f"<text x='{x + w / 2}' y='{y + 32}' class='nt'>{E(t)}</text><text x='{x + w / 2}' y='{y + 54}' class='ns'>{E(sub)}</text></g>")
+        if i < len(steps) - 1:
+            ax = x + w
+            parts.append(f"<path class='edge' style='--d:{i * 0.12 + 0.1:.2f}s' d='M{ax + 4} {y + 37} H{ax + gap - 8}' marker-end='url(#ah)'/>")
+    hx = x0 + 4 * (w + gap) + w / 2
+    parts.append(f"<g class='htag'><rect x='{hx - 34}' y='14' width='68' height='22' rx='11'/><text x='{hx}' y='29'>HUMAN</text></g>")
+    parts.append(f"<path class='loop' d='M{x0 + 2 * (w + gap) + w / 2} {y + 74} v18 H{x0 + 1 * (w + gap) + w / 2} v-14' marker-end='url(#ah)'/>")
+    parts.append(f"<text x='{x0 + 1.5 * (w + gap) + w / 2}' y='{y + 108}' class='ls'>re-check flagged apps</text>")
+    W = x0 * 2 + 6 * w + 5 * gap
+    return (f"<div class='scroll flowbox'><svg class='flow' viewBox='0 0 {W} 180' role='img' aria-label='Pipeline: research, auto-verify, fact-check, Composio lookup, human audit, publish'>"
+            "<defs><marker id='ah' viewBox='0 0 10 10' refX='8' refY='5' markerWidth='7' markerHeight='7' orient='auto'><path d='M0 0 L10 5 L0 10 z' class='ahd'/></marker></defs>"
+            f"{''.join(parts)}</svg></div>")
+
+
 # ------------------------------------------------------------------ page
 def main():
     ap = argparse.ArgumentParser()
@@ -318,16 +409,21 @@ def main():
 <section class="reveal" id="findings">
 <h2>What the patterns say</h2>
 <div class="lead-findings">{insights_html}</div>
-<h3>Where each category lands</h3><p class="muted small">Apps per verdict. Darker means more of that category.</p>{heatmap(final)}
+<div class="cols two charts">
+<div class="panel"><h3>How developers get credentials</h3>{donut(a['credential_access'], n, str(k['self_serve_pct']) + '%', 'self-serve')}</div>
+<div class="panel"><h3>Auth methods <span class="muted">· apps can have several</span></h3>{bars(a['auth'], n)}</div>
+</div>
+<div class="panel chartpanel"><h3>Can it be built today? By category</h3>{stacked_by_category(final)}</div>
 <div class="cols two">
 <div class="panel"><h3>Easy wins <span class="muted">· ready now, not yet on Composio</span></h3>{app_list(a['easy_wins'])}</div>
 <div class="panel"><h3>Needs outreach <span class="muted">· partner, approval or no usable API</span></h3>{app_list(a['outreach'])}</div>
 </div>
 <details><summary>See the full distributions</summary>
 <div class="cols three">
-<div><h3>Auth methods</h3>{bars(a['auth'], n)}</div>
+<div><h3>Main blocker</h3>{bars(a['blockers'], n)}</div>
 <div><h3>Credential access</h3>{bars(a['credential_access'], n)}</div>
-<div><h3>Main blocker</h3>{bars(a['blockers'], n)}</div></div>
+<div><h3>API styles</h3>{bars(a.get('api_styles', {}), n)}</div></div>
+<h3>Category heatmap</h3>{heatmap(final)}
 <h3>By category</h3>{category_matrix(a['by_category'])}
 </details>
 </section>
@@ -347,6 +443,7 @@ def main():
 <section class="reveal" id="how">
 <h2>How it works</h2>
 <p class="muted">A Python pipeline. Every number on this page is computed from its output, none typed by hand.</p>
+{flow_svg(p1, v, k, n, (v.get('accuracy') or {}).get('gold_apps', 20))}
 <ol class="steps">
 <li><b>Research</b><span>Gemini reads each vendor's official docs and fills a fixed schema with evidence URLs. One JSON per app.</span></li>
 <li><b>Auto-verify</b><span>Rules check logic and schema, open every evidence link, and flag weak answers.{f" {p1.get('flagged')} apps flagged." if p1 else ''}</span></li>
@@ -365,10 +462,13 @@ def main():
 <section class="reveal" id="verify">
 <h2>Verification</h2>
 <div class="cols">
-<div><h3>Accuracy on the hand-checked sample</h3>{acc_hero if scored else ''}{acc_detail}</div>
+<div><h3>Accuracy by stage <span class="muted">· 20 hand-checked apps</span></h3>{stage_chart(v.get('accuracy')) if scored else acc_detail}
+<p class="note">{'The automatic fact-check did not lift accuracy; an independent blind agent did better, and the human audit corrected every audited row.' if scored else ''}</p></div>
+<div><h3>Accuracy by field</h3>{field_chart(v.get('accuracy')) if scored else ''}</div></div>
+<div class="cols">
 <div><h3>Automatic checks on all {n} apps</h3>
 {f"<p>{p1.get('links_checked', '?')} evidence links opened and checked. {p1.get('flagged', '?')} apps flagged on pass 1, {p2.get('flagged', '?')} still flagged after the fact-check pass.</p>" if p1 else "<p class='muted'>Auto-check results appear after <code>03_verify.py</code>.</p>"}
-<ul>{''.join(f"<li>{E(t)}: {c}</li>" for t, c in (p1.get('flag_types') or {}).items())}</ul></div></div>
+</div><div><h3>What the auto-checks flagged</h3>{bars(p1.get('flag_types') or {}, max(p1.get('flagged') or 1, 1))}</div></div>
 <h3>Every miss on the audited sample{f' ({n_miss})' if n_miss else ''}</h3>{miss_html}
 </section>
 
@@ -532,6 +632,46 @@ h1{background:linear-gradient(90deg,var(--ink) 0%,var(--ink) 55%,var(--accent) 1
 .steps li.human{box-shadow:0 0 0 0 rgba(63,81,181,.35)}.in .steps li.human{animation:rise .6s ease .4s both,ring 2s ease 1.2s 2}@keyframes ring{0%{box-shadow:0 0 0 0 rgba(63,81,181,.35)}100%{box-shadow:0 0 0 12px rgba(63,81,181,0)}}
 .row{transition:background .15s}.kpi .big{transition:color .2s}.kpi:hover .big{color:var(--accent)}
 .cmd button:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+
+:root{--s1:#15803d;--s2:#65a30d;--s3:#0f766e;--s4:#ca8a04;--s5:#ea580c;--s6:#dc2626;--s7:#a8a29e;--s8:#7f1d1d;--g:#a8a29e;--g2:#78716c;--a2:#7c8ce0}
+@media (prefers-color-scheme:dark){:root{--s1:#4ade80;--s2:#a3e635;--s3:#2dd4bf;--s4:#facc15;--s5:#fb923c;--s6:#f87171;--s7:#737373;--s8:#b91c1c;--g:#6b6b6b;--g2:#9a9a9a;--a2:#7c8ce0}}
+.s1{--c:var(--s1)}.s2{--c:var(--s2)}.s3{--c:var(--s3)}.s4{--c:var(--s4)}.s5{--c:var(--s5)}.s6{--c:var(--s6)}.s7{--c:var(--s7)}.s8{--c:var(--s8)}
+.g{--c:var(--g)}.g2{--c:var(--g2)}.a2{--c:var(--a2)}.a{--c:var(--accent)}
+.sw{display:inline-block;width:10px;height:10px;border-radius:3px;background:var(--c);flex:none}
+.charts{margin-top:28px}.chartpanel{margin-top:20px}
+.donutwrap{display:flex;align-items:center;gap:24px;flex-wrap:wrap}.donut{width:180px;height:180px;flex:none}
+.donut .seg{fill:none;stroke:var(--c);stroke-width:26;transition:stroke-width .2s}.donut .seg:hover{stroke-width:32}
+.donut .cover{fill:none;stroke:var(--surface);stroke-width:34;stroke-dashoffset:0;transition:stroke-dashoffset 1.4s cubic-bezier(.4,.1,.2,1) .2s}
+.in .donut .cover{stroke-dashoffset:calc(var(--C) * -1)}
+.donut .dv{text-anchor:middle;font-size:28px;font-weight:600;fill:var(--ink)}.donut .dl{text-anchor:middle;font-size:12px;fill:var(--muted)}
+.legend{list-style:none;padding:0;margin:0;flex:1;min-width:180px;font-size:14px}
+.legend li{display:flex;align-items:center;gap:10px;margin:6px 0}.legend li span{flex:1;color:var(--ink2)}.legend b{font-weight:600;font-variant-numeric:tabular-nums}
+.slegend{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:13px;color:var(--ink2);margin:4px 0 14px}.slegend span{display:flex;align-items:center;gap:6px}
+.srow{display:grid;grid-template-columns:240px 1fr;gap:14px;align-items:center;margin:8px 0;font-size:14px}.sl{color:var(--ink2)}
+.strack{display:flex;height:22px;border-radius:6px;overflow:hidden;background:var(--soft)}
+.sg{background:var(--c);color:#fff;font-size:12px;font-weight:600;display:flex;align-items:center;justify-content:center;transform-origin:left;transform:scaleX(0);transition:transform .9s cubic-bezier(.2,.7,.2,1);border-right:2px solid var(--surface)}
+.sg:last-child{border-right:0}.in .sg{transform:scaleX(1)}
+.colchart{display:flex;align-items:flex-end;gap:18px;height:240px;padding-top:28px;border-bottom:1px solid var(--line);margin-top:10px}
+.col{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;position:relative}
+.cbar{width:100%;max-width:72px;background:var(--c);border-radius:8px 8px 0 0;transform-origin:bottom;transform:scaleY(0);transition:transform 1s cubic-bezier(.2,.7,.2,1)}
+.in .cbar{transform:scaleY(1)}.col:nth-child(2) .cbar{transition-delay:.12s}.col:nth-child(3) .cbar{transition-delay:.24s}.col:nth-child(4) .cbar{transition-delay:.36s}
+.cv{font-size:15px;font-weight:600;margin-bottom:6px;font-variant-numeric:tabular-nums}.cl{position:absolute;bottom:-40px;font-size:12px;color:var(--muted);text-align:center;line-height:1.3}
+.colchart+.note{margin-top:52px}
+.frow{display:grid;grid-template-columns:130px 1fr;gap:12px;align-items:center;padding:8px 0;border-bottom:1px solid var(--line);font-size:14px}
+.fl{color:var(--ink2)}.fb{display:grid;grid-template-columns:1fr 40px;gap:8px;align-items:center;margin:2px 0}
+.ft{height:7px;background:var(--soft);border-radius:4px;overflow:hidden}.ft i{display:block;height:100%;background:var(--c);transform-origin:left;transform:scaleX(0);transition:transform 1s cubic-bezier(.2,.7,.2,1)}
+.in .ft i{transform:scaleX(1)}.fb b{font-size:12px;font-weight:500;color:var(--muted);text-align:right;font-variant-numeric:tabular-nums}
+.flowbox{margin:24px 0 8px}.flow{width:100%;min-width:760px;height:auto;display:block}
+.flow .node rect{fill:var(--surface);stroke:var(--line);stroke-width:1.5}.flow .node.h rect{stroke:var(--accent);stroke-width:2}
+.flow .nt{text-anchor:middle;font-size:15px;font-weight:600;fill:var(--ink)}.flow .ns{text-anchor:middle;font-size:12.5px;fill:var(--muted)}
+.flow .edge,.flow .loop{fill:none;stroke:var(--muted);stroke-width:1.6}.flow .loop{stroke-dasharray:4 4}.flow .ahd{fill:var(--muted)}
+.flow .ls{text-anchor:middle;font-size:12px;fill:var(--muted)}
+.flow .htag rect{fill:var(--accent)}.flow .htag text{text-anchor:middle;font-size:11px;font-weight:600;fill:#fff;letter-spacing:.08em}
+.flow .node,.flow .edge,.flow .htag,.flow .loop,.flow .ls{opacity:0;transition:opacity .5s ease var(--d,0s),transform .5s ease var(--d,0s)}
+.flow .node{transform:translateY(8px)}.in .flow .node,.in .flow .edge{opacity:1;transform:none}.in .flow .htag,.in .flow .loop,.in .flow .ls{opacity:1;transition-delay:.8s}
+@media (max-width:820px){.srow{grid-template-columns:1fr;gap:4px}.frow{grid-template-columns:1fr}.colchart{gap:10px}.cl{font-size:11px}}
+@media (prefers-reduced-motion:reduce){.sg,.cbar,.ft i{transform:none!important;transition:none!important}.donut .cover{display:none}.flow *{opacity:1!important;transform:none!important}}
+@media print{.donut .cover{display:none}.sg,.cbar,.ft i{transform:none}.flow *{opacity:1}}
 @media (prefers-reduced-motion:reduce){.hero::before,.hm,.steps li,.findings li,.apps li{animation:none!important}}
 @media (prefers-reduced-motion:reduce){.reveal,.hero>*,.track i{opacity:1!important;transform:none!important;animation:none!important;transition:none!important}}
 @media print{.reveal{opacity:1;transform:none}.top,.filters,.cmd button{display:none}.tablebox{max-height:none;overflow:visible}details{display:block}.detail{display:table-row!important}}
