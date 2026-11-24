@@ -248,7 +248,7 @@ CRED_ORDER = ["self_serve_free", "self_serve_trial", "open_source_local", "paid_
               "partner_or_sales_gated", "unclear", "null"]
 CRED_CLS = {"self_serve_free": "s1", "self_serve_trial": "s2", "open_source_local": "s3", "paid_plan": "s4",
             "admin_approval": "s5", "partner_or_sales_gated": "s6", "unclear": "s7", "null": "s7"}
-BUILD_CLS = {"ready_now": "s1", "ready_with_constraints": "s4", "outreach_required": "s6", "not_buildable_now": "s8"}
+BUILD_CLS = {"ready_now": "s1", "ready_with_constraints": "s4", "outreach_required": "s6", "not_buildable_now": "s8", "none": "s0"}
 
 
 def donut(counts, n, center, center_label):
@@ -270,20 +270,30 @@ def donut(counts, n, center, center_label):
 
 
 def stacked_by_category(final):
-    cats = sorted({r.get("category", "") for r in final},
-                  key=lambda c: -sum(1 for r in final if r.get("category") == c and r.get("buildability") == "ready_now"))
-    legend = "".join(f"<span><i class='sw {BUILD_CLS[b]}'></i>{E(lab(b))}</span>" for b in BUILD_ORDER)
-    rows = []
-    for c in cats:
+    short = lambda c: c.replace(" and ", " & ")
+    stats = []
+    for c in {r.get("category", "") for r in final}:
         rs = [r for r in final if r.get("category") == c]
+        stats.append((c, rs, sum(r.get("buildability") == "ready_now" for r in rs)))
+    stats.sort(key=lambda x: (-x[2], x[0]))
+    keys = BUILD_ORDER + (["none"] if any(not r.get("buildability") for r in final) else [])
+    names = {**{b: lab(b) for b in BUILD_ORDER}, "none": "Not researched"}
+    legend = "".join(f"<span><i class='sw {BUILD_CLS[b]}'></i>{E(names[b])}</span>" for b in keys)
+    rows = []
+    for c, rs, ready in stats:
         segs = []
-        for b in BUILD_ORDER:
-            v = sum(r.get("buildability") == b for r in rs)
+        for b in keys:
+            v = sum((r.get("buildability") or "none") == b for r in rs)
             if v:
-                w = 100 * v / len(rs)
-                segs.append(f"<span class='sg {BUILD_CLS[b]}' style='width:{w:.1f}%' title='{E(lab(b))}: {v}'>{v}</span>")
-        rows.append(f"<div class='srow'><span class='sl'>{E(c)}</span><span class='strack'>{''.join(segs)}</span></div>")
-    return f"<div class='slegend'>{legend}</div><div class='stacked'>{''.join(rows)}</div>"
+                segs.append(f"<span class='sg {BUILD_CLS[b]}' style='flex:{v}' title='{E(names[b])}: {v} of {len(rs)}'></span>")
+        rows.append(f"<div class='srow'><span class='sl' title='{E(c)}'>{E(short(c))}</span><span class='strack'>{''.join(segs)}</span>"
+                    f"<span class='sn'><b>{ready}</b>/{len(rs)} ready</span></div>")
+    nick = lambda c: c.split(",")[0].split(" and ")[0]
+    top, low = stats[:3], stats[-2:]
+    caption = (f"{nick(top[0][0])}, {nick(top[1][0])} and {nick(top[2][0])} apps are the easiest: "
+               f"{top[2][2]}{'' if top[0][2] == top[2][2] else '+'} of 10 ready today. {nick(low[1][0])} and {nick(low[0][0])} need the most work, "
+               f"with only {low[1][2]} and {low[0][2]} ready.")
+    return f"<p class='takeaway'>{E(caption)}</p><div class='slegend'>{legend}</div><div class='stacked'>{''.join(rows)}</div>"
 
 
 def stage_chart(acc):
@@ -575,12 +585,12 @@ thead th{font-size:12px;font-weight:500;color:var(--muted);text-transform:upperc
 .num,.c{text-align:center;font-variant-numeric:tabular-nums}table.narrow{max-width:420px}
 .heat th[scope=row]{font-weight:500;white-space:nowrap}
 .hm{text-align:center;font-variant-numeric:tabular-nums;color:var(--ink);border-left:2px solid var(--bg)}
-.hm.good{background:rgba(var(--good-rgb),calc(var(--a)*.45))}.hm.mid{background:rgba(var(--mid-rgb),calc(var(--a)*.45))}.hm.bad{background:rgba(var(--bad-rgb),calc(var(--a)*.45))}
+.hm.good{background:color-mix(in srgb,var(--s1) calc(var(--a)*70%),transparent)}.hm.mid{background:color-mix(in srgb,var(--s4) calc(var(--a)*70%),transparent)}.hm.bad{background:color-mix(in srgb,var(--s6) calc(var(--a)*70%),transparent)}
 .bar{display:grid;grid-template-columns:1fr 90px 28px;gap:10px;align-items:center;font-size:14px;margin:6px 0}
 .track{height:6px;background:var(--soft);border-radius:3px;overflow:hidden}.track i{display:block;height:100%;background:var(--accent);opacity:.75}
 .bar .num{text-align:right;color:var(--muted)}
 .pill{display:inline-block;font-size:13px;padding:2px 10px;border-radius:999px;background:var(--soft);color:var(--ink2);white-space:nowrap}
-.pill.good{background:rgba(var(--good-rgb),.12);color:var(--good)}.pill.mid{background:rgba(var(--mid-rgb),.12);color:var(--mid)}.pill.bad{background:rgba(var(--bad-rgb),.12);color:var(--bad)}
+.pill.good{background:color-mix(in srgb,var(--s1) 14%,transparent);color:var(--s1)}.pill.mid{background:color-mix(in srgb,var(--s4) 18%,transparent);color:color-mix(in srgb,var(--s4) 75%,var(--ink))}.pill.bad{background:color-mix(in srgb,var(--s6) 14%,transparent);color:var(--s6)}
 .tick{font-size:11px;font-weight:500;color:var(--accent);border:1px solid currentColor;border-radius:4px;padding:0 5px;margin-left:6px;vertical-align:2px}
 .filters{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:20px 0 12px}
 .filters input[type=search],.filters select{font:inherit;font-size:14px;padding:8px 12px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink);max-width:100%}
@@ -633,8 +643,9 @@ h1{background:linear-gradient(90deg,var(--ink) 0%,var(--ink) 55%,var(--accent) 1
 .row{transition:background .15s}.kpi .big{transition:color .2s}.kpi:hover .big{color:var(--accent)}
 .cmd button:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
 
-:root{--s1:#15803d;--s2:#65a30d;--s3:#0f766e;--s4:#ca8a04;--s5:#ea580c;--s6:#dc2626;--s7:#a8a29e;--s8:#7f1d1d;--g:#a8a29e;--g2:#78716c;--a2:#7c8ce0}
-@media (prefers-color-scheme:dark){:root{--s1:#4ade80;--s2:#a3e635;--s3:#2dd4bf;--s4:#facc15;--s5:#fb923c;--s6:#f87171;--s7:#737373;--s8:#b91c1c;--g:#6b6b6b;--g2:#9a9a9a;--a2:#7c8ce0}}
+:root{--s1:#2f7d74;--s2:#6fa89f;--s3:#a9cbc4;--s4:#d3a44f;--s5:#c98767;--s6:#c56b5c;--s7:#b9b5ae;--s8:#8a8f99;--s0:#e2dfda;--g:#b9b5ae;--g2:#8a857e;--a2:#8e9be0}
+@media (prefers-color-scheme:dark){:root{--s1:#4fa69a;--s2:#7fb9ae;--s3:#a3cbc3;--s4:#c9a55e;--s5:#c48a6e;--s6:#cc7f71;--s7:#6e6c69;--s8:#7d828c;--s0:#55534f;--g:#6e6c69;--g2:#9a9690;--a2:#8e9be0}}
+.s0{--c:var(--s0)}
 .s1{--c:var(--s1)}.s2{--c:var(--s2)}.s3{--c:var(--s3)}.s4{--c:var(--s4)}.s5{--c:var(--s5)}.s6{--c:var(--s6)}.s7{--c:var(--s7)}.s8{--c:var(--s8)}
 .g{--c:var(--g)}.g2{--c:var(--g2)}.a2{--c:var(--a2)}.a{--c:var(--accent)}
 .sw{display:inline-block;width:10px;height:10px;border-radius:3px;background:var(--c);flex:none}
@@ -647,10 +658,13 @@ h1{background:linear-gradient(90deg,var(--ink) 0%,var(--ink) 55%,var(--accent) 1
 .legend{list-style:none;padding:0;margin:0;flex:1;min-width:180px;font-size:14px}
 .legend li{display:flex;align-items:center;gap:10px;margin:6px 0}.legend li span{flex:1;color:var(--ink2)}.legend b{font-weight:600;font-variant-numeric:tabular-nums}
 .slegend{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:13px;color:var(--ink2);margin:4px 0 14px}.slegend span{display:flex;align-items:center;gap:6px}
-.srow{display:grid;grid-template-columns:240px 1fr;gap:14px;align-items:center;margin:8px 0;font-size:14px}.sl{color:var(--ink2)}
-.strack{display:flex;height:22px;border-radius:6px;overflow:hidden;background:var(--soft)}
-.sg{background:var(--c);color:#fff;font-size:12px;font-weight:600;display:flex;align-items:center;justify-content:center;transform-origin:left;transform:scaleX(0);transition:transform .9s cubic-bezier(.2,.7,.2,1);border-right:2px solid var(--surface)}
-.sg:last-child{border-right:0}.in .sg{transform:scaleX(1)}
+.takeaway{font-size:15px;color:var(--ink2);margin:0 0 14px;max-width:760px}
+.srow{display:grid;grid-template-columns:260px 1fr 78px;gap:16px;align-items:center;padding:7px 0;font-size:14px}
+.sl{color:var(--ink2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.strack{display:flex;gap:3px;height:12px;transform-origin:left;transform:scaleX(0);transition:transform 1s cubic-bezier(.2,.7,.2,1)}
+.in .strack{transform:scaleX(1)}.srow:nth-child(n+4) .strack{transition-delay:.1s}.srow:nth-child(n+7) .strack{transition-delay:.2s}
+.sg{background:var(--c);border-radius:4px;min-width:6px;transition:filter .15s}.sg:hover{filter:brightness(1.12)}
+.sn{font-size:13px;color:var(--muted);text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}.sn b{color:var(--ink);font-weight:600}
 .colchart{display:flex;align-items:flex-end;gap:18px;height:240px;padding-top:28px;border-bottom:1px solid var(--line);margin-top:10px}
 .col{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;position:relative}
 .cbar{width:100%;max-width:72px;background:var(--c);border-radius:8px 8px 0 0;transform-origin:bottom;transform:scaleY(0);transition:transform 1s cubic-bezier(.2,.7,.2,1)}
@@ -669,8 +683,8 @@ h1{background:linear-gradient(90deg,var(--ink) 0%,var(--ink) 55%,var(--accent) 1
 .flow .htag rect{fill:var(--accent)}.flow .htag text{text-anchor:middle;font-size:11px;font-weight:600;fill:#fff;letter-spacing:.08em}
 .flow .node,.flow .edge,.flow .htag,.flow .loop,.flow .ls{opacity:0;transition:opacity .5s ease var(--d,0s),transform .5s ease var(--d,0s)}
 .flow .node{transform:translateY(8px)}.in .flow .node,.in .flow .edge{opacity:1;transform:none}.in .flow .htag,.in .flow .loop,.in .flow .ls{opacity:1;transition-delay:.8s}
-@media (max-width:820px){.srow{grid-template-columns:1fr;gap:4px}.frow{grid-template-columns:1fr}.colchart{gap:10px}.cl{font-size:11px}}
-@media (prefers-reduced-motion:reduce){.sg,.cbar,.ft i{transform:none!important;transition:none!important}.donut .cover{display:none}.flow *{opacity:1!important;transform:none!important}}
+@media (max-width:820px){.srow{grid-template-columns:1fr 70px;gap:4px 10px}.srow .sl{grid-column:1/-1}.frow{grid-template-columns:1fr}.colchart{gap:10px}.cl{font-size:11px}}
+@media (prefers-reduced-motion:reduce){.strack,.sg,.cbar,.ft i{transform:none!important;transition:none!important}.donut .cover{display:none}.flow *{opacity:1!important;transform:none!important}}
 @media print{.donut .cover{display:none}.sg,.cbar,.ft i{transform:none}.flow *{opacity:1}}
 @media (prefers-reduced-motion:reduce){.hero::before,.hm,.steps li,.findings li,.apps li{animation:none!important}}
 @media (prefers-reduced-motion:reduce){.reveal,.hero>*,.track i{opacity:1!important;transform:none!important;animation:none!important;transition:none!important}}
