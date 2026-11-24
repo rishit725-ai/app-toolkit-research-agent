@@ -343,6 +343,36 @@ def flow_svg(p1, v, k, n, gold):
             f"{''.join(parts)}</svg></div>")
 
 
+
+def roadmap(a, final, k, n):
+    b = a["buildability"]
+    limited = [r for r in final if r.get("buildability") == "ready_with_constraints"]
+    lim_reasons = {}
+    for r in limited:
+        lim_reasons[r.get("credential_access")] = lim_reasons.get(r.get("credential_access"), 0) + 1
+    top_lim = sorted(lim_reasons.items(), key=lambda x: -x[1])[:3]
+    lim_txt = ", ".join(f"{lab(c).lower()} ({v})" for c, v in top_lim)
+    names = lambda items: "".join(f"<li>{E(i['app'])}</li>" for i in items)
+    cov = k["composio_covered"]
+    return f"""
+<div class="cov"><div class="covtop"><span class="mono">Composio catalog coverage</span><span><b>{cov}</b> / {n} apps already have a toolkit</span></div>
+<div class="covbar"><i style="width:{cov}%"></i></div></div>
+<div class="lanes">
+<div class="lane l1"><div class="lh"><span class="mono">01 · Build next</span><b>{k['easy_wins']}</b></div>
+<p>Ready now and not yet in the catalog: public API, self-serve credentials, a standard auth config.</p><ul class="chips">{names(a['easy_wins'])}</ul></div>
+<div class="lane l2"><div class="lh"><span class="mono">02 · Ship with limits</span><b>{b.get('ready_with_constraints', 0)}</b></div>
+<p>Buildable, but the auth config needs a caveat. Most common reasons: {E(lim_txt)}.</p></div>
+<div class="lane l3"><div class="lh"><span class="mono">03 · Partner outreach</span><b>{k['outreach']}</b></div>
+<p>Partner, approval or no usable public API. These go through BD, not engineering.</p><ul class="chips">{names(a['outreach'])}</ul></div>
+</div>
+<div class="authcfg">
+<div><span class="mono">OAuth2</span><b>{a['auth'].get('oauth2', 0)}</b><p>apps can use a managed OAuth auth config</p></div>
+<div><span class="mono">API key</span><b>{a['auth'].get('api_key', 0)}</b><p>apps accept an API key auth config</p></div>
+<div><span class="mono">Official MCP</span><b>{k['official_mcp']}</b><p>vendors already ship their own MCP server</p></div>
+<div><span class="mono">Self-serve</span><b>{k['self_serve_pct']}%</b><p>of apps let a developer get credentials alone</p></div>
+</div>"""
+
+
 # ------------------------------------------------------------------ page
 def main():
     ap = argparse.ArgumentParser()
@@ -397,15 +427,15 @@ def main():
 <link rel="alternate" type="text/csv" href="final.csv" title="All apps as CSV">
 <link rel="alternate" type="text/plain" href="llms.txt" title="Summary for LLMs and agents">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>{CSS}</style></head><body>
-<header class="top"><div class="wrap navrow"><span class="brand">Agent Toolkit Research</span>
-<nav><a href="#findings">Findings</a><a href="#apps">All apps</a><a href="#how">How it works</a><a href="#verify">Verification</a><a href="#limits">Limits</a><a href="#run">Run it</a></nav></div></header>
+<header class="top"><div class="wrap navrow"><span class="brand"><span class="logo"></span>toolkit-research</span>
+<nav><a href="#findings">Findings</a><a href="#roadmap">Roadmap</a><a href="#apps">All apps</a><a href="#how">How it works</a><a href="#verify">Verification</a><a href="#limits">Limits</a><a href="#run">Run it</a></nav></div></header>
 <main class="wrap">
 
 <section class="hero">
-<p class="eyebrow">Composio · AI Product Ops take-home · {n} apps · data as of {today}</p>
-<h1>Which apps can become agent toolkits today?</h1>
+<p class="badge"><span class="dot"></span>Toolkit research · {n} apps · data as of {today}</p>
+<h1>Which apps can become <span class="grad">agent toolkits</span> today?</h1>
 <p class="lede">{E(headline)}</p>
 <div class="kpis">{kpi_html}</div>
 <div class="proof">
@@ -438,6 +468,13 @@ def main():
 </details>
 </section>
 
+<section class="reveal" id="roadmap">
+<p class="kicker">What this means for Composio</p>
+<h2>Toolkit roadmap</h2>
+<p class="muted">How the {n} apps split into engineering work, caveated toolkits and partner conversations.</p>
+{roadmap(a, final, k, n)}
+</section>
+
 <section class="reveal" id="apps">
 <h2>All {n} apps</h2>
 <p class="muted">Click a row for the reasoning and evidence links. Rows marked Human-checked were verified by hand against official docs.</p>
@@ -446,7 +483,7 @@ def main():
 <select id="fb" aria-label="Verdict"><option value="">All verdicts</option>{build_opts}</select>
 <label class="check"><input type="checkbox" id="fh"> Human-checked only ({n_human})</label>
 <span id="count" class="muted small"></span></div>
-<div class="scroll tablebox"><table id="t" class="apps"><thead><tr><th>App</th><th>Auth</th><th>Credentials</th><th>Verdict</th><th class="c">Official MCP</th><th class="c">On Composio</th></tr></thead>
+<div class="scroll tablebox"><table id="t" class="apps"><thead><tr><th>App</th><th>Auth</th><th>Credentials</th><th>Verdict</th><th class="c">Official MCP</th><th class="c">In Composio catalog</th></tr></thead>
 <tbody>{app_rows(final)}</tbody></table></div>
 </section>
 
@@ -526,7 +563,7 @@ python agent/07_build_site.py</pre></details>
 <p><a href="{repo}">Source repository</a> · <a href="{live}">Live page</a></p>
 </section>
 </main>
-<footer class="wrap muted small">Built for the Composio AI Product Ops take-home. Machine-readable: <a href="llms.txt">llms.txt</a>, <a href="final.json">final.json</a>, <a href="final.csv">final.csv</a>, <a href="analysis.json">analysis.json</a>.</footer>
+<footer class="wrap muted small">An independent case study by a candidate for Composio's AI Product Ops role. Not an official Composio page. Machine-readable: <a href="llms.txt">llms.txt</a>, <a href="final.json">final.json</a>, <a href="final.csv">final.csv</a>, <a href="analysis.json">analysis.json</a>.</footer>
 <script>{JS}</script></body></html>"""
 
     SITE.mkdir(parents=True, exist_ok=True)
@@ -689,6 +726,53 @@ h1{background:linear-gradient(90deg,var(--ink) 0%,var(--ink) 55%,var(--accent) 1
 @media (prefers-reduced-motion:reduce){.hero::before,.hm,.steps li,.findings li,.apps li{animation:none!important}}
 @media (prefers-reduced-motion:reduce){.reveal,.hero>*,.track i{opacity:1!important;transform:none!important;animation:none!important;transition:none!important}}
 @media print{.reveal{opacity:1;transform:none}.top,.filters,.cmd button{display:none}.tablebox{max-height:none;overflow:visible}details{display:block}.detail{display:table-row!important}}
+
+/* ---- developer-tool dark theme (always on) ---- */
+:root,:root:not([data-theme]){--bg:#0a0a0c;--surface:rgba(255,255,255,.035);--ink:#f2f2f4;--ink2:#c4c4cc;--muted:#8a8a96;--line:rgba(255,255,255,.08);--soft:rgba(255,255,255,.05);
+--accent:#8b7dff;--accent2:#4fd1c5;--good:#4fa69a;--mid:#c9a55e;--bad:#cc7f71;
+--s1:#4fa69a;--s2:#7fb9ae;--s3:#a3cbc3;--s4:#c9a55e;--s5:#c48a6e;--s6:#cc7f71;--s7:#6e6c69;--s8:#7d828c;--s0:#55534f;--g:#5d5d66;--g2:#8a8a96;--a2:#6f8cff;color-scheme:dark}
+body{background:var(--bg);font-family:Inter,system-ui,sans-serif}
+body::before{content:"";position:fixed;inset:0;z-index:-2;pointer-events:none;
+background-image:radial-gradient(rgba(255,255,255,.07) 1px,transparent 1px);background-size:22px 22px;
+mask-image:radial-gradient(ellipse at 50% 0%,#000 30%,transparent 75%);-webkit-mask-image:radial-gradient(ellipse at 50% 0%,#000 30%,transparent 75%)}
+body::after{content:"";position:fixed;z-index:-1;pointer-events:none;top:-260px;left:50%;width:1100px;height:620px;transform:translateX(-50%);
+background:radial-gradient(closest-side,rgba(139,125,255,.22),transparent),radial-gradient(closest-side at 70% 60%,rgba(79,209,197,.12),transparent);filter:blur(20px)}
+.hero::before{display:none}
+.mono,.kicker,.eyebrow,thead th,.cap,.dgrid b,.sn,.cl,.fb b{font-family:"JetBrains Mono",ui-monospace,Consolas,monospace}
+.mono{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.kicker{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin:0 0 8px}
+.top{background:rgba(10,10,12,.72)}.brand{display:flex;align-items:center;gap:10px;font-family:"JetBrains Mono",monospace;font-size:14px}
+.logo{width:18px;height:18px;border-radius:5px;background:linear-gradient(135deg,var(--accent),var(--accent2))}
+.badge{display:inline-flex;align-items:center;gap:8px;font-family:"JetBrains Mono",monospace;font-size:12px;color:var(--ink2);border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:6px 12px;margin:0}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--accent2);box-shadow:0 0 10px var(--accent2);animation:blink 2s ease-in-out infinite}@keyframes blink{50%{opacity:.35}}
+h1{color:var(--ink);background:none;-webkit-background-clip:initial;background-clip:initial;letter-spacing:-.03em}
+.grad{background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+h2{letter-spacing:-.02em}.reveal h2::after{background:linear-gradient(90deg,var(--accent),var(--accent2))}
+.proofcard,.panel,.steps li,.tablebox,.cmd,pre,.lane,.authcfg>div,.cov{background:var(--surface);border:1px solid var(--line);backdrop-filter:blur(6px)}
+.proofcard:hover,.panel:hover,.steps li:hover,.lane:hover{border-color:rgba(139,125,255,.35);box-shadow:0 0 0 1px rgba(139,125,255,.15),0 12px 40px rgba(0,0,0,.4)}
+.panel.soft{background:rgba(255,255,255,.025)}.big.accent{color:var(--accent)}
+.kpis{border-color:var(--line)}.kpi+.kpi{border-color:var(--line)}.kpi:hover{background:var(--surface)}
+.detail td,.row:hover{background:rgba(255,255,255,.03)}.apps thead th{background:#111114}
+.donut .cover{stroke:#0f0f12}.flow .node rect{fill:#121216}.flow .htag rect{fill:var(--accent)}
+.filters input[type=search],.filters select{background:#111114}
+.tick,.steps li.human b::after{color:var(--accent)}.steps li.human{border-color:rgba(139,125,255,.5)}
+.cmd button{background:rgba(255,255,255,.06)}.cmd button:hover{background:var(--accent)}
+/* roadmap */
+.cov{border-radius:12px;padding:18px 20px;margin-top:22px}.covtop{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:14px;color:var(--ink2);margin-bottom:10px}
+.covtop b{color:var(--ink);font-size:18px}.covbar{height:8px;border-radius:4px;background:var(--soft);overflow:hidden}
+.covbar i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));transform-origin:left;transform:scaleX(0);transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}.in .covbar i{transform:scaleX(1)}
+.lanes{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:16px}
+.lane{border-radius:14px;padding:20px;position:relative;overflow:hidden;transition:border-color .2s,box-shadow .2s}
+.lane::before{content:"";position:absolute;left:0;top:0;right:0;height:2px;background:var(--c)}
+.lane.l1{--c:var(--s1)}.lane.l2{--c:var(--s4)}.lane.l3{--c:var(--s6)}
+.lh{display:flex;justify-content:space-between;align-items:baseline}.lh b{font-size:34px;font-weight:600;color:var(--c)}
+.lane p{font-size:14px;color:var(--ink2);margin:8px 0 12px}
+.chips{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:6px}
+.chips li{font-size:12.5px;margin:0;padding:3px 10px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.04);color:var(--ink)}
+.authcfg{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:16px}
+.authcfg>div{border-radius:12px;padding:16px}.authcfg b{display:block;font-size:26px;font-weight:600;margin-top:4px}.authcfg p{font-size:13px;color:var(--muted);margin:4px 0 0}
+@media (max-width:820px){.lanes{grid-template-columns:1fr}.authcfg{grid-template-columns:1fr 1fr}}
+@media print{body::before,body::after{display:none}}
 """
 
 JS = """
